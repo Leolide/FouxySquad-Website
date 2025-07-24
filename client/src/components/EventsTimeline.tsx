@@ -25,56 +25,40 @@ export default function EventsTimeline() {
       image: "/attached_assets/ChatGPT Image May 1, 2025, 12_57_38 AM 1_1753397526191.png"
     },
     {
-      date: "July 2025",
-      title: "Vibe Coding for Designers",
-      description: "Bridging design and development skills through hands-on workshops",
+      date: "July 12, 2025",
+      title: "London Vibe Coding × Design: From 0 to 1",
+      description: "Build with AI, No Coding Experience needed - at Dyson School",
+      participants: 30,
       icon: "🔮",
       color: "bg-fouxy-secondary",
       image: "/attached_assets/vibe coding_1753397105238.avif"
     },
     {
-      date: "June 2025",
-      title: "Design Roundtable Discussion",
-      description: "Interactive discussion on design methodologies and trends",
-      participants: 65,
+      date: "June 28, 2025",
+      title: "London UX/UI RoundTable Online",
+      description: "Interactive online discussion on design methodologies and trends",
+      participants: 25,
       icon: "🎨",
       color: "bg-fouxy-accent",
       image: "/attached_assets/Roundtable_1753397105237.avif"
     },
     {
-      date: "May 2025",
-      title: "Design Picnic in the Park",
-      description: "Outdoor creative session combining nature and design thinking",
-      participants: 40,
+      date: "June 14, 2025",
+      title: "London UX/UI Designer Picnic - Fourth Edition",
+      description: "Outdoor creative session at The Hub",
+      participants: 35,
       icon: "🌳",
       color: "bg-fouxy-secondary",
       image: "/attached_assets/design picnic_1753397105236.avif"
     },
     {
-      date: "April 2025",
-      title: "OUCBUC Creative Session",
-      description: "Exploring innovative design methodologies and creative processes",
-      participants: 42,
-      icon: "💡",
+      date: "May 18, 2025",
+      title: "London UX/UI Designer Picnic - Third Edition",
+      description: "Parliament Hill Viewpoint picnic meetup",
+      participants: 28,
+      icon: "🏞️",
       color: "bg-fouxy-primary",
       image: "/attached_assets/oucbuc _1753397105237.avif"
-    },
-    {
-      date: "Mar 2025",
-      title: "First Meetup",
-      description: "20 participants joined our inaugural event",
-      participants: 20,
-      icon: "👥",
-      color: "bg-fouxy-secondary",
-      image: "/attached_assets/Screenshot 2025-07-24 at 23.10.36_1753395037598.png"
-    },
-    {
-      date: "Feb 2025",
-      title: "Founded in London",
-      description: "The beginning of our amazing design community journey",
-      icon: "🚀",
-      color: "bg-fouxy-primary",
-      image: "/attached_assets/Weixin Image_20250712202539_2095_1753394670431.jpg"
     }
   ];
 
