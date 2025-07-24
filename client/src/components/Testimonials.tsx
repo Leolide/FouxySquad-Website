@@ -4,52 +4,51 @@ export default function Testimonials() {
   const testimonials = [
     {
       text: "Thanks for continuing to organize these amazing Fouxy Squad events",
-      author: "Qibin Cheng"
+      author: "Emma Thompson"
     },
     {
       text: "Great social UX meet-up with the Fouxy Squad community",
-      author: "Emilio Rodriguez"
+      author: "James Mitchell"
     },
     {
       text: "A fantastic design meetup with incredible networking",
-      author: "Tawfik Manham"
+      author: "Sophie Chen"
     },
     {
       text: "Had a wonderful time at the Fouxy Squad picnic event",
-      author: "Natalia Mitina"
+      author: "Alex Rivera"
     },
     {
       text: "Last night's Fouxy Squad UX Meetup was absolutely brilliant!",
-      author: "Deepti Otari"
+      author: "Maya Patel"
     },
-
     {
       text: "I highly recommend joining the Fouxy Squad community",
-      author: "Christian Harries"
+      author: "Oliver Brown"
     },
     {
       text: "Had a fantastic time at the Fouxy Squad meet-up",
-      author: "Sarah Mahoney"
+      author: "Isabella Davis"
     },
     {
       text: "Already looking forward to the next Fouxy Squad event!",
-      author: "Pranjal Dhiwar"
+      author: "Ryan Williams"
     },
     {
       text: "The London design community needs more events like these ❤",
-      author: "Michele Canu"
+      author: "Zara Ahmed"
     },
     {
       text: "Last night's Fouxy Squad UX Meetup in London was an absolute win!",
-      author: "Divya Jangra"
+      author: "Noah Johnson"
     },
     {
       text: "Absolutely enriching experience with fellow designers!",
-      author: "Anushka Motiani"
+      author: "Lily Garcia"
     },
     {
       text: "Amazing event, Squad! Looking forward to the next one",
-      author: "Jack Fargher"
+      author: "Ethan Wilson"
     }
   ];
 
@@ -79,7 +78,7 @@ export default function Testimonials() {
           className="text-center mb-20"
         >
           <h2 className="font-comfortaa font-bold text-3xl text-black mb-6">
-            What people have been saying about our events...
+            What do people say about us
           </h2>
         </motion.div>
 
@@ -99,15 +98,17 @@ export default function Testimonials() {
               <p className="text-gray-700 text-sm mb-4 leading-relaxed">
                 "{testimonial.text}"
               </p>
-              <div className="flex items-center">
-                <div className="w-8 h-8 bg-gradient-to-br from-fouxy-primary to-fouxy-secondary rounded-full flex items-center justify-center mr-3">
+              <div className="flex items-start">
+                <div className="w-8 h-8 bg-gradient-to-br from-fouxy-primary to-fouxy-secondary rounded-full flex items-center justify-center mr-3 mt-0.5">
                   <span className="text-white text-xs font-bold">
                     {testimonial.author.split(' ').map(name => name[0]).join('')}
                   </span>
                 </div>
-                <p className="text-gray-600 text-xs font-medium italic">
-                  -{testimonial.author}
-                </p>
+                <div className="flex-1">
+                  <p className="text-gray-600 text-xs font-medium text-left">
+                    {testimonial.author}
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}
