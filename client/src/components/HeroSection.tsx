@@ -114,14 +114,8 @@ export default function HeroSection() {
                 <img 
                   src="/attached_assets/ChatGPT Image Jul 6, 2025, 05_27_50 PM_1753396225683.png" 
                   alt="Fouxy Squad Mascot - Pixel Art Orange Fox Character" 
-                  className="w-80 h-80 mx-auto mb-6 drop-shadow-2xl"
+                  className="w-96 h-96 mx-auto drop-shadow-2xl"
                 />
-                <div className="font-comfortaa font-bold text-black text-3xl mb-2">
-                  Meet Fouxy!
-                </div>
-                <div className="text-gray-700 text-lg">
-                  Our adorable pixel art mascot
-                </div>
               </div>
             </div>
             <div className="absolute -top-6 -right-6 w-24 h-24 bg-fouxy-accent/20 rounded-full animate-pulse-slow"></div>
