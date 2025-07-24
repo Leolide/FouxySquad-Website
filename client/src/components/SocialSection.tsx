@@ -121,7 +121,10 @@ export default function SocialSection() {
                   Scan QR code to join our active community chat
                 </p>
 
-                <div className="w-32 h-32 bg-fouxy-neutral border-2 border-dashed border-fouxy-primary rounded-xl mx-auto mb-4 flex items-center justify-center">
+                <div 
+                  onClick={openQRModal}
+                  className="w-32 h-32 bg-fouxy-neutral border-2 border-dashed border-fouxy-primary rounded-xl mx-auto mb-4 flex items-center justify-center cursor-pointer hover:bg-orange-50 transition-colors"
+                >
                   <div className="text-center text-fouxy-text/50">
                     <QrCode className="w-8 h-8 mx-auto mb-2" />
                     <div className="text-xs">Click to view QR</div>
@@ -139,32 +142,7 @@ export default function SocialSection() {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8"
-        >
-          <div className="text-center">
-            <div className="font-comfortaa font-bold text-3xl text-fouxy-primary mb-2">
-              2.5K
-            </div>
-            <div className="text-gray-600">Instagram Followers</div>
-          </div>
-          <div className="text-center">
-            <div className="font-comfortaa font-bold text-3xl text-fouxy-primary mb-2">
-              1.8K
-            </div>
-            <div className="text-gray-600">LinkedIn Connections</div>
-          </div>
-          <div className="text-center">
-            <div className="font-comfortaa font-bold text-3xl text-fouxy-primary mb-2">
-              95%
-            </div>
-            <div className="text-gray-600">Active in Group Chat</div>
-          </div>
-        </motion.div>
+
       </div>
 
       <QRCodeModal 
