@@ -70,23 +70,36 @@ export default function HeroSection() {
             </div>
 
             {/* Next Event Highlight */}
-            <div className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-6 border-l-4 border-orange-500 mt-8">
-              <div className="flex items-center space-x-3 mb-2">
-                <span className="text-2xl">🔮</span>
-                <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">Next Event</span>
+            <div className="relative bg-white rounded-3xl p-8 shadow-2xl border border-orange-100 mt-8 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full transform translate-x-8 -translate-y-8 opacity-10"></div>
+              <div className="relative z-10">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center">
+                    <span className="text-white text-xl">🔮</span>
+                  </div>
+                  <div>
+                    <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-1.5 rounded-full text-sm font-bold tracking-wide">NEXT EVENT</span>
+                  </div>
+                </div>
+                <h3 className="font-comfortaa font-bold text-2xl text-black mb-3">
+                  Vibe Coding for Designers
+                </h3>
+                <p className="text-gray-600 mb-6 text-lg">
+                  <span className="font-medium">July 2025</span> • Bridging design and development skills through hands-on workshops
+                </p>
+                <div className="flex items-center space-x-4">
+                  <button 
+                    onClick={() => window.open("https://lu.ma/user/FouxySquad", "_blank")}
+                    className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-2xl font-bold hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg"
+                  >
+                    Register on Luma →
+                  </button>
+                  <div className="text-sm text-gray-500">
+                    <div className="font-medium">Free Event</div>
+                    <div>London Based</div>
+                  </div>
+                </div>
               </div>
-              <h3 className="font-comfortaa font-bold text-xl text-black mb-2">
-                Vibe Coding for Designers
-              </h3>
-              <p className="text-gray-700 mb-3">
-                July 2025 - Bridging design and development skills
-              </p>
-              <button 
-                onClick={() => window.open("https://lu.ma/user/FouxySquad", "_blank")}
-                className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-orange-600 transition-colors"
-              >
-                Register on Luma →
-              </button>
             </div>
           </motion.div>
 

@@ -10,6 +10,7 @@ interface TimelineEvent {
   icon: string;
   color: string;
   isUpcoming?: boolean;
+  image?: string;
 }
 
 export default function EventsTimeline() {
@@ -20,7 +21,8 @@ export default function EventsTimeline() {
       description: "Upcoming: Bridging design and development skills",
       icon: "🔮",
       color: "bg-fouxy-primary",
-      isUpcoming: true
+      isUpcoming: true,
+      image: "/attached_assets/Screenshot 2025-07-24 at 23.16.12_1753395373670.png"
     },
     {
       date: "June 2025",
@@ -28,7 +30,8 @@ export default function EventsTimeline() {
       description: "100 participants total across our biggest events yet!",
       participants: 100,
       icon: "🎉",
-      color: "bg-fouxy-accent"
+      color: "bg-fouxy-accent",
+      image: "/attached_assets/Screenshot 2025-07-24 at 23.15.54_1753395355549.png"
     },
     {
       date: "May 2025",
@@ -36,7 +39,8 @@ export default function EventsTimeline() {
       description: "30 participants connected virtually from around the world",
       participants: 30,
       icon: "💻",
-      color: "bg-fouxy-secondary"
+      color: "bg-fouxy-secondary",
+      image: "/attached_assets/Screenshot 2025-07-24 at 23.13.46_1753395227760.png"
     },
     {
       date: "May 2025",
@@ -44,7 +48,8 @@ export default function EventsTimeline() {
       description: "40 participants enjoyed outdoor creativity and networking",
       participants: 40,
       icon: "🌳",
-      color: "bg-fouxy-primary"
+      color: "bg-fouxy-primary",
+      image: "/attached_assets/Screenshot 2025-07-24 at 23.10.46_1753395048052.png"
     },
     {
       date: "Apr 2025",
@@ -52,7 +57,8 @@ export default function EventsTimeline() {
       description: "Growing to 30 participants with amazing energy",
       participants: 30,
       icon: "📈",
-      color: "bg-fouxy-accent"
+      color: "bg-fouxy-accent",
+      image: "/attached_assets/Screenshot 2025-07-24 at 23.10.41_1753395042464.png"
     },
     {
       date: "Mar 2025",
@@ -60,14 +66,16 @@ export default function EventsTimeline() {
       description: "20 participants joined our inaugural event",
       participants: 20,
       icon: "👥",
-      color: "bg-fouxy-secondary"
+      color: "bg-fouxy-secondary",
+      image: "/attached_assets/Screenshot 2025-07-24 at 23.10.36_1753395037598.png"
     },
     {
       date: "Feb 2025",
       title: "Founded in London",
       description: "The beginning of our amazing design community journey",
       icon: "🚀",
-      color: "bg-fouxy-primary"
+      color: "bg-fouxy-primary",
+      image: "/attached_assets/Weixin Image_20250712202539_2095_1753394670431.jpg"
     }
   ];
 
@@ -81,7 +89,7 @@ export default function EventsTimeline() {
   };
 
   return (
-    <section id="events" className="py-20 bg-fouxy-bg">
+    <section id="events" className="py-20 bg-gradient-to-b from-fouxy-bg to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -93,15 +101,12 @@ export default function EventsTimeline() {
           <h2 className="font-comfortaa font-bold text-4xl text-black mb-4">
             Our Journey & Events
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            From our humble beginnings in February 2025 to hosting events with
-            100+ participants. Here's our incredible growth story.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            From our humble beginnings to exciting community events, follow our growth story through memorable moments
           </p>
         </motion.div>
 
-        <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-fouxy-accent/40"></div>
-
+        <div className="grid gap-8 md:gap-12">
           {events.map((event, index) => (
             <motion.div
               key={index}
@@ -109,54 +114,87 @@ export default function EventsTimeline() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`timeline-item relative flex items-center justify-between w-full mb-8 ${
-                index % 2 === 1 ? "flex-row-reverse" : ""
-              }`}
+              className={`flex items-center gap-8 ${
+                index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+              } flex-col`}
             >
-              <div className="order-1 w-5/12"></div>
-              <div
-                className={`z-20 flex items-center order-1 ${event.color} shadow-xl w-12 h-12 rounded-full ${
-                  event.isUpcoming ? "animate-pulse" : ""
-                }`}
-              >
-                <span className="mx-auto text-lg text-white">{event.icon}</span>
-              </div>
-              <Card
-                className={`order-1 ${
-                  event.isUpcoming
-                    ? "bg-gradient-to-br from-fouxy-bg to-white border-2 border-dashed border-fouxy-primary"
-                    : "bg-white"
-                } rounded-2xl shadow-lg w-5/12 card-hover`}
-              >
-                <CardContent className="px-6 py-4">
-                  <h3
-                    className={`mb-2 font-comfortaa font-bold text-xl ${
-                      event.color === "bg-fouxy-primary"
-                        ? "text-orange-600"
-                        : event.color === "bg-fouxy-secondary"
-                        ? "text-orange-600"
-                        : "text-orange-600"
-                    }`}
-                  >
-                    {event.date}
-                  </h3>
-                  <h4 className="mb-2 font-bold text-lg text-black">
-                    {event.title}
-                  </h4>
-                  <p className="text-sm leading-snug tracking-wide text-gray-700">
-                    {event.description}
-                  </p>
-                  {event.isUpcoming && (
-                    <Button
-                      onClick={handleRegisterInterest}
-                      size="sm"
-                      className="mt-3 bg-fouxy-primary text-white rounded-full hover:bg-fouxy-secondary transition-colors"
-                    >
-                      Register Interest
-                    </Button>
+              {/* Event Image */}
+              <div className="lg:w-1/2 w-full">
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl group">
+                  {event.image ? (
+                    <img 
+                      src={event.image} 
+                      alt={event.title}
+                      className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="w-full h-80 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+                      <span className="text-6xl">{event.icon}</span>
+                    </div>
                   )}
-                </CardContent>
-              </Card>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  <div className="absolute top-4 left-4">
+                    <span className={`${event.color} text-white px-4 py-2 rounded-full text-sm font-bold`}>
+                      {event.date}
+                    </span>
+                  </div>
+                  {event.isUpcoming && (
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-white text-orange-600 px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                        Upcoming
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Event Content */}
+              <div className="lg:w-1/2 w-full">
+                <Card className={`${event.isUpcoming ? 'ring-2 ring-orange-500 ring-opacity-30' : ''} bg-white rounded-3xl shadow-xl border-0 hover:shadow-2xl transition-all duration-300`}>
+                  <CardContent className="p-8">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className={`w-12 h-12 ${event.color} rounded-2xl flex items-center justify-center`}>
+                        <span className="text-white text-xl">{event.icon}</span>
+                      </div>
+                      <div>
+                        <h3 className="font-comfortaa font-bold text-2xl text-black">
+                          {event.title}
+                        </h3>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                      {event.description}
+                    </p>
+                    
+                    {event.participants && (
+                      <div className="flex items-center space-x-4">
+                        <div className="flex items-center bg-orange-50 px-4 py-2 rounded-full">
+                          <span className="text-orange-600 font-bold text-lg">
+                            {event.participants}
+                          </span>
+                          <span className="text-gray-600 ml-2">participants</span>
+                        </div>
+                        <div className="text-gray-400">•</div>
+                        <div className="text-gray-600">
+                          Community Growth: +{Math.round(event.participants * 0.3)} new members
+                        </div>
+                      </div>
+                    )}
+
+                    {event.isUpcoming && (
+                      <div className="mt-6">
+                        <Button
+                          onClick={handleLumaRedirect}
+                          className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-2xl font-bold hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105"
+                        >
+                          Register on Luma →
+                        </Button>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              </div>
             </motion.div>
           ))}
         </div>
