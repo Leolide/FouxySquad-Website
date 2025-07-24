@@ -89,8 +89,8 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="gallery" className="py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

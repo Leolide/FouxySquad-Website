@@ -89,112 +89,75 @@ export default function EventsTimeline() {
   };
 
   return (
-    <section id="events" className="py-20 bg-gradient-to-b from-fouxy-bg to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="events" className="py-32 bg-white">
+      <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-24"
         >
-          <h2 className="font-comfortaa font-bold text-4xl text-black mb-4">
-            Our Journey & Events
+          <h2 className="font-comfortaa font-bold text-3xl text-black mb-6">
+            Our Journey
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From our humble beginnings to exciting community events, follow our growth story through memorable moments
-          </p>
         </motion.div>
 
-        <div className="grid gap-8 md:gap-12">
+        <div className="space-y-20">
           {events.map((event, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.05 }}
               viewport={{ once: true }}
-              className={`flex items-center gap-8 ${
-                index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-              } flex-col`}
+              className="group"
             >
-              {/* Event Image */}
-              <div className="lg:w-1/2 w-full">
-                <div className="relative overflow-hidden rounded-3xl shadow-2xl group">
-                  {event.image ? (
-                    <img 
-                      src={event.image} 
-                      alt={event.title}
-                      className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  ) : (
-                    <div className="w-full h-80 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
-                      <span className="text-6xl">{event.icon}</span>
-                    </div>
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  <div className="absolute top-4 left-4">
-                    <span className={`${event.color} text-white px-4 py-2 rounded-full text-sm font-bold`}>
-                      {event.date}
-                    </span>
-                  </div>
-                  {event.isUpcoming && (
-                    <div className="absolute top-4 right-4">
-                      <span className="bg-white text-orange-600 px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                        Upcoming
+              {event.image ? (
+                <div className="relative overflow-hidden rounded-2xl">
+                  <img 
+                    src={event.image} 
+                    alt={event.title}
+                    className="w-full h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="flex items-center space-x-3 mb-3">
+                      <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                        {event.date}
                       </span>
+                      {event.isUpcoming && (
+                        <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                          Upcoming
+                        </span>
+                      )}
                     </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Event Content */}
-              <div className="lg:w-1/2 w-full">
-                <Card className={`${event.isUpcoming ? 'ring-2 ring-orange-500 ring-opacity-30' : ''} bg-white rounded-3xl shadow-xl border-0 hover:shadow-2xl transition-all duration-300`}>
-                  <CardContent className="p-8">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className={`w-12 h-12 ${event.color} rounded-2xl flex items-center justify-center`}>
-                        <span className="text-white text-xl">{event.icon}</span>
-                      </div>
-                      <div>
-                        <h3 className="font-comfortaa font-bold text-2xl text-black">
-                          {event.title}
-                        </h3>
-                      </div>
-                    </div>
-                    
-                    <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                    <h3 className="font-comfortaa font-bold text-2xl text-white mb-2">
+                      {event.title}
+                    </h3>
+                    <p className="text-white/90 text-lg">
                       {event.description}
                     </p>
-                    
                     {event.participants && (
-                      <div className="flex items-center space-x-4">
-                        <div className="flex items-center bg-orange-50 px-4 py-2 rounded-full">
-                          <span className="text-orange-600 font-bold text-lg">
-                            {event.participants}
-                          </span>
-                          <span className="text-gray-600 ml-2">participants</span>
-                        </div>
-                        <div className="text-gray-400">•</div>
-                        <div className="text-gray-600">
-                          Community Growth: +{Math.round(event.participants * 0.3)} new members
-                        </div>
+                      <div className="mt-4">
+                        <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">
+                          {event.participants} participants
+                        </span>
                       </div>
                     )}
-
-                    {event.isUpcoming && (
-                      <div className="mt-6">
-                        <Button
-                          onClick={handleLumaRedirect}
-                          className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-2xl font-bold hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105"
-                        >
-                          Register on Luma →
-                        </Button>
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-              </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="bg-gray-50 rounded-2xl p-12 text-center">
+                  <span className="text-6xl mb-4 block">{event.icon}</span>
+                  <h3 className="font-comfortaa font-bold text-2xl text-black mb-2">
+                    {event.title}
+                  </h3>
+                  <p className="text-gray-600 text-lg">
+                    {event.description}
+                  </p>
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
