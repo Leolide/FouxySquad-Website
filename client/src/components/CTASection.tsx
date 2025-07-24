@@ -34,18 +34,14 @@ export default function CTASection() {
           viewport={{ once: true }}
           className="mb-8"
         >
-          <img 
-            src="/attached_assets/Frame 5_1753394404905.png" 
-            alt="Fouxy Squad Mascot" 
-            className="w-20 h-20 mx-auto mb-4 animate-kawaii-bounce" 
-          />
-          <h2 className="font-comfortaa font-bold text-4xl text-white mb-4 sparkle-decoration">
-            Ready to Join Fouxy Squad? 🌟
+          <div className="text-6xl mb-4 animate-bounce-slow">🦊</div>
+          <h2 className="font-comfortaa font-bold text-4xl text-white mb-4">
+            Ready to Join Fouxy Squad?
           </h2>
-          <p className="text-xl text-white/95 max-w-2xl mx-auto leading-relaxed font-medium">
-            Become part of London's most vibrant design community! Connect with
+          <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+            Become part of London's most vibrant design community. Connect with
             amazing creatives, attend inspiring events, and grow your design
-            career with us. ✨
+            career with us.
           </p>
         </motion.div>
 

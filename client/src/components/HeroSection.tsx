@@ -22,50 +22,50 @@ export default function HeroSection() {
             <div className="space-y-4">
               <h1 className="font-comfortaa font-bold text-5xl lg:text-6xl leading-tight">
                 Welcome to{" "}
-                <span className="fox-mascot sparkle-decoration">Fouxy Squad</span> 🌸
+                <span className="fox-mascot">Fouxy Squad</span>
               </h1>
-              <p className="text-xl text-fouxy-text leading-relaxed font-medium">
+              <p className="text-xl text-fouxy-text/80 leading-relaxed">
                 A vibrant London-based design community of{" "}
-                <strong className="text-fouxy-primary">200+ creatives</strong>—from students to pros in UX, UI,
+                <strong>200+ creatives</strong>—from students to pros in UX, UI,
                 product design. We host playful, bold events that spark
-                connection, fresh ideas, and skill-sharing! ✨
+                connection, fresh ideas, and skill-sharing.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 onClick={() => scrollToSection("cta")}
-                className="kawaii-button bg-fouxy-primary text-white px-8 py-4 font-comfortaa font-bold text-lg"
+                className="bg-fouxy-primary text-white px-8 py-4 rounded-full hover:bg-fouxy-secondary transition-all duration-300 transform hover:scale-105 font-comfortaa font-medium text-lg shadow-lg"
               >
-                Join Our Community! 🦊✨
+                Join Our Community
               </Button>
               <Button
                 variant="outline"
                 onClick={() => scrollToSection("events")}
-                className="kawaii-button border-2 border-fouxy-primary text-fouxy-primary px-8 py-4 hover:bg-fouxy-primary hover:text-white font-comfortaa font-bold text-lg"
+                className="border-2 border-fouxy-primary text-fouxy-primary px-8 py-4 rounded-full hover:bg-fouxy-primary hover:text-white transition-all duration-300 font-comfortaa font-medium text-lg"
               >
-                View Events 🎉
+                View Events
               </Button>
             </div>
 
             <div className="flex items-center space-x-6 pt-4">
-              <div className="text-center kawaii-card bg-fouxy-pink px-4 py-3">
-                <div className="font-comfortaa font-bold text-2xl text-fouxy-text">
-                  200+ 👥
+              <div className="text-center">
+                <div className="font-comfortaa font-bold text-2xl text-fouxy-primary">
+                  200+
                 </div>
-                <div className="text-sm text-fouxy-text-light font-medium">Active Members</div>
+                <div className="text-sm text-fouxy-text/70">Active Members</div>
               </div>
-              <div className="text-center kawaii-card bg-fouxy-yellow px-4 py-3">
-                <div className="font-comfortaa font-bold text-2xl text-fouxy-text">
-                  6 🎉
+              <div className="text-center">
+                <div className="font-comfortaa font-bold text-2xl text-fouxy-primary">
+                  6
                 </div>
-                <div className="text-sm text-fouxy-text-light font-medium">Events Hosted</div>
+                <div className="text-sm text-fouxy-text/70">Events Hosted</div>
               </div>
-              <div className="text-center kawaii-card bg-fouxy-blue px-4 py-3">
-                <div className="font-comfortaa font-bold text-2xl text-fouxy-text">
-                  London 🏙️
+              <div className="text-center">
+                <div className="font-comfortaa font-bold text-2xl text-fouxy-primary">
+                  London
                 </div>
-                <div className="text-sm text-fouxy-text-light font-medium">Based</div>
+                <div className="text-sm text-fouxy-text/70">Based</div>
               </div>
             </div>
           </motion.div>
@@ -76,19 +76,15 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative z-10 animate-kawaii-bounce">
-              <div className="kawaii-card bg-gradient-to-br from-fouxy-primary via-fouxy-secondary to-fouxy-accent p-12 shadow-2xl">
+            <div className="relative z-10 animate-float">
+              <div className="bg-gradient-to-br from-fouxy-primary via-fouxy-secondary to-fouxy-accent rounded-3xl p-12 shadow-2xl">
                 <div className="text-center">
-                  <img 
-                    src="/attached_assets/Frame 5_1753394404905.png" 
-                    alt="Fouxy Squad Mascot" 
-                    className="w-24 h-24 mx-auto mb-4 animate-kawaii-wiggle" 
-                  />
-                  <div className="font-comfortaa font-bold text-white text-2xl mb-2 sparkle-decoration">
+                  <div className="text-8xl mb-4">🦊</div>
+                  <div className="font-comfortaa font-bold text-white text-2xl mb-2">
                     Meet Fouxy!
                   </div>
-                  <div className="text-white/90 font-medium">
-                    Our adorable community mascot 🌟
+                  <div className="text-white/90">
+                    Our adorable community mascot
                   </div>
                 </div>
               </div>
