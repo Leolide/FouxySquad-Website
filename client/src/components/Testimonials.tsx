@@ -22,10 +22,7 @@ export default function Testimonials() {
       text: "Last night's FAUX UX Meetup was a blast!",
       author: "Deepti Otari"
     },
-    {
-      text: "Enjoyed the company and the food!",
-      author: "Andy Walker"
-    },
+
     {
       text: "I highly recommend FAUX",
       author: "Christian Harries"
@@ -49,10 +46,6 @@ export default function Testimonials() {
     {
       text: "Absolutely enriching!",
       author: "Anushka Motiani"
-    },
-    {
-      text: "Such a valuable event!",
-      author: "Nia Oleyede"
     },
     {
       text: "Amazing event, Simon! Looking forward to the next one",
