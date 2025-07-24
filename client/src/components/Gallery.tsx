@@ -148,7 +148,7 @@ export default function Gallery() {
               <img
                 src={item.src}
                 alt={item.alt}
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                className="w-full h-64 object-cover"
                 loading="lazy"
               />
               <div
