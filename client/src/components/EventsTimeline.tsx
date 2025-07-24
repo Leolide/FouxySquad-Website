@@ -114,7 +114,7 @@ export default function EventsTimeline() {
               className="group"
             >
               {event.image ? (
-                <div className="relative overflow-hidden rounded-2xl aspect-square">
+                <div className="relative overflow-hidden rounded-2xl aspect-[4/5]">
                   <img 
                     src={event.image} 
                     alt={event.title}
@@ -148,7 +148,7 @@ export default function EventsTimeline() {
                   </div>
                 </div>
               ) : (
-                <div className="bg-gray-50 rounded-2xl p-8 text-center aspect-square flex flex-col justify-center">
+                <div className="bg-gray-50 rounded-2xl p-8 text-center aspect-[4/5] flex flex-col justify-center">
                   <span className="text-4xl mb-3 block">{event.icon}</span>
                   <h3 className="font-comfortaa font-bold text-lg text-black mb-2">
                     {event.title}
@@ -161,33 +161,6 @@ export default function EventsTimeline() {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <Card className="bg-white rounded-2xl shadow-lg card-hover max-w-2xl mx-auto">
-            <CardContent className="p-8">
-              <div className="text-4xl mb-4">📅</div>
-              <h3 className="font-comfortaa font-bold text-2xl text-black mb-4">
-                Event Management via Luma
-              </h3>
-              <p className="text-gray-700 mb-6">
-                All our events are seamlessly managed through Luma for easy
-                registration, updates, and community interaction.
-              </p>
-              <Button
-                onClick={handleLumaRedirect}
-                className="bg-fouxy-primary text-white px-8 py-3 rounded-full hover:bg-fouxy-secondary transition-colors font-comfortaa font-medium"
-              >
-                View Events on Luma
-              </Button>
-            </CardContent>
-          </Card>
-        </motion.div>
       </div>
     </section>
   );

@@ -39,8 +39,8 @@ export default function SocialSection() {
   };
 
   return (
-    <section className="py-40 bg-fouxy-bg">
-      <div className="max-w-6xl mx-auto px-12 sm:px-16 lg:px-20">
+    <section className="py-48 bg-fouxy-bg">
+      <div className="max-w-5xl mx-auto px-16 sm:px-20 lg:px-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import CommunitySection from "@/components/CommunitySection";
 import EventsTimeline from "@/components/EventsTimeline";
 import Gallery from "@/components/Gallery";
+import Testimonials from "@/components/Testimonials";
 import SocialSection from "@/components/SocialSection";
 import Footer from "@/components/Footer";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <CommunitySection />
       <EventsTimeline />
       <Gallery />
+      <Testimonials />
       <SocialSection />
       <Footer />
     </div>
