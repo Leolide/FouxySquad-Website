@@ -11,60 +11,46 @@ export default function Gallery() {
       gradient: "from-fouxy-primary/80"
     },
     {
-      src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
-      alt: "Creative professionals collaborating in design workshop",
-      title: "Collaborative Sessions",
-      description: "Creative minds working together",
+      src: "/attached_assets/9504e6604cd0e27a3c9c470fd2f930d7 1_1753397342850.png",
+      alt: "Fouxy Squad community dining together at restaurant meetup in London",
+      title: "Community Dining Experience",
+      description: "Building connections over great food and conversation",
       gradient: "from-fouxy-secondary/80"
     },
     {
-      src: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
-      alt: "Design community networking event with professionals mingling",
-      title: "Networking Events",
-      description: "Building meaningful connections",
+      src: "/attached_assets/IMG_3466 1_1753397342850.png",
+      alt: "Large group photo of Fouxy Squad members at outdoor picnic event",
+      title: "Design Picnic Gathering",
+      description: "Our amazing outdoor community event with 40+ members",
       gradient: "from-fouxy-accent/80"
     },
     {
-      src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
-      alt: "Outdoor community gathering with designers enjoying picnic",
-      title: "Design Picnics",
-      description: "Creative fun in the great outdoors",
+      src: "/attached_assets/IMG_3765 1_1753397342851.png",
+      alt: "Indoor meetup with Fouxy Squad members networking and collaborating",
+      title: "Indoor Networking Session",
+      description: "Creative professionals connecting in central London",
       gradient: "from-fouxy-primary/80"
     },
     {
-      src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
-      alt: "Modern design workspace with creative tools and equipment",
-      title: "Workshop Spaces",
-      description: "Where creativity comes to life",
+      src: "/attached_assets/4-1 1_1753397342850.png",
+      alt: "Digital collaboration tools and design workflows in action",
+      title: "Digital Workshop Tools",
+      description: "Exploring modern design and development workflows",
       gradient: "from-fouxy-secondary/80"
     },
     {
-      src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
-      alt: "Team brainstorming session with designers sharing ideas",
-      title: "Brainstorming Sessions",
-      description: "Ideas flowing freely",
+      src: "/attached_assets/4 1_1753397342850.png",
+      alt: "Virtual gaming session with community members exploring creative spaces",
+      title: "Creative Gaming Sessions",
+      description: "Building community through interactive experiences",
       gradient: "from-fouxy-accent/80"
     },
     {
-      src: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
-      alt: "Diverse group of designers engaged in community discussion",
-      title: "Community Discussions",
-      description: "Learning from each other",
+      src: "/attached_assets/1 1_1753397342848.png",
+      alt: "Virtual meetup space with multiple participants joining online",
+      title: "Virtual Community Events",
+      description: "Connecting globally through digital platforms",
       gradient: "from-fouxy-primary/80"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
-      alt: "Online virtual meetup with designers connecting remotely",
-      title: "Virtual Meetups",
-      description: "Connecting from anywhere in the world",
-      gradient: "from-fouxy-secondary/80"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
-      alt: "London design community members presenting projects",
-      title: "Project Showcases",
-      description: "Sharing creative work and inspiration",
-      gradient: "from-fouxy-accent/80"
     }
   ];
 
