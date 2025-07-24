@@ -22,43 +22,34 @@ export default function EventsTimeline() {
       icon: "🔮",
       color: "bg-fouxy-primary",
       isUpcoming: true,
-      image: "/attached_assets/Screenshot 2025-07-24 at 23.16.12_1753395373670.png"
+      image: "/attached_assets/vibe coding_1753397105238.avif"
     },
     {
       date: "June 2025",
-      title: "Two Amazing Meetups",
-      description: "100 participants total across our biggest events yet!",
-      participants: 100,
-      icon: "🎉",
+      title: "Design Roundtable Discussion",
+      description: "Interactive discussion on design methodologies and trends",
+      participants: 65,
+      icon: "🎨",
       color: "bg-fouxy-accent",
-      image: "/attached_assets/Screenshot 2025-07-24 at 23.15.54_1753395355549.png"
+      image: "/attached_assets/Roundtable_1753397105237.avif"
     },
     {
       date: "May 2025",
-      title: "First Online Meetup",
-      description: "30 participants connected virtually from around the world",
-      participants: 30,
-      icon: "💻",
-      color: "bg-fouxy-secondary",
-      image: "/attached_assets/Screenshot 2025-07-24 at 23.13.46_1753395227760.png"
-    },
-    {
-      date: "May 2025",
-      title: "Design Picnic",
-      description: "40 participants enjoyed outdoor creativity and networking",
+      title: "Design Picnic in the Park",
+      description: "Outdoor creative session combining nature and design thinking",
       participants: 40,
       icon: "🌳",
-      color: "bg-fouxy-primary",
-      image: "/attached_assets/Screenshot 2025-07-24 at 23.10.46_1753395048052.png"
+      color: "bg-fouxy-secondary",
+      image: "/attached_assets/design picnic_1753397105236.avif"
     },
     {
-      date: "Apr 2025",
-      title: "Second Meetup",
-      description: "Growing to 30 participants with amazing energy",
-      participants: 30,
-      icon: "📈",
-      color: "bg-fouxy-accent",
-      image: "/attached_assets/Screenshot 2025-07-24 at 23.10.41_1753395042464.png"
+      date: "April 2025",
+      title: "OUCBUC Creative Session",
+      description: "Exploring innovative design methodologies and creative processes",
+      participants: 42,
+      icon: "💡",
+      color: "bg-fouxy-primary",
+      image: "/attached_assets/oucbuc _1753397105237.avif"
     },
     {
       date: "Mar 2025",
