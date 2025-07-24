@@ -3,52 +3,52 @@ import { motion } from "framer-motion";
 export default function Testimonials() {
   const testimonials = [
     {
-      text: "Thanks for continuing organising these amazing events",
+      text: "Thanks for continuing to organize these amazing Fouxy Squad events",
       author: "Qibin Cheng"
     },
     {
-      text: "Great social UX meet-up",
+      text: "Great social UX meet-up with the Fouxy Squad community",
       author: "Emilio Rodriguez"
     },
     {
-      text: "A yummy design meetup",
+      text: "A fantastic design meetup with incredible networking",
       author: "Tawfik Manham"
     },
     {
-      text: "Had a fantastic time at the Food and UX meeting",
+      text: "Had a wonderful time at the Fouxy Squad picnic event",
       author: "Natalia Mitina"
     },
     {
-      text: "Last night's FAUX UX Meetup was a blast!",
+      text: "Last night's Fouxy Squad UX Meetup was absolutely brilliant!",
       author: "Deepti Otari"
     },
 
     {
-      text: "I highly recommend FAUX",
+      text: "I highly recommend joining the Fouxy Squad community",
       author: "Christian Harries"
     },
     {
-      text: "Had a fantastic time at the FAUX meet-up",
+      text: "Had a fantastic time at the Fouxy Squad meet-up",
       author: "Sarah Mahoney"
     },
     {
-      text: "Already looking forward to the next one!",
+      text: "Already looking forward to the next Fouxy Squad event!",
       author: "Pranjal Dhiwar"
     },
     {
-      text: "The design community needs you ❤",
+      text: "The London design community needs more events like these ❤",
       author: "Michele Canu"
     },
     {
-      text: "Last night's FAUX UX Meetup in London was an absolute win!",
+      text: "Last night's Fouxy Squad UX Meetup in London was an absolute win!",
       author: "Divya Jangra"
     },
     {
-      text: "Absolutely enriching!",
+      text: "Absolutely enriching experience with fellow designers!",
       author: "Anushka Motiani"
     },
     {
-      text: "Amazing event, Simon! Looking forward to the next one",
+      text: "Amazing event, Squad! Looking forward to the next one",
       author: "Jack Fargher"
     }
   ];
