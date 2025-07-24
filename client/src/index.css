@@ -1,38 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
-
 :root {
   --background: hsl(32, 22%, 97%);
-  --foreground: hsl(27, 48%, 14%);
+  --foreground: hsl(27, 48%, 10%);
   --muted: hsl(60, 4.8%, 95.9%);
-  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --muted-foreground: hsl(25, 5.3%, 35%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(27, 48%, 14%);
+  --popover-foreground: hsl(27, 48%, 10%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(27, 48%, 14%);
-  --border: hsl(20, 5.9%, 90%);
-  --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(13, 96%, 45%);
+  --card-foreground: hsl(27, 48%, 10%);
+  --border: hsl(20, 5.9%, 85%);
+  --input: hsl(20, 5.9%, 85%);
+  --primary: hsl(13, 96%, 42%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(22, 98%, 49%);
+  --secondary: hsl(22, 98%, 46%);
   --secondary-foreground: hsl(0, 0%, 100%);
-  --accent: hsl(18, 98%, 56%);
+  --accent: hsl(18, 98%, 53%);
   --accent-foreground: hsl(0, 0%, 100%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(27, 48%, 14%);
+  --ring: hsl(13, 96%, 42%);
   --radius: 0.5rem;
   
-  /* Custom Fouxy colors */
-  --fouxy-primary: hsl(13, 96%, 45%);
-  --fouxy-secondary: hsl(22, 98%, 49%);
-  --fouxy-accent: hsl(18, 98%, 56%);
+  /* Custom Fouxy colors with improved contrast */
+  --fouxy-primary: hsl(13, 96%, 42%);
+  --fouxy-secondary: hsl(22, 98%, 46%);
+  --fouxy-accent: hsl(18, 98%, 53%);
   --fouxy-bg: hsl(32, 22%, 97%);
-  --fouxy-text: hsl(27, 48%, 14%);
-  --fouxy-neutral: hsl(0, 0%, 96%);
+  --fouxy-text: hsl(27, 48%, 10%);
+  --fouxy-neutral: hsl(0, 0%, 94%);
+  --fouxy-text-secondary: hsl(27, 35%, 25%);
 }
 
 .dark {
@@ -131,6 +132,21 @@
   
   .hover\:text-fouxy-primary:hover {
     color: var(--fouxy-primary);
+  }
+  
+  .text-fouxy-text-secondary {
+    color: var(--fouxy-text-secondary);
+  }
+  
+  /* Focus states for better accessibility */
+  .focus-visible\:ring-fouxy-primary:focus-visible {
+    outline: 2px solid var(--fouxy-primary);
+    outline-offset: 2px;
+  }
+  
+  .focus-visible\:outline-fouxy-primary:focus-visible {
+    outline: 2px solid var(--fouxy-primary);
+    outline-offset: 2px;
   }
 }
 

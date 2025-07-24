@@ -124,14 +124,21 @@ export class MemStorage implements IStorage {
         date: new Date("2025-07-30"),
         participants: 0,
         isOnline: false,
-        lumaUrl: "https://lu.ma/fouxy-squad-coding",
+        lumaUrl: "https://lu.ma/user/FouxySquad",
         status: "upcoming"
       }
     ];
 
     sampleEvents.forEach(event => {
       const id = this.currentEventId++;
-      this.events.set(id, { ...event, id });
+      this.events.set(id, { 
+        ...event, 
+        id,
+        status: event.status || "upcoming",
+        participants: event.participants || 0,
+        isOnline: event.isOnline || false,
+        lumaUrl: event.lumaUrl || null
+      });
     });
   }
 
@@ -166,7 +173,14 @@ export class MemStorage implements IStorage {
 
   async createEvent(insertEvent: InsertEvent): Promise<Event> {
     const id = this.currentEventId++;
-    const event: Event = { ...insertEvent, id };
+    const event: Event = { 
+      ...insertEvent, 
+      id,
+      status: insertEvent.status || "upcoming",
+      participants: insertEvent.participants || 0,
+      isOnline: insertEvent.isOnline || false,
+      lumaUrl: insertEvent.lumaUrl || null
+    };
     this.events.set(id, event);
     return event;
   }
@@ -190,7 +204,11 @@ export class MemStorage implements IStorage {
   async updateCommunityStats(stats: InsertCommunityStats): Promise<CommunityStats> {
     this.communityStats = {
       id: 1,
-      ...stats,
+      totalMembers: stats.totalMembers || 0,
+      totalEvents: stats.totalEvents || 0,
+      instagramFollowers: stats.instagramFollowers || 0,
+      linkedinConnections: stats.linkedinConnections || 0,
+      activeChatMembers: stats.activeChatMembers || 0,
       updatedAt: new Date(),
     };
     return this.communityStats;
@@ -212,6 +230,7 @@ export class MemStorage implements IStorage {
     const image: GalleryImage = { 
       ...insertImage, 
       id, 
+      eventId: insertImage.eventId || null,
       createdAt: new Date() 
     };
     this.galleryImages.set(id, image);

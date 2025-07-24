@@ -22,7 +22,11 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
-            <div className="text-3xl animate-bounce-slow">🦊</div>
+            <img 
+              src="/attached_assets/Group 7_1753394618394.png" 
+              alt="Fouxy Squad Logo - Orange Fox" 
+              className="w-10 h-10 animate-bounce-slow"
+            />
             <span className="font-comfortaa font-bold text-xl text-fouxy-primary">
               Fouxy Squad
             </span>
@@ -32,19 +36,19 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("community")}
-              className="text-fouxy-text hover:text-fouxy-primary transition-colors duration-200"
+              className="text-fouxy-text hover:text-fouxy-primary transition-colors duration-200 focus-visible:outline-fouxy-primary rounded-md px-2 py-1"
             >
               Community
             </button>
             <button
               onClick={() => scrollToSection("events")}
-              className="text-fouxy-text hover:text-fouxy-primary transition-colors duration-200"
+              className="text-fouxy-text hover:text-fouxy-primary transition-colors duration-200 focus-visible:outline-fouxy-primary rounded-md px-2 py-1"
             >
               Events
             </button>
             <button
               onClick={() => scrollToSection("gallery")}
-              className="text-fouxy-text hover:text-fouxy-primary transition-colors duration-200"
+              className="text-fouxy-text hover:text-fouxy-primary transition-colors duration-200 focus-visible:outline-fouxy-primary rounded-md px-2 py-1"
             >
               Gallery
             </button>

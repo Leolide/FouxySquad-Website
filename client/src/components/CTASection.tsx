@@ -9,7 +9,7 @@ export default function CTASection() {
   };
 
   const handleViewEvents = () => {
-    window.open("https://lu.ma/fouxy-squad", "_blank");
+    window.open("https://lu.ma/user/FouxySquad", "_blank");
   };
 
   const handleSocialClick = (platform: string) => {
@@ -34,7 +34,11 @@ export default function CTASection() {
           viewport={{ once: true }}
           className="mb-8"
         >
-          <div className="text-6xl mb-4 animate-bounce-slow">🦊</div>
+          <img 
+            src="/attached_assets/Group 7_1753394618394.png" 
+            alt="Fouxy Squad Logo - Join Our Community" 
+            className="w-16 h-16 mx-auto mb-4 animate-bounce-slow"
+          />
           <h2 className="font-comfortaa font-bold text-4xl text-white mb-4">
             Ready to Join Fouxy Squad?
           </h2>

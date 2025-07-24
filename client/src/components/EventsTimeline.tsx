@@ -72,8 +72,7 @@ export default function EventsTimeline() {
   ];
 
   const handleLumaRedirect = () => {
-    // In a real implementation, this would redirect to the actual Luma page
-    window.open("https://lu.ma/fouxy-squad", "_blank");
+    window.open("https://lu.ma/user/FouxySquad", "_blank");
   };
 
   const handleRegisterInterest = () => {
@@ -94,7 +93,7 @@ export default function EventsTimeline() {
           <h2 className="font-comfortaa font-bold text-4xl text-fouxy-text mb-4">
             Our Journey & Events
           </h2>
-          <p className="text-xl text-fouxy-text/70 max-w-3xl mx-auto">
+          <p className="text-xl text-fouxy-text-secondary max-w-3xl mx-auto">
             From our humble beginnings in February 2025 to hosting events with
             100+ participants. Here's our incredible growth story.
           </p>
@@ -144,7 +143,7 @@ export default function EventsTimeline() {
                   <h4 className="mb-2 font-bold text-lg text-fouxy-text">
                     {event.title}
                   </h4>
-                  <p className="text-sm leading-snug tracking-wide text-fouxy-text/70">
+                  <p className="text-sm leading-snug tracking-wide text-fouxy-text-secondary">
                     {event.description}
                   </p>
                   {event.isUpcoming && (
@@ -175,7 +174,7 @@ export default function EventsTimeline() {
               <h3 className="font-comfortaa font-bold text-2xl text-fouxy-text mb-4">
                 Event Management via Luma
               </h3>
-              <p className="text-fouxy-text/70 mb-6">
+              <p className="text-fouxy-text-secondary mb-6">
                 All our events are seamlessly managed through Luma for easy
                 registration, updates, and community interaction.
               </p>

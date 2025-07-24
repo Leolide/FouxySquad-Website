@@ -4,45 +4,66 @@ import { Button } from "@/components/ui/button";
 export default function Gallery() {
   const galleryItems = [
     {
+      src: "/attached_assets/Weixin Image_20250712202539_2095_1753394670431.jpg",
+      alt: "Fouxy Squad community event with diverse group of designers and creatives in London",
+      title: "July Community Meetup",
+      description: "Our amazing community gathering in London",
+      gradient: "from-fouxy-primary/80"
+    },
+    {
       src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
-      alt: "Creative professionals collaborating",
+      alt: "Creative professionals collaborating in design workshop",
       title: "Collaborative Sessions",
       description: "Creative minds working together",
-      gradient: "from-fouxy-primary/80"
+      gradient: "from-fouxy-secondary/80"
     },
     {
       src: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
-      alt: "Design community networking event",
+      alt: "Design community networking event with professionals mingling",
       title: "Networking Events",
       description: "Building meaningful connections",
-      gradient: "from-fouxy-secondary/80"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
-      alt: "Outdoor community gathering",
-      title: "Design Picnics",
-      description: "Creative fun in the great outdoors",
       gradient: "from-fouxy-accent/80"
     },
     {
-      src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
-      alt: "Modern design workspace",
-      title: "Workshop Spaces",
-      description: "Where creativity comes to life",
+      src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
+      alt: "Outdoor community gathering with designers enjoying picnic",
+      title: "Design Picnics",
+      description: "Creative fun in the great outdoors",
       gradient: "from-fouxy-primary/80"
     },
     {
-      src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
-      alt: "Team brainstorming session",
-      title: "Brainstorming Sessions",
-      description: "Ideas flowing freely",
+      src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
+      alt: "Modern design workspace with creative tools and equipment",
+      title: "Workshop Spaces",
+      description: "Where creativity comes to life",
       gradient: "from-fouxy-secondary/80"
     },
     {
+      src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
+      alt: "Team brainstorming session with designers sharing ideas",
+      title: "Brainstorming Sessions",
+      description: "Ideas flowing freely",
+      gradient: "from-fouxy-accent/80"
+    },
+    {
       src: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
-      alt: "Diverse group of designers",
+      alt: "Diverse group of designers engaged in community discussion",
       title: "Community Discussions",
       description: "Learning from each other",
+      gradient: "from-fouxy-primary/80"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
+      alt: "Online virtual meetup with designers connecting remotely",
+      title: "Virtual Meetups",
+      description: "Connecting from anywhere in the world",
+      gradient: "from-fouxy-secondary/80"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80",
+      alt: "London design community members presenting projects",
+      title: "Project Showcases",
+      description: "Sharing creative work and inspiration",
       gradient: "from-fouxy-accent/80"
     }
   ];
@@ -80,7 +101,7 @@ export default function Gallery() {
           <h2 className="font-comfortaa font-bold text-4xl text-fouxy-text mb-4">
             Community Gallery
           </h2>
-          <p className="text-xl text-fouxy-text/70 max-w-3xl mx-auto">
+          <p className="text-xl text-fouxy-text-secondary max-w-3xl mx-auto">
             Capturing the energy, creativity, and connections from our events.
             See our amazing community in action!
           </p>

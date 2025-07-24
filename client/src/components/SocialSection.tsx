@@ -53,7 +53,7 @@ export default function SocialSection() {
           <h2 className="font-comfortaa font-bold text-4xl text-fouxy-text mb-4">
             Connect With Us
           </h2>
-          <p className="text-xl text-fouxy-text/70 max-w-3xl mx-auto">
+          <p className="text-xl text-fouxy-text-secondary max-w-3xl mx-auto">
             Follow our journey, join our chat, and stay updated with the latest
             events and community highlights.
           </p>
@@ -75,7 +75,7 @@ export default function SocialSection() {
                 <h3 className="font-comfortaa font-bold text-xl text-fouxy-text mb-2">
                   Instagram
                 </h3>
-                <p className="text-fouxy-text/70 mb-4">
+                <p className="text-fouxy-text-secondary mb-4">
                   Follow our visual journey and event highlights
                 </p>
                 <Button
@@ -97,7 +97,7 @@ export default function SocialSection() {
                 <h3 className="font-comfortaa font-bold text-xl text-fouxy-text mb-2">
                   LinkedIn
                 </h3>
-                <p className="text-fouxy-text/70 mb-4">
+                <p className="text-fouxy-text-secondary mb-4">
                   Professional updates and industry insights
                 </p>
                 <Button
@@ -119,7 +119,7 @@ export default function SocialSection() {
                 <h3 className="font-comfortaa font-bold text-xl text-fouxy-text mb-2">
                   Join Group Chat
                 </h3>
-                <p className="text-fouxy-text/70 mb-4">
+                <p className="text-fouxy-text-secondary mb-4">
                   Scan QR code to join our active community chat
                 </p>
 
@@ -168,19 +168,19 @@ export default function SocialSection() {
             <div className="font-comfortaa font-bold text-3xl text-fouxy-primary mb-2">
               2.5K
             </div>
-            <div className="text-fouxy-text/70">Instagram Followers</div>
+            <div className="text-fouxy-text-secondary">Instagram Followers</div>
           </div>
           <div className="text-center">
             <div className="font-comfortaa font-bold text-3xl text-fouxy-primary mb-2">
               1.8K
             </div>
-            <div className="text-fouxy-text/70">LinkedIn Connections</div>
+            <div className="text-fouxy-text-secondary">LinkedIn Connections</div>
           </div>
           <div className="text-center">
             <div className="font-comfortaa font-bold text-3xl text-fouxy-primary mb-2">
               95%
             </div>
-            <div className="text-fouxy-text/70">Active in Group Chat</div>
+            <div className="text-fouxy-text-secondary">Active in Group Chat</div>
           </div>
         </motion.div>
       </div>

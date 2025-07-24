@@ -25,12 +25,16 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="text-2xl">🦊</div>
+              <img 
+                src="/attached_assets/Group 7_1753394618394.png" 
+                alt="Fouxy Squad Logo" 
+                className="w-8 h-8"
+              />
               <span className="font-comfortaa font-bold text-xl">
                 Fouxy Squad
               </span>
             </div>
-            <p className="text-white/70 max-w-md">
+            <p className="text-white/90 max-w-md">
               London's vibrant design community fostering connection,
               creativity, and growth among 200+ passionate designers and
               creatives.
@@ -41,7 +45,7 @@ export default function Footer() {
             <h4 className="font-comfortaa font-bold text-lg mb-4">
               Quick Links
             </h4>
-            <ul className="space-y-2 text-white/70">
+            <ul className="space-y-2 text-white/90">
               <li>
                 <button
                   onClick={() => scrollToSection("community")}
@@ -82,21 +86,21 @@ export default function Footer() {
             <div className="space-y-3">
               <button
                 onClick={() => handleSocialClick("instagram")}
-                className="flex items-center space-x-2 text-white/70 hover:text-white transition-colors duration-200"
+                className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
               >
                 <Instagram className="w-4 h-4" />
                 <span>@fouxy_squad</span>
               </button>
               <button
                 onClick={() => handleSocialClick("linkedin")}
-                className="flex items-center space-x-2 text-white/70 hover:text-white transition-colors duration-200"
+                className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
               >
                 <Linkedin className="w-4 h-4" />
                 <span>Fouxy Squad</span>
               </button>
               <a
                 href="mailto:hello@fouxysquad.com"
-                className="flex items-center space-x-2 text-white/70 hover:text-white transition-colors duration-200"
+                className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
               >
                 <Mail className="w-4 h-4" />
                 <span>hello@fouxysquad.com</span>
@@ -105,7 +109,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/60">
+        <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/80">
           <p>
             &copy; 2025 Fouxy Squad. Bringing London's design community together
             with love and creativity. 🦊

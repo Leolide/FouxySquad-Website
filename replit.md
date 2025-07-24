@@ -8,6 +8,13 @@ This is a community website for "Fouxy Squad," a London-based design community. 
 
 Preferred communication style: Simple, everyday language.
 
+### Recent Updates (July 24, 2025)
+- Integrated official Fouxy Squad logo (orange fox design) throughout the website
+- Updated Luma integration URL to: https://lu.ma/user/FouxySquad
+- Added real event photos from community gatherings
+- Improved accessibility and contrast ratios across all components
+- Enhanced gallery with 9 event photos including authentic community images
+
 ## System Architecture
 
 The application follows a modern full-stack architecture with clear separation between frontend, backend, and shared code:

@@ -24,7 +24,7 @@ export default function HeroSection() {
                 Welcome to{" "}
                 <span className="fox-mascot">Fouxy Squad</span>
               </h1>
-              <p className="text-xl text-fouxy-text/80 leading-relaxed">
+              <p className="text-xl text-fouxy-text-secondary leading-relaxed">
                 A vibrant London-based design community of{" "}
                 <strong>200+ creatives</strong>—from students to pros in UX, UI,
                 product design. We host playful, bold events that spark
@@ -53,19 +53,19 @@ export default function HeroSection() {
                 <div className="font-comfortaa font-bold text-2xl text-fouxy-primary">
                   200+
                 </div>
-                <div className="text-sm text-fouxy-text/70">Active Members</div>
+                <div className="text-sm text-fouxy-text-secondary">Active Members</div>
               </div>
               <div className="text-center">
                 <div className="font-comfortaa font-bold text-2xl text-fouxy-primary">
                   6
                 </div>
-                <div className="text-sm text-fouxy-text/70">Events Hosted</div>
+                <div className="text-sm text-fouxy-text-secondary">Events Hosted</div>
               </div>
               <div className="text-center">
                 <div className="font-comfortaa font-bold text-2xl text-fouxy-primary">
                   London
                 </div>
-                <div className="text-sm text-fouxy-text/70">Based</div>
+                <div className="text-sm text-fouxy-text-secondary">Based</div>
               </div>
             </div>
           </motion.div>
@@ -79,7 +79,11 @@ export default function HeroSection() {
             <div className="relative z-10 animate-float">
               <div className="bg-gradient-to-br from-fouxy-primary via-fouxy-secondary to-fouxy-accent rounded-3xl p-12 shadow-2xl">
                 <div className="text-center">
-                  <div className="text-8xl mb-4">🦊</div>
+                  <img 
+                    src="/attached_assets/Group 7_1753394618394.png" 
+                    alt="Fouxy Squad Mascot - Orange Fox Character" 
+                    className="w-24 h-24 mx-auto mb-4"
+                  />
                   <div className="font-comfortaa font-bold text-white text-2xl mb-2">
                     Meet Fouxy!
                   </div>

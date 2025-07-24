@@ -35,7 +35,7 @@ export default function CommunitySection() {
           <h2 className="font-comfortaa font-bold text-4xl text-fouxy-text mb-4">
             Our Amazing Community
           </h2>
-          <p className="text-xl text-fouxy-text/70 max-w-3xl mx-auto">
+          <p className="text-xl text-fouxy-text-secondary max-w-3xl mx-auto">
             A diverse group of passionate designers and creatives fostering
             design-driven tech conversations through inclusive events.
           </p>
@@ -55,7 +55,7 @@ export default function CommunitySection() {
                 <h3 className="font-comfortaa font-bold text-2xl text-fouxy-primary mb-2">
                   200+ Members
                 </h3>
-                <p className="text-fouxy-text/70">
+                <p className="text-fouxy-text-secondary">
                   Highly active professionals and students across UX, UI, and
                   product design
                 </p>
@@ -70,7 +70,7 @@ export default function CommunitySection() {
                 <h3 className="font-comfortaa font-bold text-2xl text-fouxy-primary mb-2">
                   Diverse Backgrounds
                 </h3>
-                <p className="text-fouxy-text/70">
+                <p className="text-fouxy-text-secondary">
                   From top design schools (UAL, RCA, Cambridge) and leading tech
                   companies
                 </p>
@@ -85,7 +85,7 @@ export default function CommunitySection() {
                 <h3 className="font-comfortaa font-bold text-2xl text-fouxy-primary mb-2">
                   20-35 Years
                 </h3>
-                <p className="text-fouxy-text/70">
+                <p className="text-fouxy-text-secondary">
                   Young professionals and students passionate about design and
                   technology
                 </p>
