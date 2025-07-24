@@ -48,10 +48,7 @@ export default function HeroSection() {
                 <span className="fox-mascot">Fouxy Squad</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-800 leading-relaxed">
-                A vibrant London-based design community of{" "}
-                <strong>200+ creatives</strong>—from students to pros in UX, UI,
-                product design. We host playful, bold events that spark
-                connection, fresh ideas, and skill-sharing.
+                A vibrant design community of creatives in UX, UI, product design. We host playful, bold events that spark connection, fresh ideas, and skill-sharing.
               </p>
             </div>
 
