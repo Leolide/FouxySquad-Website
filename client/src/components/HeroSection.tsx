@@ -14,7 +14,6 @@ export default function HeroSection() {
       {/* Floating Next Event Card - Only on Hero Section */}
       <div className="absolute top-4 right-4 z-40 max-w-xs hidden xl:block">
         <div className="relative bg-white rounded-2xl p-4 shadow-xl border border-orange-100 overflow-hidden">
-          <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full transform translate-x-4 -translate-y-4 opacity-10"></div>
           <div className="relative z-10">
             <div className="flex items-center space-x-2 mb-2">
               <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2 py-1 rounded-full text-xs font-bold">NEXT EVENT</span>
