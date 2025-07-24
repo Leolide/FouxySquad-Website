@@ -112,15 +112,15 @@ export default function HeroSection() {
             <div className="relative z-10 animate-float">
               <div className="text-center">
                 <img 
-                  src="/attached_assets/Group 7_1753395217548.png" 
-                  alt="Fouxy Squad Mascot - Orange Fox Character" 
-                  className="w-64 h-64 mx-auto mb-6"
+                  src="/attached_assets/ChatGPT Image Jul 6, 2025, 05_27_50 PM_1753396225683.png" 
+                  alt="Fouxy Squad Mascot - Pixel Art Orange Fox Character" 
+                  className="w-80 h-80 mx-auto mb-6 drop-shadow-2xl"
                 />
                 <div className="font-comfortaa font-bold text-black text-3xl mb-2">
                   Meet Fouxy!
                 </div>
                 <div className="text-gray-700 text-lg">
-                  Our adorable community mascot
+                  Our adorable pixel art mascot
                 </div>
               </div>
             </div>
