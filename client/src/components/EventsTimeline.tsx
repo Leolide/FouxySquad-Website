@@ -103,7 +103,7 @@ export default function EventsTimeline() {
           </h2>
         </motion.div>
 
-        <div className="space-y-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event, index) => (
             <motion.div
               key={index}
@@ -114,33 +114,33 @@ export default function EventsTimeline() {
               className="group"
             >
               {event.image ? (
-                <div className="relative overflow-hidden rounded-2xl">
+                <div className="relative overflow-hidden rounded-2xl aspect-square">
                   <img 
                     src={event.image} 
                     alt={event.title}
-                    className="w-full h-96 object-cover"
+                    className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                  <div className="absolute bottom-8 left-8 right-8">
-                    <div className="flex items-center space-x-3 mb-3">
-                      <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium">
                         {event.date}
                       </span>
                       {event.isUpcoming && (
-                        <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        <span className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold">
                           Upcoming
                         </span>
                       )}
                     </div>
-                    <h3 className="font-comfortaa font-bold text-2xl text-white mb-2">
+                    <h3 className="font-comfortaa font-bold text-lg text-white mb-2">
                       {event.title}
                     </h3>
-                    <p className="text-white/90 text-lg">
+                    <p className="text-white/90 text-sm">
                       {event.description}
                     </p>
                     {event.participants && (
-                      <div className="mt-4">
-                        <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">
+                      <div className="mt-3">
+                        <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium">
                           {event.participants} participants
                         </span>
                       </div>
@@ -148,12 +148,12 @@ export default function EventsTimeline() {
                   </div>
                 </div>
               ) : (
-                <div className="bg-gray-50 rounded-2xl p-12 text-center">
-                  <span className="text-6xl mb-4 block">{event.icon}</span>
-                  <h3 className="font-comfortaa font-bold text-2xl text-black mb-2">
+                <div className="bg-gray-50 rounded-2xl p-8 text-center aspect-square flex flex-col justify-center">
+                  <span className="text-4xl mb-3 block">{event.icon}</span>
+                  <h3 className="font-comfortaa font-bold text-lg text-black mb-2">
                     {event.title}
                   </h3>
-                  <p className="text-gray-600 text-lg">
+                  <p className="text-gray-600 text-sm">
                     {event.description}
                   </p>
                 </div>
