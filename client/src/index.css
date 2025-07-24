@@ -31,9 +31,9 @@
   --fouxy-secondary: hsl(22, 98%, 46%);
   --fouxy-accent: hsl(18, 98%, 53%);
   --fouxy-bg: hsl(32, 22%, 97%);
-  --fouxy-text: hsl(27, 48%, 10%);
+  --fouxy-text: hsl(0, 0%, 5%);
   --fouxy-neutral: hsl(0, 0%, 94%);
-  --fouxy-text-secondary: hsl(27, 35%, 15%);
+  --fouxy-text-secondary: hsl(0, 0%, 20%);
 }
 
 .dark {
@@ -201,6 +201,6 @@
 }
 
 .fox-mascot {
-  color: var(--fouxy-primary);
+  color: #DF4106;
   font-weight: 700;
 }

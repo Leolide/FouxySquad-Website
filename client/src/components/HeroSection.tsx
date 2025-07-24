@@ -20,11 +20,11 @@ export default function HeroSection() {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <h1 className="font-comfortaa font-bold text-5xl lg:text-6xl leading-tight text-fouxy-text">
+              <h1 className="font-comfortaa font-bold text-5xl lg:text-6xl leading-tight text-black">
                 Welcome to{" "}
                 <span className="fox-mascot">Fouxy Squad</span>
               </h1>
-              <p className="text-xl text-fouxy-text-secondary leading-relaxed">
+              <p className="text-xl text-gray-800 leading-relaxed">
                 A vibrant London-based design community of{" "}
                 <strong>200+ creatives</strong>—from students to pros in UX, UI,
                 product design. We host playful, bold events that spark
@@ -50,22 +50,22 @@ export default function HeroSection() {
 
             <div className="flex items-center space-x-6 pt-4">
               <div className="text-center">
-                <div className="font-comfortaa font-bold text-2xl text-fouxy-primary">
+                <div className="font-comfortaa font-bold text-2xl text-orange-600">
                   200+
                 </div>
-                <div className="text-sm text-fouxy-text-secondary">Active Members</div>
+                <div className="text-sm text-gray-700">Active Members</div>
               </div>
               <div className="text-center">
-                <div className="font-comfortaa font-bold text-2xl text-fouxy-primary">
+                <div className="font-comfortaa font-bold text-2xl text-orange-600">
                   6
                 </div>
-                <div className="text-sm text-fouxy-text-secondary">Events Hosted</div>
+                <div className="text-sm text-gray-700">Events Hosted</div>
               </div>
               <div className="text-center">
-                <div className="font-comfortaa font-bold text-2xl text-fouxy-primary">
+                <div className="font-comfortaa font-bold text-2xl text-orange-600">
                   London
                 </div>
-                <div className="text-sm text-fouxy-text-secondary">Based</div>
+                <div className="text-sm text-gray-700">Based</div>
               </div>
             </div>
           </motion.div>
@@ -77,19 +77,17 @@ export default function HeroSection() {
             className="relative"
           >
             <div className="relative z-10 animate-float">
-              <div className="bg-gradient-to-br from-fouxy-primary via-fouxy-secondary to-fouxy-accent rounded-3xl p-12 shadow-2xl">
-                <div className="text-center">
-                  <img 
-                    src="/attached_assets/Group 7_1753395217548.png" 
-                    alt="Fouxy Squad Mascot - Orange Fox Character" 
-                    className="w-24 h-24 mx-auto mb-4"
-                  />
-                  <div className="font-comfortaa font-bold text-white text-2xl mb-2">
-                    Meet Fouxy!
-                  </div>
-                  <div className="text-white/90">
-                    Our adorable community mascot
-                  </div>
+              <div className="text-center">
+                <img 
+                  src="/attached_assets/Group 7_1753395217548.png" 
+                  alt="Fouxy Squad Mascot - Orange Fox Character" 
+                  className="w-64 h-64 mx-auto mb-6"
+                />
+                <div className="font-comfortaa font-bold text-black text-3xl mb-2">
+                  Meet Fouxy!
+                </div>
+                <div className="text-gray-700 text-lg">
+                  Our adorable community mascot
                 </div>
               </div>
             </div>
