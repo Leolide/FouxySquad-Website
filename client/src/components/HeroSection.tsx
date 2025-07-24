@@ -34,20 +34,20 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid lg:grid-cols-2 gap-16 items-center py-8">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-8 px-4 sm:px-0"
           >
-            <div className="space-y-4">
-              <h1 className="font-comfortaa font-bold text-5xl lg:text-6xl leading-tight text-black">
+            <div className="space-y-6">
+              <h1 className="font-comfortaa font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-black">
                 Welcome to{" "}
                 <span className="fox-mascot">Fouxy Squad</span>
               </h1>
-              <p className="text-xl text-gray-800 leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-800 leading-relaxed">
                 A vibrant London-based design community of{" "}
                 <strong>200+ creatives</strong>—from students to pros in UX, UI,
                 product design. We host playful, bold events that spark
@@ -55,17 +55,17 @@ export default function HeroSection() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 px-2 sm:px-0">
               <Button
                 onClick={() => scrollToSection("cta")}
-                className="bg-fouxy-primary text-white px-8 py-4 rounded-full hover:bg-fouxy-secondary transition-all duration-300 transform hover:scale-105 font-comfortaa font-medium text-lg shadow-lg"
+                className="bg-fouxy-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-fouxy-secondary transition-all duration-300 transform hover:scale-105 font-comfortaa font-medium text-base sm:text-lg shadow-lg"
               >
                 Join Our Community
               </Button>
               <Button
                 variant="outline"
                 onClick={() => scrollToSection("events")}
-                className="border-2 border-fouxy-primary text-fouxy-primary px-8 py-4 rounded-full hover:bg-fouxy-primary hover:text-white transition-all duration-300 font-comfortaa font-medium text-lg"
+                className="border-2 border-fouxy-primary text-fouxy-primary px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-fouxy-primary hover:text-white transition-all duration-300 font-comfortaa font-medium text-base sm:text-lg"
               >
                 View Events
               </Button>
@@ -99,20 +99,20 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="relative mt-12 lg:mt-0"
           >
             <div className="relative z-10 animate-float">
-              <div className="text-center">
+              <div className="text-center px-4">
                 <img 
                   src="/attached_assets/ChatGPT Image Jul 6, 2025, 05_27_50 PM_1753396225683.png" 
                   alt="Fouxy Squad Mascot - Pixel Art Orange Fox Character" 
-                  className="w-[500px] h-[500px] mx-auto drop-shadow-2xl"
+                  className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] mx-auto drop-shadow-2xl object-contain"
                 />
               </div>
             </div>
-            <div className="absolute -top-6 -right-6 w-24 h-24 bg-fouxy-accent/20 rounded-full animate-pulse-slow"></div>
+            <div className="absolute -top-6 -right-6 w-16 h-16 sm:w-24 sm:h-24 bg-fouxy-accent/20 rounded-full animate-pulse-slow"></div>
             <div
-              className="absolute -bottom-8 -left-8 w-32 h-32 bg-fouxy-secondary/20 rounded-full animate-pulse-slow"
+              className="absolute -bottom-8 -left-8 w-20 h-20 sm:w-32 sm:h-32 bg-fouxy-secondary/20 rounded-full animate-pulse-slow"
               style={{ animationDelay: "1s" }}
             ></div>
           </motion.div>
