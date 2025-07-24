@@ -12,8 +12,8 @@ export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-fouxy-bg via-white to-fouxy-neutral min-h-screen flex items-center">
       {/* Floating Next Event Card - Only on Hero Section */}
-      <div className="absolute top-20 right-6 z-40 max-w-sm hidden lg:block">
-        <div className="relative bg-white rounded-3xl p-6 shadow-2xl border border-orange-100 overflow-hidden">
+      <div className="absolute top-4 right-4 z-40 max-w-xs hidden xl:block">
+        <div className="relative bg-white rounded-3xl p-5 shadow-2xl border border-orange-100 overflow-hidden">
           <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full transform translate-x-6 -translate-y-6 opacity-10"></div>
           <div className="relative z-10">
             <div className="flex items-center space-x-3 mb-3">
