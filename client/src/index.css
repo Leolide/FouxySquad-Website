@@ -201,8 +201,6 @@
 }
 
 .fox-mascot {
-  background: linear-gradient(135deg, var(--fouxy-primary) 0%, var(--fouxy-secondary) 50%, var(--fouxy-accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--fouxy-primary);
+  font-weight: 700;
 }
