@@ -32,10 +32,10 @@ export default function CommunitySection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-comfortaa font-bold text-4xl text-fouxy-text mb-4">
+          <h2 className="font-comfortaa font-bold text-4xl text-black mb-4">
             Our Amazing Community
           </h2>
-          <p className="text-xl text-fouxy-text-secondary max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             A diverse group of passionate designers and creatives fostering
             design-driven tech conversations through inclusive events.
           </p>
@@ -52,10 +52,10 @@ export default function CommunitySection() {
             <Card className="bg-fouxy-bg rounded-2xl card-hover border border-fouxy-accent/20">
               <CardContent className="p-8">
                 <div className="text-4xl mb-4">👥</div>
-                <h3 className="font-comfortaa font-bold text-2xl text-fouxy-primary mb-2">
+                <h3 className="font-comfortaa font-bold text-2xl text-orange-600 mb-2">
                   200+ Members
                 </h3>
-                <p className="text-fouxy-text-secondary">
+                <p className="text-gray-700">
                   Highly active professionals and students across UX, UI, and
                   product design
                 </p>
@@ -67,10 +67,10 @@ export default function CommunitySection() {
             <Card className="bg-fouxy-bg rounded-2xl card-hover border border-fouxy-accent/20">
               <CardContent className="p-8">
                 <div className="text-4xl mb-4">🎓</div>
-                <h3 className="font-comfortaa font-bold text-2xl text-fouxy-primary mb-2">
+                <h3 className="font-comfortaa font-bold text-2xl text-orange-600 mb-2">
                   Diverse Backgrounds
                 </h3>
-                <p className="text-fouxy-text-secondary">
+                <p className="text-gray-700">
                   From top design schools (UAL, RCA, Cambridge) and leading tech
                   companies
                 </p>
@@ -82,10 +82,10 @@ export default function CommunitySection() {
             <Card className="bg-fouxy-bg rounded-2xl card-hover border border-fouxy-accent/20">
               <CardContent className="p-8">
                 <div className="text-4xl mb-4">🌟</div>
-                <h3 className="font-comfortaa font-bold text-2xl text-fouxy-primary mb-2">
+                <h3 className="font-comfortaa font-bold text-2xl text-orange-600 mb-2">
                   20-35 Years
                 </h3>
-                <p className="text-fouxy-text-secondary">
+                <p className="text-gray-700">
                   Young professionals and students passionate about design and
                   technology
                 </p>
@@ -101,10 +101,10 @@ export default function CommunitySection() {
           viewport={{ once: true }}
           className="bg-fouxy-neutral rounded-2xl p-12"
         >
-          <h3 className="font-comfortaa font-bold text-2xl text-center text-fouxy-text mb-8">
+          <h3 className="font-comfortaa font-bold text-2xl text-center text-black mb-8">
             Our Members Work At
           </h3>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+          <div className="flex flex-wrap justify-center items-center gap-8">
             {companies.map((company, index) => (
               <motion.div
                 key={company}
@@ -112,7 +112,7 @@ export default function CommunitySection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white px-6 py-3 rounded-lg shadow-sm font-medium text-fouxy-text"
+                className="bg-white px-6 py-3 rounded-lg shadow-sm font-medium text-gray-800"
               >
                 {company}
               </motion.div>

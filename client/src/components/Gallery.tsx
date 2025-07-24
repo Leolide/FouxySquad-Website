@@ -98,10 +98,10 @@ export default function Gallery() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-comfortaa font-bold text-4xl text-fouxy-text mb-4">
+          <h2 className="font-comfortaa font-bold text-4xl text-black mb-4">
             Community Gallery
           </h2>
-          <p className="text-xl text-fouxy-text-secondary max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Capturing the energy, creativity, and connections from our events.
             See our amazing community in action!
           </p>

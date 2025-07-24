@@ -90,10 +90,10 @@ export default function EventsTimeline() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-comfortaa font-bold text-4xl text-fouxy-text mb-4">
+          <h2 className="font-comfortaa font-bold text-4xl text-black mb-4">
             Our Journey & Events
           </h2>
-          <p className="text-xl text-fouxy-text-secondary max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             From our humble beginnings in February 2025 to hosting events with
             100+ participants. Here's our incredible growth story.
           </p>
@@ -132,18 +132,18 @@ export default function EventsTimeline() {
                   <h3
                     className={`mb-2 font-comfortaa font-bold text-xl ${
                       event.color === "bg-fouxy-primary"
-                        ? "text-fouxy-primary"
+                        ? "text-orange-600"
                         : event.color === "bg-fouxy-secondary"
-                        ? "text-fouxy-secondary"
-                        : "text-fouxy-accent"
+                        ? "text-orange-600"
+                        : "text-orange-600"
                     }`}
                   >
                     {event.date}
                   </h3>
-                  <h4 className="mb-2 font-bold text-lg text-fouxy-text">
+                  <h4 className="mb-2 font-bold text-lg text-black">
                     {event.title}
                   </h4>
-                  <p className="text-sm leading-snug tracking-wide text-fouxy-text-secondary">
+                  <p className="text-sm leading-snug tracking-wide text-gray-700">
                     {event.description}
                   </p>
                   {event.isUpcoming && (
@@ -171,10 +171,10 @@ export default function EventsTimeline() {
           <Card className="bg-white rounded-2xl shadow-lg card-hover max-w-2xl mx-auto">
             <CardContent className="p-8">
               <div className="text-4xl mb-4">📅</div>
-              <h3 className="font-comfortaa font-bold text-2xl text-fouxy-text mb-4">
+              <h3 className="font-comfortaa font-bold text-2xl text-black mb-4">
                 Event Management via Luma
               </h3>
-              <p className="text-fouxy-text-secondary mb-6">
+              <p className="text-gray-700 mb-6">
                 All our events are seamlessly managed through Luma for easy
                 registration, updates, and community interaction.
               </p>
