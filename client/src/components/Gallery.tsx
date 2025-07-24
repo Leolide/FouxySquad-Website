@@ -33,13 +33,7 @@ export default function Gallery() {
       description: "Creative professionals connecting in central London",
       gradient: "from-fouxy-primary/80"
     },
-    {
-      src: "/attached_assets/4-1 1_1753397342850.png",
-      alt: "Digital collaboration tools and design workflows in action",
-      title: "Digital Workshop Tools",
-      description: "Exploring modern design and development workflows",
-      gradient: "from-fouxy-secondary/80"
-    },
+
     {
       src: "/attached_assets/4 1_1753397342850.png",
       alt: "Virtual gaming session with community members exploring creative spaces",

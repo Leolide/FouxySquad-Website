@@ -16,15 +16,6 @@ interface TimelineEvent {
 export default function EventsTimeline() {
   const events: TimelineEvent[] = [
     {
-      date: "Mar 29, 2024",
-      title: "London UX/UI Designers - Online Mini Social",
-      description: "Virtual networking event for London-based designers",
-      participants: 15,
-      icon: "💻",
-      color: "bg-fouxy-primary",
-      image: "/attached_assets/ChatGPT Image May 1, 2025, 12_57_38 AM 1_1753397526191.png"
-    },
-    {
       date: "July 12, 2025",
       title: "London Vibe Coding × Design: From 0 to 1",
       description: "Build with AI, No Coding Experience needed - at Dyson School",
@@ -59,6 +50,15 @@ export default function EventsTimeline() {
       icon: "🏞️",
       color: "bg-fouxy-primary",
       image: "/attached_assets/oucbuc _1753397105237.avif"
+    },
+    {
+      date: "Mar 29, 2025",
+      title: "London UX/UI Designers - Online Mini Social",
+      description: "Virtual networking event for London-based designers",
+      participants: 15,
+      icon: "💻",
+      color: "bg-fouxy-primary",
+      image: "/attached_assets/ChatGPT Image May 1, 2025, 12_57_38 AM 1_1753397526191.png"
     }
   ];
 
@@ -82,7 +82,7 @@ export default function EventsTimeline() {
           className="text-center mb-24"
         >
           <h2 className="font-comfortaa font-bold text-3xl text-black mb-6">
-            Our Journey
+            Our Events
           </h2>
         </motion.div>
 
@@ -97,7 +97,7 @@ export default function EventsTimeline() {
               className="group"
             >
               {event.image ? (
-                <div className="relative overflow-hidden rounded-2xl aspect-[4/5]">
+                <div className="relative overflow-hidden rounded-2xl aspect-square">
                   <img 
                     src={event.image} 
                     alt={event.title}
@@ -131,7 +131,7 @@ export default function EventsTimeline() {
                   </div>
                 </div>
               ) : (
-                <div className="bg-gray-50 rounded-2xl p-8 text-center aspect-[4/5] flex flex-col justify-center">
+                <div className="bg-gray-50 rounded-2xl p-8 text-center aspect-square flex flex-col justify-center">
                   <span className="text-4xl mb-3 block">{event.icon}</span>
                   <h3 className="font-comfortaa font-bold text-lg text-black mb-2">
                     {event.title}

@@ -13,35 +13,24 @@ export default function HeroSection() {
     <section className="relative overflow-hidden bg-gradient-to-br from-fouxy-bg via-white to-fouxy-neutral min-h-screen flex items-center">
       {/* Floating Next Event Card - Only on Hero Section */}
       <div className="absolute top-4 right-4 z-40 max-w-xs hidden xl:block">
-        <div className="relative bg-white rounded-3xl p-5 shadow-2xl border border-orange-100 overflow-hidden">
-          <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full transform translate-x-6 -translate-y-6 opacity-10"></div>
+        <div className="relative bg-white rounded-2xl p-4 shadow-xl border border-orange-100 overflow-hidden">
+          <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full transform translate-x-4 -translate-y-4 opacity-10"></div>
           <div className="relative z-10">
-            <div className="flex items-center space-x-3 mb-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center">
-                <span className="text-white text-lg">🔮</span>
-              </div>
-              <div>
-                <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-3 py-1 rounded-full text-xs font-bold tracking-wide">NEXT EVENT</span>
-              </div>
+            <div className="flex items-center space-x-2 mb-2">
+              <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2 py-1 rounded-full text-xs font-bold">NEXT EVENT</span>
             </div>
-            <h3 className="font-comfortaa font-bold text-xl text-black mb-2">
-              London Vibe Coding × Design: From 0 to 1
+            <h3 className="font-comfortaa font-bold text-lg text-black mb-1">
+              London UX/UI Designers - Online Mini Social
             </h3>
-            <p className="text-gray-600 mb-4 text-sm">
-              <span className="font-medium">July 12, 2025</span> • Build with AI, No Coding Experience needed
+            <p className="text-gray-600 mb-3 text-xs">
+              <span className="font-medium">Mar 29, 2025</span> • Virtual networking
             </p>
-            <div className="flex items-center space-x-3">
-              <button 
-                onClick={() => window.open("https://lu.ma/user/FouxySquad", "_blank")}
-                className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-2xl font-bold hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg text-sm"
-              >
-                Register on Luma →
-              </button>
-              <div className="text-xs text-gray-500">
-                <div className="font-medium">Free Event</div>
-                <div>London Based</div>
-              </div>
-            </div>
+            <button 
+              onClick={() => window.open("https://lu.ma/user/FouxySquad", "_blank")}
+              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-3 py-1.5 rounded-xl font-medium hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg text-xs w-full"
+            >
+              Register on Luma →
+            </button>
           </div>
         </div>
       </div>
