@@ -98,17 +98,15 @@ export default function Testimonials() {
               <p className="text-gray-700 text-sm mb-4 leading-relaxed">
                 "{testimonial.text}"
               </p>
-              <div className="flex items-start">
-                <div className="w-8 h-8 bg-gradient-to-br from-fouxy-primary to-fouxy-secondary rounded-full flex items-center justify-center mr-3 mt-0.5">
+              <div className="flex items-center justify-start">
+                <div className="w-8 h-8 bg-gradient-to-br from-fouxy-primary to-fouxy-secondary rounded-full flex items-center justify-center mr-3">
                   <span className="text-white text-xs font-bold">
                     {testimonial.author.split(' ').map(name => name[0]).join('')}
                   </span>
                 </div>
-                <div className="flex-1">
-                  <p className="text-gray-600 text-xs font-medium text-left">
-                    {testimonial.author}
-                  </p>
-                </div>
+                <p className="text-gray-600 text-xs font-medium">
+                  {testimonial.author}
+                </p>
               </div>
             </motion.div>
           ))}
