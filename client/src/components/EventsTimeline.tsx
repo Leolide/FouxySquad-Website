@@ -15,43 +15,12 @@ interface TimelineEvent {
 export default function EventsTimeline() {
   const events: TimelineEvent[] = [
     {
-      date: "Feb 2025",
-      title: "Founded in London",
-      description: "The beginning of our amazing design community journey",
-      icon: "🚀",
-      color: "bg-fouxy-primary"
-    },
-    {
-      date: "Mar 2025",
-      title: "First Meetup",
-      description: "20 participants joined our inaugural event",
-      participants: 20,
-      icon: "👥",
-      color: "bg-fouxy-secondary"
-    },
-    {
-      date: "Apr 2025",
-      title: "Second Meetup",
-      description: "Growing to 30 participants with amazing energy",
-      participants: 30,
-      icon: "📈",
-      color: "bg-fouxy-accent"
-    },
-    {
-      date: "May 2025",
-      title: "Design Picnic",
-      description: "40 participants enjoyed outdoor creativity and networking",
-      participants: 40,
-      icon: "🌳",
-      color: "bg-fouxy-primary"
-    },
-    {
-      date: "May 2025",
-      title: "First Online Meetup",
-      description: "30 participants connected virtually from around the world",
-      participants: 30,
-      icon: "💻",
-      color: "bg-fouxy-secondary"
+      date: "July 2025",
+      title: "Vibe Coding for Designers",
+      description: "Upcoming: Bridging design and development skills",
+      icon: "🔮",
+      color: "bg-fouxy-primary",
+      isUpcoming: true
     },
     {
       date: "June 2025",
@@ -62,12 +31,43 @@ export default function EventsTimeline() {
       color: "bg-fouxy-accent"
     },
     {
-      date: "July 2025",
-      title: "Vibe Coding for Designers",
-      description: "Upcoming: Bridging design and development skills",
-      icon: "🔮",
-      color: "bg-fouxy-primary",
-      isUpcoming: true
+      date: "May 2025",
+      title: "First Online Meetup",
+      description: "30 participants connected virtually from around the world",
+      participants: 30,
+      icon: "💻",
+      color: "bg-fouxy-secondary"
+    },
+    {
+      date: "May 2025",
+      title: "Design Picnic",
+      description: "40 participants enjoyed outdoor creativity and networking",
+      participants: 40,
+      icon: "🌳",
+      color: "bg-fouxy-primary"
+    },
+    {
+      date: "Apr 2025",
+      title: "Second Meetup",
+      description: "Growing to 30 participants with amazing energy",
+      participants: 30,
+      icon: "📈",
+      color: "bg-fouxy-accent"
+    },
+    {
+      date: "Mar 2025",
+      title: "First Meetup",
+      description: "20 participants joined our inaugural event",
+      participants: 20,
+      icon: "👥",
+      color: "bg-fouxy-secondary"
+    },
+    {
+      date: "Feb 2025",
+      title: "Founded in London",
+      description: "The beginning of our amazing design community journey",
+      icon: "🚀",
+      color: "bg-fouxy-primary"
     }
   ];
 

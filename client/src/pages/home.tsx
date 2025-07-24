@@ -4,7 +4,6 @@ import CommunitySection from "@/components/CommunitySection";
 import EventsTimeline from "@/components/EventsTimeline";
 import Gallery from "@/components/Gallery";
 import SocialSection from "@/components/SocialSection";
-import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
       <EventsTimeline />
       <Gallery />
       <SocialSection />
-      <CTASection />
       <Footer />
     </div>
   );

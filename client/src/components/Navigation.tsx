@@ -25,7 +25,7 @@ export default function Navigation() {
             <img 
               src="/attached_assets/Group 7_1753395217548.png" 
               alt="Fouxy Squad Logo - Orange Fox" 
-              className="w-10 h-10 animate-bounce-slow"
+              className="w-10 h-10"
             />
             <span className="font-comfortaa font-bold text-xl text-fouxy-primary">
               Fouxy Squad
