@@ -16,12 +16,12 @@ interface TimelineEvent {
 export default function EventsTimeline() {
   const events: TimelineEvent[] = [
     {
-      date: "August 2025",
+      date: "Mar 29, 2024",
       title: "London UX/UI Designers - Online Mini Social",
-      description: "Upcoming: Virtual networking event for London-based designers",
+      description: "Virtual networking event for London-based designers",
+      participants: 15,
       icon: "💻",
       color: "bg-fouxy-primary",
-      isUpcoming: true,
       image: "/attached_assets/ChatGPT Image May 1, 2025, 12_57_38 AM 1_1753397526191.png"
     },
     {
