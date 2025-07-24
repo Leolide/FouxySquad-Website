@@ -32,16 +32,9 @@ export default function CommunitySection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-comfortaa font-bold text-4xl text-black mb-6">
+          <h2 className="font-comfortaa font-bold text-4xl text-black mb-4">
             Our Amazing Community
           </h2>
-          <div className="max-w-4xl mx-auto mb-6">
-            <img 
-              src="/attached_assets/Group 1_1753397447548.png" 
-              alt="Diverse community of 200+ creative fox characters representing our amazing Fouxy Squad members"
-              className="w-full h-auto rounded-2xl shadow-lg"
-            />
-          </div>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             A diverse group of passionate designers and creatives fostering
             design-driven tech conversations through inclusive events.
