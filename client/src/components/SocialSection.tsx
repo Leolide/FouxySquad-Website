@@ -117,19 +117,9 @@ export default function SocialSection() {
                 <h3 className="font-comfortaa font-bold text-xl text-black mb-2">
                   Join Group Chat
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-6">
                   Scan QR code to join our active community chat
                 </p>
-
-                <div 
-                  onClick={openQRModal}
-                  className="w-32 h-32 bg-fouxy-neutral border-2 border-dashed border-fouxy-primary rounded-xl mx-auto mb-4 flex items-center justify-center cursor-pointer hover:bg-orange-50 transition-colors"
-                >
-                  <div className="text-center text-fouxy-text/50">
-                    <QrCode className="w-8 h-8 mx-auto mb-2" />
-                    <div className="text-xs">Click to view QR</div>
-                  </div>
-                </div>
 
                 <Button
                   onClick={openQRModal}
