@@ -25,8 +25,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="text-2xl">🦊</div>
-              <span className="font-comfortaa font-bold text-xl">
+              <img 
+                src="/attached_assets/Frame 5_1753394404905.png" 
+                alt="Fouxy Squad Logo" 
+                className="w-8 h-8 animate-kawaii-wiggle" 
+              />
+              <span className="font-comfortaa font-bold text-xl sparkle-decoration">
                 Fouxy Squad
               </span>
             </div>

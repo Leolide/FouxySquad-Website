@@ -22,8 +22,12 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
-            <div className="text-3xl animate-bounce-slow">🦊</div>
-            <span className="font-comfortaa font-bold text-xl text-fouxy-primary">
+            <img 
+              src="/attached_assets/Frame 5_1753394404905.png" 
+              alt="Fouxy Squad Logo" 
+              className="w-10 h-10 animate-kawaii-wiggle" 
+            />
+            <span className="font-comfortaa font-bold text-xl text-fouxy-text sparkle-decoration">
               Fouxy Squad
             </span>
           </div>
@@ -32,27 +36,27 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("community")}
-              className="text-fouxy-text hover:text-fouxy-primary transition-colors duration-200"
+              className="text-fouxy-text hover:text-fouxy-primary transition-all duration-300 font-medium hover:scale-105"
             >
-              Community
+              Community 💫
             </button>
             <button
               onClick={() => scrollToSection("events")}
-              className="text-fouxy-text hover:text-fouxy-primary transition-colors duration-200"
+              className="text-fouxy-text hover:text-fouxy-primary transition-all duration-300 font-medium hover:scale-105"
             >
-              Events
+              Events 🎉
             </button>
             <button
               onClick={() => scrollToSection("gallery")}
-              className="text-fouxy-text hover:text-fouxy-primary transition-colors duration-200"
+              className="text-fouxy-text hover:text-fouxy-primary transition-all duration-300 font-medium hover:scale-105"
             >
-              Gallery
+              Gallery 📸
             </button>
             <Button
               onClick={handleJoinCommunity}
-              className="bg-fouxy-primary text-white px-6 py-2 rounded-full hover:bg-fouxy-secondary transition-colors duration-200 font-medium"
+              className="kawaii-button bg-fouxy-primary text-white px-6 py-2 font-comfortaa font-bold"
             >
-              Join Us
+              Join Us! 🌟
             </Button>
           </div>
           
@@ -75,27 +79,27 @@ export default function Navigation() {
             <div className="flex flex-col space-y-4 px-4">
               <button
                 onClick={() => scrollToSection("community")}
-                className="text-left text-fouxy-text hover:text-fouxy-primary transition-colors duration-200"
+                className="text-left text-fouxy-text hover:text-fouxy-primary transition-all duration-300 font-medium hover:scale-105"
               >
-                Community
+                Community 💫
               </button>
               <button
                 onClick={() => scrollToSection("events")}
-                className="text-left text-fouxy-text hover:text-fouxy-primary transition-colors duration-200"
+                className="text-left text-fouxy-text hover:text-fouxy-primary transition-all duration-300 font-medium hover:scale-105"
               >
-                Events
+                Events 🎉
               </button>
               <button
                 onClick={() => scrollToSection("gallery")}
-                className="text-left text-fouxy-text hover:text-fouxy-primary transition-colors duration-200"
+                className="text-left text-fouxy-text hover:text-fouxy-primary transition-all duration-300 font-medium hover:scale-105"
               >
-                Gallery
+                Gallery 📸
               </button>
               <Button
                 onClick={handleJoinCommunity}
-                className="bg-fouxy-primary text-white rounded-full hover:bg-fouxy-secondary transition-colors duration-200 w-full"
+                className="kawaii-button bg-fouxy-primary text-white w-full font-comfortaa font-bold"
               >
-                Join Us
+                Join Us! 🌟
               </Button>
             </div>
           </div>
