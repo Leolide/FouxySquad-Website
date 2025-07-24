@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
+import { X } from "lucide-react";
 
 export default function Gallery() {
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const galleryItems = [
     {
       src: "/attached_assets/Weixin Image_20250712202539_2095_1753394670431.jpg",
@@ -69,10 +71,52 @@ export default function Gallery() {
     visible: { opacity: 1, y: 0 }
   };
 
-  const handleViewMore = () => {
-    // In a real implementation, this would load more gallery images
-    console.log("View more gallery clicked");
+  const openLightbox = (index: number) => {
+    setSelectedImage(index);
   };
+
+  const closeLightbox = () => {
+    setSelectedImage(null);
+  };
+
+  const navigateImage = (direction: 'prev' | 'next') => {
+    if (selectedImage === null) return;
+    
+    if (direction === 'prev') {
+      setSelectedImage(selectedImage > 0 ? selectedImage - 1 : galleryItems.length - 1);
+    } else {
+      setSelectedImage(selectedImage < galleryItems.length - 1 ? selectedImage + 1 : 0);
+    }
+  };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (selectedImage === null) return;
+
+      switch (event.key) {
+        case 'Escape':
+          closeLightbox();
+          break;
+        case 'ArrowLeft':
+          navigateImage('prev');
+          break;
+        case 'ArrowRight':
+          navigateImage('next');
+          break;
+      }
+    };
+
+    if (selectedImage !== null) {
+      document.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedImage]);
 
   return (
     <section id="gallery" className="py-32 bg-white">
@@ -104,7 +148,8 @@ export default function Gallery() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="relative group overflow-hidden rounded-2xl card-hover"
+              className="relative group overflow-hidden rounded-2xl card-hover cursor-pointer"
+              onClick={() => openLightbox(index)}
             >
               <img
                 src={item.src}
@@ -126,22 +171,67 @@ export default function Gallery() {
           ))}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <Button
-            onClick={handleViewMore}
-            variant="outline"
-            className="border-2 border-fouxy-primary text-fouxy-primary px-8 py-3 rounded-full hover:bg-fouxy-primary hover:text-white transition-all duration-300 font-comfortaa font-medium"
-          >
-            View More Photos
-          </Button>
-        </motion.div>
+
       </div>
+
+      {/* Lightbox */}
+      {selectedImage !== null && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          onClick={closeLightbox}
+        >
+          <div 
+            className="relative max-w-7xl max-h-full w-full h-full flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={closeLightbox}
+              className="absolute top-4 right-4 z-10 bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm rounded-full p-2 transition-all duration-200"
+            >
+              <X className="w-6 h-6 text-white" />
+            </button>
+
+            {/* Previous button */}
+            <button
+              onClick={() => navigateImage('prev')}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm rounded-full p-3 transition-all duration-200"
+            >
+              <span className="text-white text-xl font-bold">‹</span>
+            </button>
+
+            {/* Next button */}
+            <button
+              onClick={() => navigateImage('next')}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm rounded-full p-3 transition-all duration-200"
+            >
+              <span className="text-white text-xl font-bold">›</span>
+            </button>
+
+            {/* Main image */}
+            <img
+              src={galleryItems[selectedImage].src}
+              alt={galleryItems[selectedImage].alt}
+              className="max-w-full max-h-full object-contain"
+            />
+
+            {/* Image info */}
+            <div className="absolute bottom-4 left-4 right-4 text-center">
+              <div className="bg-black bg-opacity-50 backdrop-blur-sm rounded-2xl p-4 mx-auto max-w-md">
+                <h3 className="font-comfortaa font-bold text-white text-lg mb-1">
+                  {galleryItems[selectedImage].title}
+                </h3>
+                <p className="text-white text-sm opacity-90">
+                  {galleryItems[selectedImage].description}
+                </p>
+                <p className="text-white text-xs opacity-70 mt-2">
+                  {selectedImage + 1} / {galleryItems.length}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
