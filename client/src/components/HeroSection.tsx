@@ -25,10 +25,10 @@ export default function HeroSection() {
               </div>
             </div>
             <h3 className="font-comfortaa font-bold text-xl text-black mb-2">
-              Vibe Coding for Designers
+              London UX/UI Designers - Online Mini Social
             </h3>
             <p className="text-gray-600 mb-4 text-sm">
-              <span className="font-medium">July 2025</span> • Bridging design and development skills through hands-on workshops
+              <span className="font-medium">August 2025</span> • Virtual networking event for London-based designers
             </p>
             <div className="flex items-center space-x-3">
               <button 

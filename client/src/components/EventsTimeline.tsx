@@ -16,12 +16,20 @@ interface TimelineEvent {
 export default function EventsTimeline() {
   const events: TimelineEvent[] = [
     {
-      date: "July 2025",
-      title: "Vibe Coding for Designers",
-      description: "Upcoming: Bridging design and development skills",
-      icon: "🔮",
+      date: "August 2025",
+      title: "London UX/UI Designers - Online Mini Social",
+      description: "Upcoming: Virtual networking event for London-based designers",
+      icon: "💻",
       color: "bg-fouxy-primary",
       isUpcoming: true,
+      image: "/attached_assets/ChatGPT Image May 1, 2025, 12_57_38 AM 1_1753397526191.png"
+    },
+    {
+      date: "July 2025",
+      title: "Vibe Coding for Designers",
+      description: "Bridging design and development skills through hands-on workshops",
+      icon: "🔮",
+      color: "bg-fouxy-secondary",
       image: "/attached_assets/vibe coding_1753397105238.avif"
     },
     {
