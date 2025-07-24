@@ -10,7 +10,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-fouxy-bg via-white to-fouxy-neutral py-20">
+    <section className="relative overflow-hidden bg-gradient-to-br from-fouxy-bg via-white to-fouxy-neutral min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -67,6 +67,26 @@ export default function HeroSection() {
                 </div>
                 <div className="text-sm text-gray-700">Based</div>
               </div>
+            </div>
+
+            {/* Next Event Highlight */}
+            <div className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-6 border-l-4 border-orange-500 mt-8">
+              <div className="flex items-center space-x-3 mb-2">
+                <span className="text-2xl">🔮</span>
+                <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">Next Event</span>
+              </div>
+              <h3 className="font-comfortaa font-bold text-xl text-black mb-2">
+                Vibe Coding for Designers
+              </h3>
+              <p className="text-gray-700 mb-3">
+                July 2025 - Bridging design and development skills
+              </p>
+              <button 
+                onClick={() => window.open("https://lu.ma/user/FouxySquad", "_blank")}
+                className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-orange-600 transition-colors"
+              >
+                Register on Luma →
+              </button>
             </div>
           </motion.div>
 

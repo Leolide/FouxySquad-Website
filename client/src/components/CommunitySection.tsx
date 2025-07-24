@@ -94,31 +94,7 @@ export default function CommunitySection() {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="bg-fouxy-neutral rounded-2xl p-12"
-        >
-          <h3 className="font-comfortaa font-bold text-2xl text-center text-black mb-8">
-            Our Members Work At
-          </h3>
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {companies.map((company, index) => (
-              <motion.div
-                key={company}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white px-6 py-3 rounded-lg shadow-sm font-medium text-gray-800"
-              >
-                {company}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

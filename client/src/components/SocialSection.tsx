@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Instagram, Linkedin, QrCode } from "lucide-react";
+import QRCodeModal from "./QRCodeModal";
 
 export default function SocialSection() {
-  const [qrGenerated, setQrGenerated] = useState(false);
+  const [isQRModalOpen, setIsQRModalOpen] = useState(false);
 
   const handleSocialLink = (platform: string) => {
     const urls = {
@@ -18,11 +19,8 @@ export default function SocialSection() {
     }
   };
 
-  const generateQRCode = () => {
-    setQrGenerated(true);
-    // In a real implementation, this would generate an actual QR code
-    // using a library like qrcode or similar
-    console.log("QR code generated for group chat");
+  const openQRModal = () => {
+    setIsQRModalOpen(true);
   };
 
   const containerVariants = {
@@ -50,10 +48,10 @@ export default function SocialSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-comfortaa font-bold text-4xl text-fouxy-text mb-4">
+          <h2 className="font-comfortaa font-bold text-4xl text-black mb-4">
             Connect With Us
           </h2>
-          <p className="text-xl text-fouxy-text-secondary max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Follow our journey, join our chat, and stay updated with the latest
             events and community highlights.
           </p>
@@ -72,10 +70,10 @@ export default function SocialSection() {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Instagram className="text-white text-2xl w-8 h-8" />
                 </div>
-                <h3 className="font-comfortaa font-bold text-xl text-fouxy-text mb-2">
+                <h3 className="font-comfortaa font-bold text-xl text-black mb-2">
                   Instagram
                 </h3>
-                <p className="text-fouxy-text-secondary mb-4">
+                <p className="text-gray-600 mb-4">
                   Follow our visual journey and event highlights
                 </p>
                 <Button
@@ -94,10 +92,10 @@ export default function SocialSection() {
                 <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Linkedin className="text-white text-2xl w-8 h-8" />
                 </div>
-                <h3 className="font-comfortaa font-bold text-xl text-fouxy-text mb-2">
+                <h3 className="font-comfortaa font-bold text-xl text-black mb-2">
                   LinkedIn
                 </h3>
-                <p className="text-fouxy-text-secondary mb-4">
+                <p className="text-gray-600 mb-4">
                   Professional updates and industry insights
                 </p>
                 <Button
@@ -116,41 +114,25 @@ export default function SocialSection() {
                 <div className="w-16 h-16 bg-fouxy-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <QrCode className="text-white text-2xl w-8 h-8" />
                 </div>
-                <h3 className="font-comfortaa font-bold text-xl text-fouxy-text mb-2">
+                <h3 className="font-comfortaa font-bold text-xl text-black mb-2">
                   Join Group Chat
                 </h3>
-                <p className="text-fouxy-text-secondary mb-4">
+                <p className="text-gray-600 mb-4">
                   Scan QR code to join our active community chat
                 </p>
 
                 <div className="w-32 h-32 bg-fouxy-neutral border-2 border-dashed border-fouxy-primary rounded-xl mx-auto mb-4 flex items-center justify-center">
-                  {qrGenerated ? (
-                    <div className="text-center">
-                      <div className="grid grid-cols-4 gap-1 mb-2">
-                        {Array.from({ length: 16 }).map((_, i) => (
-                          <div
-                            key={i}
-                            className={`w-2 h-2 ${
-                              Math.random() > 0.5 ? "bg-fouxy-primary" : "bg-transparent"
-                            }`}
-                          />
-                        ))}
-                      </div>
-                      <div className="text-xs text-fouxy-text/70">QR Code</div>
-                    </div>
-                  ) : (
-                    <div className="text-center text-fouxy-text/50">
-                      <QrCode className="w-8 h-8 mx-auto mb-2" />
-                      <div className="text-xs">QR Code</div>
-                    </div>
-                  )}
+                  <div className="text-center text-fouxy-text/50">
+                    <QrCode className="w-8 h-8 mx-auto mb-2" />
+                    <div className="text-xs">Click to view QR</div>
+                  </div>
                 </div>
 
                 <Button
-                  onClick={generateQRCode}
+                  onClick={openQRModal}
                   className="bg-fouxy-primary text-white px-6 py-2 rounded-full hover:bg-fouxy-secondary transition-colors duration-300"
                 >
-                  {qrGenerated ? "QR Generated!" : "Get QR Code"}
+                  View QR Code
                 </Button>
               </CardContent>
             </Card>
@@ -168,22 +150,27 @@ export default function SocialSection() {
             <div className="font-comfortaa font-bold text-3xl text-fouxy-primary mb-2">
               2.5K
             </div>
-            <div className="text-fouxy-text-secondary">Instagram Followers</div>
+            <div className="text-gray-600">Instagram Followers</div>
           </div>
           <div className="text-center">
             <div className="font-comfortaa font-bold text-3xl text-fouxy-primary mb-2">
               1.8K
             </div>
-            <div className="text-fouxy-text-secondary">LinkedIn Connections</div>
+            <div className="text-gray-600">LinkedIn Connections</div>
           </div>
           <div className="text-center">
             <div className="font-comfortaa font-bold text-3xl text-fouxy-primary mb-2">
               95%
             </div>
-            <div className="text-fouxy-text-secondary">Active in Group Chat</div>
+            <div className="text-gray-600">Active in Group Chat</div>
           </div>
         </motion.div>
       </div>
+
+      <QRCodeModal 
+        isOpen={isQRModalOpen} 
+        onClose={() => setIsQRModalOpen(false)} 
+      />
     </section>
   );
 }
