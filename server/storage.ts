@@ -103,19 +103,27 @@ export class MemStorage implements IStorage {
         status: "completed"
       },
       {
-        title: "First Online Meetup",
-        description: "Connecting virtually from around the world",
-        date: new Date("2025-05-25"),
-        participants: 30,
+        title: "London UX/UI Designers - Online Mini Social",
+        description: "Virtual networking event for London-based designers",
+        date: new Date("2025-04-15"),
+        participants: 20,
         isOnline: true,
         status: "completed"
       },
       {
-        title: "June Meetups",
-        description: "Two amazing events with record attendance",
-        date: new Date("2025-06-15"),
-        participants: 100,
+        title: "London UX/UI Designer Picnic - Third Edition", 
+        description: "Parliament Hill Viewpoint picnic meetup",
+        date: new Date("2025-05-18"),
+        participants: 30,
         isOnline: false,
+        status: "completed"
+      },
+      {
+        title: "London UX/UI RoundTable Online",
+        description: "Interactive online discussion on design methodologies and trends",
+        date: new Date("2025-06-28"),
+        participants: 40,
+        isOnline: true,
         status: "completed"
       },
       {
