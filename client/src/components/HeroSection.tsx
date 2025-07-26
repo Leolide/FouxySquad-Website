@@ -22,7 +22,7 @@ export default function HeroSection() {
               🧺 Fouxy Squad – UX/UI Picnic Meetup V.5 @ Battersea Park
             </h3>
             <p className="text-gray-600 mb-3 text-xs">
-              <span className="font-medium">Coming Soon</span> • Outdoor networking
+              <span className="font-medium">Aug 16, 2025</span> • Outdoor networking
             </p>
             <button 
               onClick={() => window.open("https://lu.ma/user/FouxySquad", "_blank")}
