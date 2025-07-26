@@ -83,7 +83,7 @@ export default function CommunitySection() {
               <CardContent className="p-8">
                 <div className="text-4xl mb-4">🌟</div>
                 <h3 className="font-comfortaa font-bold text-2xl text-orange-600 mb-2">
-                  20-35 Years
+                  20-35 Years Old
                 </h3>
                 <p className="text-gray-700">
                   Young professionals and students passionate about design and
