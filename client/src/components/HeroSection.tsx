@@ -34,15 +34,15 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-center py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-center py-4 sm:py-8">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8 px-4 sm:px-0"
+            className="space-y-6 sm:space-y-8 px-2 sm:px-0"
           >
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <h1 className="font-comfortaa font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-black">
                 Welcome to{" "}
                 <span className="fox-mascot">Fouxy Squad</span>
@@ -52,7 +52,7 @@ export default function HeroSection() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 px-2 sm:px-0">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-0">
               <Button
                 onClick={() => scrollToSection("cta")}
                 className="bg-fouxy-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-fouxy-secondary transition-all duration-300 transform hover:scale-105 font-comfortaa font-medium text-base sm:text-lg shadow-lg"
@@ -96,10 +96,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative mt-12 lg:mt-0"
+            className="relative mt-8 sm:mt-12 lg:mt-0"
           >
             <div className="relative z-10 animate-float">
-              <div className="text-center px-4">
+              <div className="text-center px-2 sm:px-4">
                 <img 
                   src="/attached_assets/ChatGPT Image Jul 6, 2025, 05_27_50 PM_1753396225683.png" 
                   alt="Fouxy Squad Mascot - Pixel Art Orange Fox Character" 
