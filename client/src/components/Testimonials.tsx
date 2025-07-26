@@ -2,54 +2,18 @@ import { motion } from "framer-motion";
 
 export default function Testimonials() {
   const testimonials = [
-    {
-      text: "Thanks for continuing to organize these amazing Fouxy Squad events",
-      author: "Emma Thompson"
-    },
-    {
-      text: "Great social UX meet-up with the Fouxy Squad community",
-      author: "James Mitchell"
-    },
-    {
-      text: "A fantastic design meetup with incredible networking",
-      author: "Sophie Chen"
-    },
-    {
-      text: "Had a wonderful time at the Fouxy Squad picnic event",
-      author: "Alex Rivera"
-    },
-    {
-      text: "Last night's Fouxy Squad UX Meetup was absolutely brilliant!",
-      author: "Maya Patel"
-    },
-    {
-      text: "I highly recommend joining the Fouxy Squad community",
-      author: "Oliver Brown"
-    },
-    {
-      text: "Had a fantastic time at the Fouxy Squad meet-up",
-      author: "Isabella Davis"
-    },
-    {
-      text: "Already looking forward to the next Fouxy Squad event!",
-      author: "Ryan Williams"
-    },
-    {
-      text: "The London design community needs more events like these ❤",
-      author: "Zara Ahmed"
-    },
-    {
-      text: "Last night's Fouxy Squad UX Meetup in London was an absolute win!",
-      author: "Noah Johnson"
-    },
-    {
-      text: "Absolutely enriching experience with fellow designers!",
-      author: "Lily Garcia"
-    },
-    {
-      text: "Amazing event, Squad! Looking forward to the next one",
-      author: "Ethan Wilson"
-    }
+    "Thanks for continuing to organize these amazing Fouxy Squad events",
+    "Great social UX meet-up with the Fouxy Squad community",
+    "A fantastic design meetup with incredible networking",
+    "Had a wonderful time at the Fouxy Squad picnic event",
+    "Last night's Fouxy Squad UX Meetup was absolutely brilliant!",
+    "I highly recommend joining the Fouxy Squad community",
+    "Had a fantastic time at the Fouxy Squad meet-up",
+    "Already looking forward to the next Fouxy Squad event!",
+    "The London design community needs more events like these ❤",
+    "Last night's Fouxy Squad UX Meetup in London was an absolute win!",
+    "Absolutely enriching experience with fellow designers!",
+    "Big thanks to Lide for organising the event! I had a lot of fun meeting new designers and learning from each other. Matcha makes it even more perfect!"
   ];
 
   const containerVariants = {
@@ -95,14 +59,9 @@ export default function Testimonials() {
               variants={itemVariants}
               className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-                "{testimonial.text}"
+              <p className="text-gray-700 text-sm leading-relaxed">
+                "{testimonial}"
               </p>
-              <div className="text-left">
-                <p className="text-gray-600 text-xs font-medium">
-                  {testimonial.author}
-                </p>
-              </div>
             </motion.div>
           ))}
         </motion.div>
