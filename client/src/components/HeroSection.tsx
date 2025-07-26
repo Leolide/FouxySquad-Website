@@ -19,10 +19,10 @@ export default function HeroSection() {
               <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2 py-1 rounded-full text-xs font-bold">NEXT EVENT</span>
             </div>
             <h3 className="font-comfortaa font-bold text-lg text-black mb-1">
-              London UX/UI Designers - Online Mini Social
+              🧺 Fouxy Squad – UX/UI Picnic Meetup V.5 @ Battersea Park
             </h3>
             <p className="text-gray-600 mb-3 text-xs">
-              <span className="font-medium">Mar 29, 2025</span> • Virtual networking
+              <span className="font-medium">Coming Soon</span> • Outdoor networking
             </p>
             <button 
               onClick={() => window.open("https://lu.ma/user/FouxySquad", "_blank")}
