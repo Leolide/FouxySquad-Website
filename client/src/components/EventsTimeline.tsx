@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useQuery } from "@tanstack/react-query";
+import type { Event } from "@shared/schema";
 
 interface TimelineEvent {
   date: string;
@@ -14,53 +16,65 @@ interface TimelineEvent {
 }
 
 export default function EventsTimeline() {
-  const events: TimelineEvent[] = [
-    {
-      date: "July 12, 2025",
-      title: "London Vibe Coding × Design: From 0 to 1",
-      description: "Build with AI, No Coding Experience needed - at Dyson School",
-      participants: 85,
-      icon: "🔮",
-      color: "bg-fouxy-secondary",
-      image: "/attached_assets/vibe coding_1753397105238.avif"
-    },
-    {
-      date: "June 28, 2025",
-      title: "London UX/UI RoundTable Online",
-      description: "Interactive online discussion on design methodologies and trends",
-      participants: 25,
-      icon: "🎨",
-      color: "bg-fouxy-accent",
-      image: "/attached_assets/Roundtable_1753397105237.avif"
-    },
-    {
-      date: "June 14, 2025",
-      title: "London UX/UI Designer Picnic - Fourth Edition",
-      description: "Outdoor creative session at The Hub",
-      participants: 40,
-      icon: "🌳",
-      color: "bg-fouxy-secondary",
-      image: "/attached_assets/design picnic_1753397105236.avif"
-    },
-    {
-      date: "May 18, 2025",
-      title: "London UX/UI Designer Picnic - Third Edition",
-      description: "Parliament Hill Viewpoint picnic meetup",
-      participants: 28,
-      icon: "🏞️",
-      color: "bg-fouxy-primary",
-      image: "/attached_assets/oucbuc _1753397105237.avif"
-    },
-    {
-      date: "Mar 29, 2025",
-      title: "London UX/UI Designers - Online Mini Social",
-      description: "Virtual networking event for London-based designers",
-      participants: 15,
-      icon: "💻",
-      color: "bg-fouxy-primary",
-      image: "/attached_assets/ChatGPT Image May 1, 2025, 12_57_38 AM 1_1753397526191.png"
-    }
-  ];
+  const { data: apiEvents = [], isLoading } = useQuery<Event[]>({
+    queryKey: ['/api/events']
+  });
+
+  // Map API events to timeline format with proper icons and images
+  const getEventIcon = (title: string) => {
+    if (title.toLowerCase().includes('coding') || title.toLowerCase().includes('vibe')) return '🔮';
+    if (title.toLowerCase().includes('roundtable') || title.toLowerCase().includes('online')) return '🎨';
+    if (title.toLowerCase().includes('picnic')) return '🌳';
+    if (title.toLowerCase().includes('social')) return '💬';
+    return '🎉';
+  };
+
+  const getEventColor = (index: number) => {
+    const colors = ['bg-fouxy-primary', 'bg-fouxy-secondary', 'bg-fouxy-accent'];
+    return colors[index % colors.length];
+  };
+
+  const getEventImage = (title: string) => {
+    if (title.toLowerCase().includes('coding') || title.toLowerCase().includes('vibe')) 
+      return '/attached_assets/vibe coding_1753397105238.avif';
+    if (title.toLowerCase().includes('roundtable')) 
+      return '/attached_assets/Roundtable_1753397105237.avif';
+    if (title.toLowerCase().includes('picnic')) 
+      return '/attached_assets/design picnic_1753397105236.avif';
+    return '/attached_assets/oucbuc _1753397105237.avif';
+  };
+
+  const events: TimelineEvent[] = apiEvents
+    .filter(event => event.status === 'completed')
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .map((event, index) => ({
+      date: new Date(event.date).toLocaleDateString('en-US', { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      }),
+      title: event.title,
+      description: event.description,
+      participants: event.participants || 0,
+      icon: getEventIcon(event.title),
+      color: getEventColor(index),
+      image: getEventImage(event.title)
+    }));
+
+  if (isLoading) {
+    return (
+      <section id="events" className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-16">
+          <div className="text-center mb-16">
+            <h2 className="font-comfortaa font-bold text-3xl text-black mb-6">
+              Our Events
+            </h2>
+            <p className="text-gray-600">Loading events...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   const handleLumaRedirect = () => {
     window.open("https://lu.ma/user/FouxySquad", "_blank");
