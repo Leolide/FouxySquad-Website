@@ -32,14 +32,14 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-32 bg-fouxy-bg">
+    <section className="py-20 bg-fouxy-bg">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
           <h2 className="font-comfortaa font-bold text-3xl text-black mb-6">
             What do people say about us
