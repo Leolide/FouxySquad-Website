@@ -37,7 +37,7 @@ export default function EventsTimeline() {
       date: "June 14, 2025",
       title: "London UX/UI Designer Picnic - Fourth Edition",
       description: "Outdoor creative session at The Hub",
-      participants: 35,
+      participants: 40,
       icon: "🌳",
       color: "bg-fouxy-secondary",
       image: "/attached_assets/design picnic_1753397105236.avif"
