@@ -105,7 +105,7 @@ export class MemStorage implements IStorage {
       {
         title: "London UX/UI Designers - Online Mini Social",
         description: "Virtual networking event for London-based designers",
-        date: new Date("2025-04-15"),
+        date: new Date("2025-03-29"),
         participants: 20,
         isOnline: true,
         status: "completed"
