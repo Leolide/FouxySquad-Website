@@ -102,11 +102,11 @@ export default function Footer() {
                 <span>Fouxy Squad</span>
               </button>
               <a
-                href="mailto:hello@fouxysquad.com"
+                href="mailto:fouxysquad@gmail.com"
                 className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
               >
                 <Mail className="w-4 h-4" />
-                <span>hello@fouxysquad.com</span>
+                <span>fouxysquad@gmail.com</span>
               </a>
               <div className="relative">
                 <button
