@@ -1,6 +1,9 @@
-import { Instagram, Linkedin, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { useState } from "react";
 
 export default function Footer() {
+  const [showQR, setShowQR] = useState(false);
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -105,6 +108,39 @@ export default function Footer() {
                 <Mail className="w-4 h-4" />
                 <span>hello@fouxysquad.com</span>
               </a>
+              <div className="relative">
+                <button
+                  onClick={() => setShowQR(!showQR)}
+                  className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  <span>WhatsApp Group</span>
+                </button>
+                
+                {showQR && (
+                  <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" onClick={() => setShowQR(false)}>
+                    <div className="bg-white p-6 rounded-2xl max-w-sm mx-4" onClick={(e) => e.stopPropagation()}>
+                      <div className="text-center mb-4">
+                        <h3 className="font-comfortaa font-bold text-xl text-black mb-2">Join Our WhatsApp</h3>
+                        <p className="text-gray-600 text-sm">Scan the QR code to join our community chat</p>
+                      </div>
+                      <div className="flex justify-center mb-4">
+                        <img 
+                          src="/attached_assets/Screenshot 2025-07-26 at 23.38.27_1753569602945.png" 
+                          alt="WhatsApp Group QR Code" 
+                          className="w-64 h-64 object-contain"
+                        />
+                      </div>
+                      <button
+                        onClick={() => setShowQR(false)}
+                        className="w-full bg-fouxy-primary text-white py-2 px-4 rounded-full hover:bg-fouxy-secondary transition-colors duration-200 font-medium"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
