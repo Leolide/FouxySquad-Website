@@ -39,7 +39,7 @@ export default function SocialSection() {
   };
 
   return (
-    <section className="py-20 bg-fouxy-bg">
+    <section id="connect" className="py-20 bg-fouxy-bg">
       <div className="max-w-5xl mx-auto px-8 sm:px-12 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
