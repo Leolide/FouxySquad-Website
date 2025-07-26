@@ -19,7 +19,7 @@ export default function EventsTimeline() {
       date: "July 12, 2025",
       title: "London Vibe Coding × Design: From 0 to 1",
       description: "Build with AI, No Coding Experience needed - at Dyson School",
-      participants: 30,
+      participants: 85,
       icon: "🔮",
       color: "bg-fouxy-secondary",
       image: "/attached_assets/vibe coding_1753397105238.avif"
