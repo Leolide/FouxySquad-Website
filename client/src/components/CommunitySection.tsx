@@ -23,7 +23,7 @@ export default function CommunitySection() {
   ];
 
   return (
-    <section id="community" className="py-32 bg-white">
+    <section id="community" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
