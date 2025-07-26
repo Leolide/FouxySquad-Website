@@ -24,15 +24,16 @@ export default function QRCodeModal({ isOpen, onClose }: QRCodeModalProps) {
             Connect with Fouxy Squad
           </h3>
           
-          {/* QR Code placeholder - you can replace this with actual QR code generation */}
-          <div className="bg-gray-100 w-64 h-64 mx-auto rounded-xl flex items-center justify-center mb-6">
-            <div className="text-center">
-              <div className="text-6xl mb-2">📱</div>
-              <p className="text-gray-600 text-sm">
-                Scan to connect
-              </p>
-            </div>
+          <div className="bg-gray-100 w-64 h-64 mx-auto rounded-xl flex items-center justify-center mb-6 p-4">
+            <img 
+              src="/attached_assets/Screenshot 2025-07-26 at 23.38.27_1753570788488.png" 
+              alt="WhatsApp Group QR Code" 
+              className="w-full h-full object-contain rounded-lg"
+            />
           </div>
+          <p className="text-gray-600 text-sm mb-6">
+            Scan to join our WhatsApp community
+          </p>
           
           <div className="space-y-3 text-left">
             <div className="flex items-center space-x-3">
@@ -45,7 +46,7 @@ export default function QRCodeModal({ isOpen, onClose }: QRCodeModalProps) {
             </div>
             <div className="flex items-center space-x-3">
               <span className="text-green-500">✉️</span>
-              <span className="text-gray-700">Email: hello@fouxysquad.com</span>
+              <span className="text-gray-700">Email: fouxysquad@gmail.com</span>
             </div>
           </div>
           
