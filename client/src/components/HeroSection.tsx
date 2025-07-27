@@ -25,7 +25,7 @@ export default function HeroSection() {
               <span className="font-medium">Aug 16, 2025</span> • Outdoor networking
             </p>
             <button 
-              onClick={() => window.open("https://lu.ma/user/FouxySquad", "_blank")}
+              onClick={() => window.open("https://lu.ma/otw38ocu", "_blank")}
               className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-3 py-1.5 rounded-xl font-medium hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg text-xs w-full"
             >
               Register on Luma →
