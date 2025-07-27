@@ -1,6 +1,19 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useQuery } from "@tanstack/react-query";
+import { format } from "date-fns";
+
+interface ApiEvent {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  participants: number;
+  isOnline: boolean;
+  status: "completed" | "upcoming";
+  lumaUrl?: string | null;
+}
 
 interface TimelineEvent {
   date: string;
@@ -11,65 +24,65 @@ interface TimelineEvent {
   color: string;
   isUpcoming?: boolean;
   image?: string;
+  lumaUrl?: string | null;
 }
 
 export default function EventsTimeline() {
-  const events: TimelineEvent[] = [
-    {
-      date: "July 12, 2025",
-      title: "London Vibe Coding × Design: From 0 to 1",
-      description: "Build with AI, No Coding Experience needed - at Dyson School",
-      participants: 85,
-      icon: "🔮",
-      color: "bg-fouxy-secondary",
-      image: "/attached_assets/vibe coding_1753397105238.avif"
-    },
-    {
-      date: "June 28, 2025",
-      title: "London UX/UI RoundTable Online",
-      description: "Interactive online discussion on design methodologies and trends",
-      participants: 25,
-      icon: "🎨",
-      color: "bg-fouxy-accent",
-      image: "/attached_assets/Roundtable_1753397105237.avif"
-    },
-    {
-      date: "June 14, 2025",
-      title: "London UX/UI Designer Picnic - Fourth Edition",
-      description: "Outdoor creative session at The Hub",
-      participants: 40,
-      icon: "🌳",
-      color: "bg-fouxy-secondary",
-      image: "/attached_assets/design picnic_1753397105236.avif"
-    },
-    {
-      date: "May 18, 2025",
-      title: "London UX/UI Designer Picnic - Third Edition",
-      description: "Parliament Hill Viewpoint picnic meetup",
-      participants: 28,
-      icon: "🏞️",
-      color: "bg-fouxy-primary",
-      image: "/attached_assets/oucbuc _1753397105237.avif"
-    },
-    {
-      date: "Mar 29, 2025",
-      title: "London UX/UI Designers - Online Mini Social",
-      description: "Virtual networking event for London-based designers",
-      participants: 15,
-      icon: "💻",
-      color: "bg-fouxy-primary",
-      image: "/attached_assets/ChatGPT Image May 1, 2025, 12_57_38 AM 1_1753397526191.png"
+  const { data: apiEvents, isLoading } = useQuery<ApiEvent[]>({
+    queryKey: ['/api/events']
+  });
+
+  // Map API events to timeline events with icons and images
+  const getEventIcon = (title: string, isOnline: boolean) => {
+    if (title.includes("Picnic")) return "🧺";
+    if (title.includes("RoundTable") || title.includes("Roundtable")) return "🎨";
+    if (title.includes("Coding") || title.includes("Vibe")) return "🔮";
+    if (isOnline) return "💻";
+    return "🎉";
+  };
+
+  const getEventColor = (index: number) => {
+    const colors = ["bg-fouxy-primary", "bg-fouxy-secondary", "bg-fouxy-accent"];
+    return colors[index % colors.length];
+  };
+
+  const getEventImage = (title: string) => {
+    if (title.includes("Coding") || title.includes("Vibe")) return "/attached_assets/vibe coding_1753397105238.avif";
+    if (title.includes("RoundTable") || title.includes("Roundtable")) return "/attached_assets/Roundtable_1753397105237.avif";
+    if (title.includes("Picnic")) return "/attached_assets/design picnic_1753397105236.avif";
+    if (title.includes("Online")) return "/attached_assets/ChatGPT Image May 1, 2025, 12_57_38 AM 1_1753397526191.png";
+    return "/attached_assets/oucbuc _1753397105237.avif";
+  };
+
+  const events: TimelineEvent[] = apiEvents?.filter(event => event.title !== "Fouxy Squad Founded").map((event, index) => ({
+    date: format(new Date(event.date), "MMMM d, yyyy"),
+    title: event.title,
+    description: event.description,
+    participants: event.participants,
+    icon: getEventIcon(event.title, event.isOnline),
+    color: getEventColor(index),
+    isUpcoming: event.status === "upcoming",
+    image: getEventImage(event.title),
+    lumaUrl: event.lumaUrl
+  })).reverse() || [];
+
+  const handleEventClick = (lumaUrl?: string | null) => {
+    if (lumaUrl) {
+      window.open(lumaUrl, "_blank");
+    } else {
+      window.open("https://lu.ma/user/FouxySquad", "_blank");
     }
-  ];
-
-  const handleLumaRedirect = () => {
-    window.open("https://lu.ma/user/FouxySquad", "_blank");
   };
 
-  const handleRegisterInterest = () => {
-    // In a real implementation, this would handle event registration
-    console.log("Register interest clicked");
-  };
+  if (isLoading) {
+    return (
+      <section id="events" className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-16">
+          <div className="text-center">Loading events...</div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="events" className="py-16 bg-white">
@@ -94,7 +107,8 @@ export default function EventsTimeline() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="group"
+              className="group cursor-pointer"
+              onClick={() => handleEventClick(event.lumaUrl)}
             >
               {event.image ? (
                 <div className="relative overflow-hidden rounded-2xl aspect-square">
