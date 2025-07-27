@@ -16,6 +16,7 @@ export const events = pgTable("events", {
   participants: integer("participants").default(0),
   isOnline: boolean("is_online").default(false),
   lumaUrl: text("luma_url"),
+  imageUrl: text("image_url"),
   status: text("status").notNull().default("upcoming"), // upcoming, completed, cancelled
 });
 

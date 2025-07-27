@@ -10,6 +10,9 @@ Preferred communication style: Simple, everyday language.
 
 ### Recent Updates (July 27, 2025)
 - Migrated event timeline from memory storage to PostgreSQL database
+- Connected all frontend components to database APIs (EventsTimeline, HeroSection, CommunitySection)
+- Added imageUrl column to events schema for custom event images
+- Updated Battersea Park event with official Luma image and 60 participants
 - Fixed navigation "Join Us" button to properly scroll to Connect section
 - Updated next event card with specific Luma link: https://lu.ma/otw38ocu
 - Corrected age demographic to "20-35 Years Old"

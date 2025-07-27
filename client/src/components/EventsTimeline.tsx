@@ -29,7 +29,10 @@ export default function EventsTimeline() {
     return "🎯";
   };
 
-  const getEventImage = (title: string): string => {
+  const getEventImage = (title: string, imageUrl?: string | null): string => {
+    // Use database imageUrl if available, otherwise fall back to local assets
+    if (imageUrl) return imageUrl;
+    
     if (title.toLowerCase().includes('coding') || title.toLowerCase().includes('vibe')) 
       return "/attached_assets/vibe coding_1753397105238.avif";
     if (title.toLowerCase().includes('roundtable')) 
@@ -57,7 +60,7 @@ export default function EventsTimeline() {
     icon: getEventIcon(event.title, event.isOnline || false),
     color: getEventColor(index),
     isUpcoming: event.status === 'upcoming',
-    image: getEventImage(event.title)
+    image: getEventImage(event.title, event.imageUrl)
   })).reverse() : []; // Reverse to show latest events first
 
   if (isLoading) {
