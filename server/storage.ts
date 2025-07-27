@@ -12,6 +12,8 @@ import {
   type GalleryImage,
   type InsertGalleryImage
 } from "@shared/schema";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 
 export interface IStorage {
   // User methods
@@ -246,4 +248,88 @@ export class MemStorage implements IStorage {
   }
 }
 
-export const storage = new MemStorage();
+export class DatabaseStorage implements IStorage {
+  async getUser(id: number): Promise<User | undefined> {
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user || undefined;
+  }
+
+  async getUserByUsername(username: string): Promise<User | undefined> {
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user || undefined;
+  }
+
+  async createUser(insertUser: InsertUser): Promise<User> {
+    const [user] = await db
+      .insert(users)
+      .values(insertUser)
+      .returning();
+    return user;
+  }
+
+  async getAllEvents(): Promise<Event[]> {
+    const allEvents = await db.select().from(events);
+    return allEvents.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  }
+
+  async getEvent(id: number): Promise<Event | undefined> {
+    const [event] = await db.select().from(events).where(eq(events.id, id));
+    return event || undefined;
+  }
+
+  async createEvent(insertEvent: InsertEvent): Promise<Event> {
+    const [event] = await db
+      .insert(events)
+      .values(insertEvent)
+      .returning();
+    return event;
+  }
+
+  async updateEvent(id: number, eventUpdate: Partial<InsertEvent>): Promise<Event | undefined> {
+    const [event] = await db
+      .update(events)
+      .set(eventUpdate)
+      .where(eq(events.id, id))
+      .returning();
+    return event || undefined;
+  }
+
+  async getCommunityStats(): Promise<CommunityStats | undefined> {
+    const [stats] = await db.select().from(communityStats).limit(1);
+    return stats || undefined;
+  }
+
+  async updateCommunityStats(stats: InsertCommunityStats): Promise<CommunityStats> {
+    const [updatedStats] = await db
+      .insert(communityStats)
+      .values({ ...stats, updatedAt: new Date() })
+      .onConflictDoUpdate({
+        target: communityStats.id,
+        set: { ...stats, updatedAt: new Date() }
+      })
+      .returning();
+    return updatedStats;
+  }
+
+  async getAllGalleryImages(): Promise<GalleryImage[]> {
+    const images = await db.select().from(galleryImages);
+    return images.sort((a, b) => 
+      new Date(b.createdAt || 0).getTime() - new Date(a.createdAt || 0).getTime()
+    );
+  }
+
+  async getGalleryImage(id: number): Promise<GalleryImage | undefined> {
+    const [image] = await db.select().from(galleryImages).where(eq(galleryImages.id, id));
+    return image || undefined;
+  }
+
+  async createGalleryImage(insertImage: InsertGalleryImage): Promise<GalleryImage> {
+    const [image] = await db
+      .insert(galleryImages)
+      .values({ ...insertImage, createdAt: new Date() })
+      .returning();
+    return image;
+  }
+}
+
+export const storage = new DatabaseStorage();

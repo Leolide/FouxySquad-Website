@@ -8,7 +8,14 @@ This is a community website for "Fouxy Squad," a London-based design community. 
 
 Preferred communication style: Simple, everyday language.
 
-### Recent Updates (July 24, 2025)
+### Recent Updates (July 27, 2025)
+- Migrated event timeline from memory storage to PostgreSQL database
+- Fixed navigation "Join Us" button to properly scroll to Connect section
+- Updated next event card with specific Luma link: https://lu.ma/otw38ocu
+- Corrected age demographic to "20-35 Years Old"
+- Updated authentic event participant counts for recent events
+
+### Previous Updates (July 24, 2025)
 - Integrated official Fouxy Squad logo (orange fox design) throughout the website
 - Updated Luma integration URL to: https://lu.ma/user/FouxySquad
 - Added real event photos from community gatherings
@@ -58,9 +65,11 @@ The application follows a modern full-stack architecture with clear separation b
 - **CTA Section**: Call-to-action for joining the community
 
 ### Backend Storage
-- **Memory Storage**: In-memory storage implementation for development
-- **Database Storage**: PostgreSQL storage via Drizzle ORM
+- **Memory Storage**: Legacy in-memory storage implementation (deprecated)
+- **Database Storage**: PostgreSQL storage via Drizzle ORM (active)
+- **Database Provider**: Neon Database with connection pooling
 - **API Routes**: RESTful endpoints for events, community stats, and gallery
+- **Seeding**: Automated database seeding with authentic event data
 
 ## Data Flow
 
