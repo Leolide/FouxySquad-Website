@@ -14,7 +14,7 @@ export default function Navigation() {
   };
 
   const handleJoinCommunity = () => {
-    scrollToSection("cta");
+    scrollToSection("connect");
   };
 
   return (
