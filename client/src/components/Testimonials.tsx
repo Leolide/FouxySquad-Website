@@ -10,7 +10,6 @@ export default function Testimonials() {
     "Thanks for continuing to organize these amazing Fouxy Squad events",
     "Great social UX meet-up with the Fouxy Squad community",
     "Yesterday's Fouxy Squad UX Meetup was absolutely brilliant!",
-    "Already looking forward to the next Fouxy Squad event!",
     "The London design community needs more events like these ❤",
     "Yesterday's Fouxy Squad UX Meetup in London was an absolute win!",
     "I've become great friends with people I met through Fouxy Squad - this community truly brings designers together!",
