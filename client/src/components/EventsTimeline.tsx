@@ -94,9 +94,17 @@ export default function EventsTimeline() {
     window.open("https://lu.ma/user/FouxySquad", "_blank");
   };
 
-  const handleRegisterInterest = () => {
-    // In a real implementation, this would handle event registration
-    console.log("Register interest clicked");
+  const handleEventClick = (event: TimelineEvent, dbEvent: Event) => {
+    // If event has a Luma URL, open it
+    if (dbEvent.lumaUrl) {
+      window.open(dbEvent.lumaUrl, "_blank");
+    } else if (event.isUpcoming) {
+      // If it's upcoming but no specific URL, go to main Luma page
+      window.open("https://lu.ma/user/FouxySquad", "_blank");
+    } else {
+      // For completed events without Luma URL, could show event details or do nothing
+      console.log("Event clicked:", event.title);
+    }
   };
 
   return (
@@ -115,56 +123,60 @@ export default function EventsTimeline() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {events.map((event, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.05 }}
-              viewport={{ once: true }}
-              className="group"
-            >
-              {event.image ? (
-                <div className="relative overflow-hidden rounded-2xl aspect-square">
-                  <img 
-                    src={event.image} 
-                    alt={event.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <div className="flex items-center space-x-2 mb-3">
-                      <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium">
-                        {event.date}
-                      </span>
-                      {event.isUpcoming && (
-                        <span className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold">
-                          Upcoming
+          {events.map((event, index) => {
+            const dbEvent = dbEvents?.[dbEvents.length - 1 - index]; // Get corresponding database event
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="group cursor-pointer"
+                onClick={() => dbEvent && handleEventClick(event, dbEvent)}
+              >
+                {event.image ? (
+                  <div className="relative overflow-hidden rounded-2xl aspect-square transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                    <img 
+                      src={event.image} 
+                      alt={event.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/80 group-hover:via-black/40 transition-all duration-300"></div>
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <div className="flex items-center space-x-2 mb-3">
+                        <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium">
+                          {event.date}
                         </span>
+                        {event.isUpcoming && (
+                          <span className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                            Upcoming
+                          </span>
+                        )}
+                      </div>
+                      <h3 className="font-comfortaa font-bold text-lg text-white mb-2">
+                        {event.title}
+                      </h3>
+                      {event.participants && (
+                        <div className="mt-3">
+                          <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium">
+                            {event.participants} participants
+                          </span>
+                        </div>
                       )}
                     </div>
-                    <h3 className="font-comfortaa font-bold text-lg text-white mb-2">
+                  </div>
+                ) : (
+                  <div className="bg-gray-50 rounded-2xl p-8 text-center aspect-square flex flex-col justify-center transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl group-hover:bg-gray-100">
+                    <span className="text-4xl mb-3 block transition-transform duration-300 group-hover:scale-110">{event.icon}</span>
+                    <h3 className="font-comfortaa font-bold text-lg text-black mb-2 transition-colors duration-300 group-hover:text-fouxy-primary">
                       {event.title}
                     </h3>
-                    {event.participants && (
-                      <div className="mt-3">
-                        <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium">
-                          {event.participants} participants
-                        </span>
-                      </div>
-                    )}
                   </div>
-                </div>
-              ) : (
-                <div className="bg-gray-50 rounded-2xl p-8 text-center aspect-square flex flex-col justify-center">
-                  <span className="text-4xl mb-3 block">{event.icon}</span>
-                  <h3 className="font-comfortaa font-bold text-lg text-black mb-2">
-                    {event.title}
-                  </h3>
-                </div>
-              )}
+                )}
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
