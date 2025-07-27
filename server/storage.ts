@@ -130,18 +130,9 @@ export class MemStorage implements IStorage {
         title: "Vibe Coding for Designers",
         description: "Bridging design and development skills",
         date: new Date("2025-07-30"),
-        participants: 85,
-        isOnline: false,
-        lumaUrl: "https://lu.ma/user/FouxySquad",
-        status: "completed"
-      },
-      {
-        title: "🧺 UX/UI Designer Picnic Meetup V.5 @Battersea Park",
-        description: "Outdoor picnic meetup with optional fun activities like cycling, tree-top adventures, and boating. Meet fellow designers, exchange ideas, and celebrate summer together at Battersea Park.",
-        date: new Date("2025-08-16"),
         participants: 0,
         isOnline: false,
-        lumaUrl: "https://lu.ma/otw38ocu",
+        lumaUrl: "https://lu.ma/user/FouxySquad",
         status: "upcoming"
       }
     ];
