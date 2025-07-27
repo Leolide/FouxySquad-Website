@@ -78,8 +78,7 @@ export default function CommunitySection() {
                   Diverse Backgrounds
                 </h3>
                 <p className="text-gray-700">
-                  From top design schools (UAL, RCA, Cambridge) and leading tech
-                  companies
+                  From top design schools and leading tech companies
                 </p>
               </CardContent>
             </Card>
