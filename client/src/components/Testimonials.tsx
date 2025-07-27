@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 export default function Testimonials() {
   const testimonials = [
     "Amazing event! Many thanks for organising it!",
-    "Amazing event @Lide Li thanks to you and the team for putting it together.",
-    "Thanks for this brilliant event! @Lide Li 🙏🙏",
+    "Amazing event thanks to you and the team for putting it together.",
+    "Thanks for this brilliant event! 🙏🙏",
     "Great event - nice to meet everyone 👋",
-    "Big thanks to Lide for organising the event! I had a lot of fun meeting new designers and learning from each other. Matcha makes it even more perfect!",
+    "Big thanks for organising the event! I had a lot of fun meeting new designers and learning from each other. Matcha makes it even more perfect!",
     "Thanks for continuing to organize these amazing Fouxy Squad events",
     "Great social UX meet-up with the Fouxy Squad community",
     "Last night's Fouxy Squad UX Meetup was absolutely brilliant!",
@@ -60,7 +60,7 @@ export default function Testimonials() {
               className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <p className="text-gray-700 text-sm leading-relaxed">
-                "{testimonial}"
+                {testimonial}
               </p>
             </motion.div>
           ))}
