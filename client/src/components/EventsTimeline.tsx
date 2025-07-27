@@ -146,9 +146,6 @@ export default function EventsTimeline() {
                     <h3 className="font-comfortaa font-bold text-lg text-white mb-2">
                       {event.title}
                     </h3>
-                    <p className="text-white/90 text-sm">
-                      {event.description}
-                    </p>
                     {event.participants && (
                       <div className="mt-3">
                         <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium">
@@ -164,9 +161,6 @@ export default function EventsTimeline() {
                   <h3 className="font-comfortaa font-bold text-lg text-black mb-2">
                     {event.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    {event.description}
-                  </p>
                 </div>
               )}
             </motion.div>
