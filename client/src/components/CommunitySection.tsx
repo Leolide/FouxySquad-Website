@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
+import { useQuery } from "@tanstack/react-query";
+import type { CommunityStats } from "@shared/schema";
 
 export default function CommunitySection() {
+  const { data: stats } = useQuery<CommunityStats[]>({
+    queryKey: ['/api/community-stats'],
+  });
+
+  const communityStats = stats?.[0];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -53,7 +60,7 @@ export default function CommunitySection() {
               <CardContent className="p-8">
                 <div className="text-4xl mb-4">👥</div>
                 <h3 className="font-comfortaa font-bold text-2xl text-orange-600 mb-2">
-                  200+ Members
+                  {communityStats?.totalMembers || 200}+ Members
                 </h3>
                 <p className="text-gray-700">
                   Highly active professionals and students across UX, UI, and

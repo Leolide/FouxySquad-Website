@@ -1,7 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useQuery } from "@tanstack/react-query";
+import type { Event } from "@shared/schema";
 
 export default function HeroSection() {
+  const { data: events } = useQuery<Event[]>({
+    queryKey: ['/api/events'],
+  });
+
+  // Get the next upcoming event
+  const nextEvent = events?.find(event => event.status === 'upcoming');
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -12,27 +21,36 @@ export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-fouxy-bg via-white to-fouxy-neutral min-h-screen flex items-center">
       {/* Floating Next Event Card - Only on Hero Section */}
-      <div className="absolute top-4 right-4 z-40 max-w-xs hidden xl:block">
-        <div className="relative bg-white rounded-2xl p-4 shadow-xl border border-orange-100 overflow-hidden">
-          <div className="relative z-10">
-            <div className="flex items-center space-x-2 mb-2">
-              <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2 py-1 rounded-full text-xs font-bold">NEXT EVENT</span>
+      {nextEvent && (
+        <div className="absolute top-4 right-4 z-40 max-w-xs hidden xl:block">
+          <div className="relative bg-white rounded-2xl p-4 shadow-xl border border-orange-100 overflow-hidden">
+            <div className="relative z-10">
+              <div className="flex items-center space-x-2 mb-2">
+                <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2 py-1 rounded-full text-xs font-bold">NEXT EVENT</span>
+                <span className="text-xs text-gray-600">{nextEvent.participants} attending</span>
+              </div>
+              <h3 className="font-comfortaa font-bold text-lg text-black mb-1">
+                🧺 {nextEvent.title}
+              </h3>
+              <p className="text-gray-600 mb-3 text-xs">
+                <span className="font-medium">
+                  {new Date(nextEvent.date).toLocaleDateString('en-US', { 
+                    month: 'short', 
+                    day: 'numeric', 
+                    year: 'numeric' 
+                  })}
+                </span> • {nextEvent.isOnline ? 'Online' : 'In-person'}
+              </p>
+              <button 
+                onClick={() => window.open(nextEvent.lumaUrl || "https://lu.ma/user/FouxySquad", "_blank")}
+                className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-3 py-1.5 rounded-xl font-medium hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg text-xs w-full"
+              >
+                Register on Luma →
+              </button>
             </div>
-            <h3 className="font-comfortaa font-bold text-lg text-black mb-1">
-              🧺 Fouxy Squad – UX/UI Picnic Meetup V.5 @ Battersea Park
-            </h3>
-            <p className="text-gray-600 mb-3 text-xs">
-              <span className="font-medium">Aug 16, 2025</span> • Outdoor networking
-            </p>
-            <button 
-              onClick={() => window.open("https://lu.ma/otw38ocu", "_blank")}
-              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-3 py-1.5 rounded-xl font-medium hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg text-xs w-full"
-            >
-              Register on Luma →
-            </button>
           </div>
         </div>
-      </div>
+      )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center py-4 sm:py-8">
