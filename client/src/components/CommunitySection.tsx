@@ -92,7 +92,7 @@ export default function CommunitySection() {
                   20-35 Years Old
                 </h3>
                 <p className="text-gray-700">
-                  Young professionals and students passionate about design and
+                  Mostly young professionals and students passionate about design and
                   technology
                 </p>
               </CardContent>
