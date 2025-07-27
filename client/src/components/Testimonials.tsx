@@ -2,18 +2,18 @@ import { motion } from "framer-motion";
 
 export default function Testimonials() {
   const testimonials = [
+    "Amazing event! Many thanks for organising it!",
+    "Amazing event @Lide Li thanks to you and the team for putting it together.",
+    "Thanks for this brilliant event! @Lide Li 🙏🙏",
+    "Great event - nice to meet everyone 👋",
+    "Big thanks to Lide for organising the event! I had a lot of fun meeting new designers and learning from each other. Matcha makes it even more perfect!",
     "Thanks for continuing to organize these amazing Fouxy Squad events",
     "Great social UX meet-up with the Fouxy Squad community",
-    "A fantastic design meetup with incredible networking",
-    "Had a wonderful time at the Fouxy Squad picnic event",
     "Last night's Fouxy Squad UX Meetup was absolutely brilliant!",
-    "I highly recommend joining the Fouxy Squad community",
-    "Had a fantastic time at the Fouxy Squad meet-up",
     "Already looking forward to the next Fouxy Squad event!",
     "The London design community needs more events like these ❤",
     "Last night's Fouxy Squad UX Meetup in London was an absolute win!",
-    "Absolutely enriching experience with fellow designers!",
-    "Big thanks to Lide for organising the event! I had a lot of fun meeting new designers and learning from each other. Matcha makes it even more perfect!"
+    "Absolutely enriching experience with fellow designers!"
   ];
 
   const containerVariants = {
