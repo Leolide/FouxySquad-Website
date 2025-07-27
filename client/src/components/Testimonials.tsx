@@ -9,11 +9,12 @@ export default function Testimonials() {
     "Big thanks for organising the event! I had a lot of fun meeting new designers and learning from each other. Matcha makes it even more perfect!",
     "Thanks for continuing to organize these amazing Fouxy Squad events",
     "Great social UX meet-up with the Fouxy Squad community",
-    "Last night's Fouxy Squad UX Meetup was absolutely brilliant!",
+    "Yesterday's Fouxy Squad UX Meetup was absolutely brilliant!",
     "Already looking forward to the next Fouxy Squad event!",
     "The London design community needs more events like these ❤",
-    "Last night's Fouxy Squad UX Meetup in London was an absolute win!",
-    "Absolutely enriching experience with fellow designers!"
+    "Yesterday's Fouxy Squad UX Meetup in London was an absolute win!",
+    "I've become great friends with people I met through Fouxy Squad - this community truly brings designers together!",
+    "Not only did I learn so much, but I've made lasting friendships with fellow designers from the community"
   ];
 
   const containerVariants = {
