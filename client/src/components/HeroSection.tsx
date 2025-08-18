@@ -70,7 +70,7 @@ export default function HeroSection() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-0 justify-center lg:justify-start">
+            <div className="inline-flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-0 justify-center lg:justify-start mx-auto lg:mx-0">
               <Button
                 onClick={() => scrollToSection("connect")}
                 className="bg-fouxy-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-fouxy-secondary transition-all duration-300 transform hover:scale-105 font-comfortaa font-medium text-base sm:text-lg shadow-lg"
