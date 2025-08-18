@@ -88,6 +88,8 @@ export default function EventsTimeline() {
     );
   }
 
+
+
   const handleLumaRedirect = () => {
     window.open("https://lu.ma/user/FouxySquad", "_blank");
   };

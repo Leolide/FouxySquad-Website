@@ -54,16 +54,73 @@ export class MemStorage implements IStorage {
     this.currentEventId = 1;
     this.currentGalleryId = 1;
     
-    // Initialize with minimal sample data (only used as fallback)
+    // Initialize with sample data
+    this.initializeSampleData();
+  }
+
+  private initializeSampleData() {
+    // Initialize community stats
     this.communityStats = {
       id: 1,
       totalMembers: 200,
-      totalEvents: 0,
+      totalEvents: 6,
       instagramFollowers: 2500,
       linkedinConnections: 1800,
       activeChatMembers: 190,
       updatedAt: new Date(),
     };
+
+    // Initialize sample events
+    const sampleEvents: InsertEvent[] = [
+      {
+        title: "Vibe Coding Session",
+        description: "Join our relaxed coding session where we build cool projects together and share design tips. Perfect for developers and designers looking to collaborate.",
+        date: new Date("2024-12-15"),
+        participants: 12,
+        isOnline: false,
+        lumaUrl: "https://lu.ma/user/FouxySquad",
+        status: "completed"
+      },
+      {
+        title: "Design Roundtable Discussion",
+        description: "An intimate roundtable where experienced designers share insights about industry trends, career growth, and creative processes.",
+        date: new Date("2025-01-20"),
+        participants: 8,
+        isOnline: true,
+        lumaUrl: "https://lu.ma/user/FouxySquad",
+        status: "completed"
+      },
+      {
+        title: "Community Design Picnic",
+        description: "Outdoor gathering combining networking with creative activities. Bring your sketchbook and join us for design games and good vibes.",
+        date: new Date("2025-02-10"),
+        participants: 25,
+        isOnline: false,
+        lumaUrl: "https://lu.ma/user/FouxySquad",
+        status: "completed"
+      },
+      {
+        title: "Creative Meetup & Portfolio Share",
+        description: "Casual meetup where community members showcase their latest work and get feedback in a supportive environment.",
+        date: new Date("2025-03-15"),
+        participants: 18,
+        isOnline: false,
+        lumaUrl: "https://lu.ma/user/FouxySquad",
+        status: "upcoming"
+      }
+    ];
+
+    sampleEvents.forEach(event => {
+      const id = this.currentEventId++;
+      this.events.set(id, { 
+        ...event, 
+        id,
+        status: event.status || "upcoming",
+        participants: event.participants || 0,
+        isOnline: event.isOnline || false,
+        lumaUrl: event.lumaUrl || null
+      });
+    });
   }
 
   // User methods
@@ -103,8 +160,7 @@ export class MemStorage implements IStorage {
       status: insertEvent.status || "upcoming",
       participants: insertEvent.participants || 0,
       isOnline: insertEvent.isOnline || false,
-      lumaUrl: insertEvent.lumaUrl || null,
-      imageUrl: insertEvent.imageUrl || null
+      lumaUrl: insertEvent.lumaUrl || null
     };
     this.events.set(id, event);
     return event;
@@ -247,4 +303,4 @@ export class DatabaseStorage implements IStorage {
   }
 }
 
-export const storage = new DatabaseStorage();
+export const storage = new MemStorage();
