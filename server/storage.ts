@@ -146,7 +146,7 @@ export class MemStorage implements IStorage {
         participants: 40,
         isOnline: false,
         lumaUrl: "https://lu.ma/otw38ocu",
-        status: "upcoming",
+        status: "completed",
         imageUrl: "/attached_assets/ChatGPT Image Jul 22, 2025, 11_33_01 PM_1755554252997.png"
       }
     ];
