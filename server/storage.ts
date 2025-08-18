@@ -132,12 +132,12 @@ export class MemStorage implements IStorage {
       },
       {
         title: "Vibe Coding for Designers",
-        description: "Upcoming coding session specifically designed for designers who want to learn development skills. Collaborative environment focusing on design-to-code workflows.",
+        description: "Coding session specifically designed for designers who want to learn development skills. Collaborative environment focusing on design-to-code workflows.",
         date: new Date("2025-07-12"),
         participants: 85,
         isOnline: false,
         lumaUrl: "https://lu.ma/ngu7l1lq",
-        status: "upcoming"
+        status: "completed"
       },
       {
         title: "UX/UI Designer Picnic Meetup V.5 @Battersea Park",
