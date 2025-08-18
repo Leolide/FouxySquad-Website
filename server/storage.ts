@@ -143,7 +143,7 @@ export class MemStorage implements IStorage {
         title: "UX/UI Designer Picnic Meetup V.5 @Battersea Park",
         description: "Fifth edition of our designer picnic series, this time at the beautiful Battersea Park. Join us for networking, design discussions, and outdoor activities.",
         date: new Date("2025-08-16"),
-        participants: 40,
+        participants: 65,
         isOnline: false,
         lumaUrl: "https://lu.ma/otw38ocu",
         status: "completed",
