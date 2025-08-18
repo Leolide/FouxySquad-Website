@@ -79,7 +79,8 @@ export class MemStorage implements IStorage {
         participants: 15,
         isOnline: false,
         lumaUrl: null,
-        status: "completed"
+        status: "completed",
+        imageUrl: "/attached_assets/20250628_1848_Fox's Cozy Workspace_simple_compose_01jyvtg4hff0ttts08jc2ghdpp_1755554373238.gif"
       },
       {
         title: "UX/UI Product Designer Pub Meetup V.2",
@@ -88,7 +89,8 @@ export class MemStorage implements IStorage {
         participants: 35,
         isOnline: false,
         lumaUrl: null,
-        status: "completed"
+        status: "completed",
+        imageUrl: "/attached_assets/ChatGPT Image Jun 8, 2025, 02_17_38 PM_1755554354646.png"
       },
       {
         title: "London UX/UI Designers - Online Mini Social",
@@ -97,7 +99,8 @@ export class MemStorage implements IStorage {
         participants: 35,
         isOnline: true,
         lumaUrl: null,
-        status: "completed"
+        status: "completed",
+        imageUrl: "/attached_assets/IMG_6646_1755554212717.jpg"
       },
       {
         title: "London UX/UI Designer Picnic - Third Edition",
@@ -106,7 +109,8 @@ export class MemStorage implements IStorage {
         participants: 30,
         isOnline: false,
         lumaUrl: "https://lu.ma/tiw20xlj",
-        status: "completed"
+        status: "completed",
+        imageUrl: "/attached_assets/cf9bb2ca-5ec7-4898-be85-5657ea462cde_1755554298693.avif"
       },
       {
         title: "London UX/UI Designer Picnic - Forth Edition",
@@ -142,7 +146,8 @@ export class MemStorage implements IStorage {
         participants: 40,
         isOnline: false,
         lumaUrl: "https://lu.ma/otw38ocu",
-        status: "upcoming"
+        status: "upcoming",
+        imageUrl: "/attached_assets/ChatGPT Image Jul 22, 2025, 11_33_01 PM_1755554252997.png"
       }
     ];
 
