@@ -58,7 +58,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6 sm:space-y-8 px-2 sm:px-0"
+            className="space-y-6 sm:space-y-8 px-2 sm:px-0 text-center lg:text-left"
           >
             <div className="space-y-4 sm:space-y-6">
               <h1 className="font-comfortaa font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-black">
@@ -70,7 +70,7 @@ export default function HeroSection() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-0">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-0 justify-center lg:justify-start">
               <Button
                 onClick={() => scrollToSection("connect")}
                 className="bg-fouxy-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-fouxy-secondary transition-all duration-300 transform hover:scale-105 font-comfortaa font-medium text-base sm:text-lg shadow-lg"
@@ -86,7 +86,7 @@ export default function HeroSection() {
               </Button>
             </div>
 
-            <div className="flex items-center space-x-6 pt-4">
+            <div className="flex items-center justify-center lg:justify-start space-x-6 pt-4">
               <div className="text-center">
                 <div className="font-comfortaa font-bold text-2xl text-orange-600">
                   200+
