@@ -73,37 +73,66 @@ export class MemStorage implements IStorage {
     // Initialize sample events
     const sampleEvents: InsertEvent[] = [
       {
-        title: "Vibe Coding Session",
-        description: "Join our relaxed coding session where we build cool projects together and share design tips. Perfect for developers and designers looking to collaborate.",
-        date: new Date("2024-12-15"),
-        participants: 12,
+        title: "Fouxy Squad Founded",
+        description: "The beginning of our amazing design community journey",
+        date: new Date("2025-02-01"),
+        participants: 0,
         isOnline: false,
-        lumaUrl: "https://lu.ma/user/FouxySquad",
         status: "completed"
       },
       {
-        title: "Design Roundtable Discussion",
-        description: "An intimate roundtable where experienced designers share insights about industry trends, career growth, and creative processes.",
-        date: new Date("2025-01-20"),
-        participants: 8,
-        isOnline: true,
-        lumaUrl: "https://lu.ma/user/FouxySquad",
-        status: "completed"
-      },
-      {
-        title: "Community Design Picnic",
-        description: "Outdoor gathering combining networking with creative activities. Bring your sketchbook and join us for design games and good vibes.",
-        date: new Date("2025-02-10"),
-        participants: 25,
-        isOnline: false,
-        lumaUrl: "https://lu.ma/user/FouxySquad",
-        status: "completed"
-      },
-      {
-        title: "Creative Meetup & Portfolio Share",
-        description: "Casual meetup where community members showcase their latest work and get feedback in a supportive environment.",
+        title: "First Meetup",
+        description: "Our inaugural community event",
         date: new Date("2025-03-15"),
-        participants: 18,
+        participants: 20,
+        isOnline: false,
+        status: "completed"
+      },
+      {
+        title: "Second Meetup",
+        description: "Growing community with amazing energy",
+        date: new Date("2025-04-20"),
+        participants: 30,
+        isOnline: false,
+        status: "completed"
+      },
+      {
+        title: "Design Picnic",
+        description: "Outdoor creativity and networking",
+        date: new Date("2025-05-10"),
+        participants: 40,
+        isOnline: false,
+        status: "completed"
+      },
+      {
+        title: "London UX/UI Designers - Online Mini Social",
+        description: "Virtual networking event for London-based designers",
+        date: new Date("2025-03-29"),
+        participants: 20,
+        isOnline: true,
+        status: "completed"
+      },
+      {
+        title: "London UX/UI Designer Picnic - Third Edition", 
+        description: "Parliament Hill Viewpoint picnic meetup",
+        date: new Date("2025-05-18"),
+        participants: 30,
+        isOnline: false,
+        status: "completed"
+      },
+      {
+        title: "London UX/UI RoundTable Online",
+        description: "Interactive online discussion on design methodologies and trends",
+        date: new Date("2025-06-28"),
+        participants: 40,
+        isOnline: true,
+        status: "completed"
+      },
+      {
+        title: "Vibe Coding for Designers",
+        description: "Bridging design and development skills",
+        date: new Date("2025-07-30"),
+        participants: 0,
         isOnline: false,
         lumaUrl: "https://lu.ma/user/FouxySquad",
         status: "upcoming"
@@ -303,4 +332,4 @@ export class DatabaseStorage implements IStorage {
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();
