@@ -46,6 +46,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.put("/api/events/:id", async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      const eventData = insertEventSchema.partial().parse(req.body);
+      const event = await storage.updateEvent(id, eventData);
+      
+      if (!event) {
+        return res.status(404).json({ message: "Event not found" });
+      }
+      
+      res.json(event);
+    } catch (error) {
+      console.error("Error updating event:", error);
+      res.status(400).json({ message: "Invalid event data" });
+    }
+  });
+
   // Community stats routes
   app.get("/api/community-stats", async (req, res) => {
     try {

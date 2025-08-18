@@ -54,102 +54,16 @@ export class MemStorage implements IStorage {
     this.currentEventId = 1;
     this.currentGalleryId = 1;
     
-    // Initialize with sample data
-    this.initializeSampleData();
-  }
-
-  private initializeSampleData() {
-    // Initialize community stats
+    // Initialize with minimal sample data (only used as fallback)
     this.communityStats = {
       id: 1,
       totalMembers: 200,
-      totalEvents: 6,
+      totalEvents: 0,
       instagramFollowers: 2500,
       linkedinConnections: 1800,
       activeChatMembers: 190,
       updatedAt: new Date(),
     };
-
-    // Initialize sample events
-    const sampleEvents: InsertEvent[] = [
-      {
-        title: "Fouxy Squad Founded",
-        description: "The beginning of our amazing design community journey",
-        date: new Date("2025-02-01"),
-        participants: 0,
-        isOnline: false,
-        status: "completed"
-      },
-      {
-        title: "First Meetup",
-        description: "Our inaugural community event",
-        date: new Date("2025-03-15"),
-        participants: 20,
-        isOnline: false,
-        status: "completed"
-      },
-      {
-        title: "Second Meetup",
-        description: "Growing community with amazing energy",
-        date: new Date("2025-04-20"),
-        participants: 30,
-        isOnline: false,
-        status: "completed"
-      },
-      {
-        title: "Design Picnic",
-        description: "Outdoor creativity and networking",
-        date: new Date("2025-05-10"),
-        participants: 40,
-        isOnline: false,
-        status: "completed"
-      },
-      {
-        title: "London UX/UI Designers - Online Mini Social",
-        description: "Virtual networking event for London-based designers",
-        date: new Date("2025-03-29"),
-        participants: 20,
-        isOnline: true,
-        status: "completed"
-      },
-      {
-        title: "London UX/UI Designer Picnic - Third Edition", 
-        description: "Parliament Hill Viewpoint picnic meetup",
-        date: new Date("2025-05-18"),
-        participants: 30,
-        isOnline: false,
-        status: "completed"
-      },
-      {
-        title: "London UX/UI RoundTable Online",
-        description: "Interactive online discussion on design methodologies and trends",
-        date: new Date("2025-06-28"),
-        participants: 40,
-        isOnline: true,
-        status: "completed"
-      },
-      {
-        title: "Vibe Coding for Designers",
-        description: "Bridging design and development skills",
-        date: new Date("2025-07-30"),
-        participants: 0,
-        isOnline: false,
-        lumaUrl: "https://lu.ma/user/FouxySquad",
-        status: "upcoming"
-      }
-    ];
-
-    sampleEvents.forEach(event => {
-      const id = this.currentEventId++;
-      this.events.set(id, { 
-        ...event, 
-        id,
-        status: event.status || "upcoming",
-        participants: event.participants || 0,
-        isOnline: event.isOnline || false,
-        lumaUrl: event.lumaUrl || null
-      });
-    });
   }
 
   // User methods
@@ -189,7 +103,8 @@ export class MemStorage implements IStorage {
       status: insertEvent.status || "upcoming",
       participants: insertEvent.participants || 0,
       isOnline: insertEvent.isOnline || false,
-      lumaUrl: insertEvent.lumaUrl || null
+      lumaUrl: insertEvent.lumaUrl || null,
+      imageUrl: insertEvent.imageUrl || null
     };
     this.events.set(id, event);
     return event;
