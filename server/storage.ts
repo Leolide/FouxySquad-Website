@@ -63,49 +63,85 @@ export class MemStorage implements IStorage {
     this.communityStats = {
       id: 1,
       totalMembers: 200,
-      totalEvents: 6,
+      totalEvents: 8,
       instagramFollowers: 2500,
       linkedinConnections: 1800,
       activeChatMembers: 190,
       updatedAt: new Date(),
     };
 
-    // Initialize sample events
+    // Initialize authentic events (chronologically ordered)
     const sampleEvents: InsertEvent[] = [
       {
-        title: "Vibe Coding Session",
-        description: "Join our relaxed coding session where we build cool projects together and share design tips. Perfect for developers and designers looking to collaborate.",
-        date: new Date("2024-12-15"),
-        participants: 12,
+        title: "UX/UI Product Designer Pub Meetup V.1",
+        description: "Our first official pub meetup bringing together UX/UI designers for networking and casual conversations about design trends and career insights.",
+        date: new Date("2025-02-15"),
+        participants: 15,
         isOnline: false,
-        lumaUrl: "https://lu.ma/user/FouxySquad",
+        lumaUrl: null,
         status: "completed"
       },
       {
-        title: "Design Roundtable Discussion",
-        description: "An intimate roundtable where experienced designers share insights about industry trends, career growth, and creative processes.",
-        date: new Date("2025-01-20"),
-        participants: 8,
+        title: "UX/UI Product Designer Pub Meetup V.2",
+        description: "Second edition of our popular pub meetup series, featuring more designers and deeper discussions about product design challenges.",
+        date: new Date("2025-03-22"),
+        participants: 35,
+        isOnline: false,
+        lumaUrl: null,
+        status: "completed"
+      },
+      {
+        title: "London UX/UI Designers - Online Mini Social",
+        description: "Virtual networking session for designers who couldn't make it to in-person events. Interactive discussions and breakout rooms for focused conversations.",
+        date: new Date("2025-04-12"),
+        participants: 35,
         isOnline: true,
-        lumaUrl: "https://lu.ma/user/FouxySquad",
+        lumaUrl: null,
         status: "completed"
       },
       {
-        title: "Community Design Picnic",
-        description: "Outdoor gathering combining networking with creative activities. Bring your sketchbook and join us for design games and good vibes.",
-        date: new Date("2025-02-10"),
-        participants: 25,
+        title: "London UX/UI Designer Picnic - Third Edition",
+        description: "Outdoor design picnic bringing the community together in a relaxed park setting. Perfect for networking while enjoying good weather.",
+        date: new Date("2025-05-18"),
+        participants: 30,
         isOnline: false,
-        lumaUrl: "https://lu.ma/user/FouxySquad",
+        lumaUrl: "https://lu.ma/tiw20xlj",
         status: "completed"
       },
       {
-        title: "Creative Meetup & Portfolio Share",
-        description: "Casual meetup where community members showcase their latest work and get feedback in a supportive environment.",
-        date: new Date("2025-03-15"),
-        participants: 18,
+        title: "London UX/UI Designer Picnic - Forth Edition",
+        description: "Fourth edition of our popular outdoor picnic series. Join fellow designers for networking, games, and creative conversations in the park.",
+        date: new Date("2025-06-14"),
+        participants: 40,
         isOnline: false,
-        lumaUrl: "https://lu.ma/user/FouxySquad",
+        lumaUrl: "https://lu.ma/du0m4rgp",
+        status: "completed"
+      },
+      {
+        title: "London UX/UI RoundTable Online",
+        description: "Interactive online roundtable discussion focusing on current UX/UI challenges and industry best practices. Structured networking with experienced designers.",
+        date: new Date("2025-06-28"),
+        participants: 40,
+        isOnline: true,
+        lumaUrl: "https://lu.ma/tiw20xlj",
+        status: "completed"
+      },
+      {
+        title: "Vibe Coding for Designers",
+        description: "Upcoming coding session specifically designed for designers who want to learn development skills. Collaborative environment focusing on design-to-code workflows.",
+        date: new Date("2025-07-12"),
+        participants: 85,
+        isOnline: false,
+        lumaUrl: "https://lu.ma/ngu7l1lq",
+        status: "upcoming"
+      },
+      {
+        title: "UX/UI Designer Picnic Meetup V.5 @Battersea Park",
+        description: "Fifth edition of our designer picnic series, this time at the beautiful Battersea Park. Join us for networking, design discussions, and outdoor activities.",
+        date: new Date("2025-08-16"),
+        participants: 40,
+        isOnline: false,
+        lumaUrl: "https://lu.ma/otw38ocu",
         status: "upcoming"
       }
     ];
@@ -118,7 +154,8 @@ export class MemStorage implements IStorage {
         status: event.status || "upcoming",
         participants: event.participants || 0,
         isOnline: event.isOnline || false,
-        lumaUrl: event.lumaUrl || null
+        lumaUrl: event.lumaUrl || null,
+        imageUrl: event.imageUrl || null
       });
     });
   }
@@ -160,7 +197,8 @@ export class MemStorage implements IStorage {
       status: insertEvent.status || "upcoming",
       participants: insertEvent.participants || 0,
       isOnline: insertEvent.isOnline || false,
-      lumaUrl: insertEvent.lumaUrl || null
+      lumaUrl: insertEvent.lumaUrl || null,
+      imageUrl: insertEvent.imageUrl || null
     };
     this.events.set(id, event);
     return event;
