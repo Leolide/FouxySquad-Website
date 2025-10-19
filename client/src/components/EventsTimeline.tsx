@@ -106,70 +106,74 @@ export default function EventsTimeline() {
   };
 
   return (
-    <section id="events" className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-16">
+    <section id="events" className="py-32 bg-white">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="font-comfortaa font-bold text-3xl text-black mb-6">
-            Our Events
+          <h2 className="font-semibold text-4xl sm:text-5xl text-fouxy-text mb-6 tracking-tight">
+            Events
           </h2>
+          <p className="text-xl text-fouxy-text-secondary max-w-2xl mx-auto font-light">
+            Bringing the design community together through meaningful gatherings
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {events.map((event, index) => {
-            const dbEvent = dbEvents?.[dbEvents.length - 1 - index]; // Get corresponding database event
+            const dbEvent = dbEvents?.[dbEvents.length - 1 - index];
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
+                transition={{ duration: 0.4, delay: index * 0.03 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
                 onClick={() => dbEvent && handleEventClick(event, dbEvent)}
+                data-testid={`event-card-${index}`}
               >
                 {event.image ? (
-                  <div className="relative overflow-hidden rounded-2xl aspect-square transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                  <div className="relative overflow-hidden rounded-2xl aspect-square transition-all duration-200">
                     <img 
                       src={event.image} 
                       alt={event.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/80 group-hover:via-black/40 transition-all duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute bottom-6 left-6 right-6">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <span className="text-white/90 text-xs font-medium">
                           {event.date}
                         </span>
                         {event.isUpcoming && (
-                          <span className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                          <span className="bg-fouxy-secondary text-white px-2 py-0.5 rounded-full text-xs font-medium">
                             Upcoming
                           </span>
                         )}
                       </div>
-                      <h3 className="font-comfortaa font-bold text-lg text-white mb-2">
+                      <h3 className="font-medium text-base text-white mb-1 line-clamp-2">
                         {event.title}
                       </h3>
                       {event.participants && (
-                        <div className="mt-3">
-                          <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium">
-                            {event.participants} participants
-                          </span>
-                        </div>
+                        <span className="text-white/80 text-xs">
+                          {event.participants} participants
+                        </span>
                       )}
                     </div>
                   </div>
                 ) : (
-                  <div className="bg-gray-50 rounded-2xl p-8 text-center aspect-square flex flex-col justify-center transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl group-hover:bg-gray-100">
-                    <span className="text-4xl mb-3 block transition-transform duration-300 group-hover:scale-110">{event.icon}</span>
-                    <h3 className="font-comfortaa font-bold text-lg text-black mb-2 transition-colors duration-300 group-hover:text-fouxy-primary">
+                  <div className="bg-fouxy-neutral border border-gray-200/60 rounded-2xl p-8 text-center aspect-square flex flex-col justify-center transition-all duration-200 hover:border-gray-300">
+                    <h3 className="font-medium text-base text-fouxy-text mb-2">
                       {event.title}
                     </h3>
+                    <p className="text-xs text-fouxy-text-secondary">
+                      {event.date}
+                    </p>
                   </div>
                 )}
             </motion.div>
