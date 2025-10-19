@@ -30,21 +30,20 @@ export default function CommunitySection() {
   ];
 
   return (
-    <section id="community" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
+    <section id="community" className="py-32 bg-fouxy-neutral">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="font-comfortaa font-bold text-4xl text-black mb-4">
-            Our Amazing Community
+          <h2 className="font-semibold text-4xl sm:text-5xl text-fouxy-text mb-6 tracking-tight">
+            Our Community
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            A diverse group of passionate designers and creatives fostering
-            design-driven tech conversations through inclusive events.
+          <p className="text-xl text-fouxy-text-secondary max-w-2xl mx-auto font-light leading-relaxed">
+            A diverse group of designers and creatives fostering design-driven conversations through inclusive events.
           </p>
         </motion.div>
 
@@ -53,54 +52,50 @@ export default function CommunitySection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid md:grid-cols-3 gap-6 mb-16"
         >
           <motion.div variants={itemVariants}>
-            <Card className="bg-fouxy-bg rounded-2xl card-hover border border-fouxy-accent/20">
-              <CardContent className="p-8">
-                <div className="text-4xl mb-4">👥</div>
-                <h3 className="font-comfortaa font-bold text-2xl text-orange-600 mb-2">
-                  {communityStats?.totalMembers || 200}+ Members
-                </h3>
-                <p className="text-gray-700">
-                  Highly active professionals and students across UX, UI, and
-                  product design
-                </p>
-              </CardContent>
-            </Card>
+            <div className="bg-white rounded-2xl p-10 card-hover border border-gray-200/60">
+              <h3 className="font-semibold text-3xl text-fouxy-text mb-3">
+                {communityStats?.totalMembers || 200}+
+              </h3>
+              <p className="text-base text-fouxy-text-secondary font-medium mb-2">
+                Members
+              </p>
+              <p className="text-sm text-fouxy-text-secondary leading-relaxed">
+                Active professionals and students across UX, UI, and product design
+              </p>
+            </div>
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <Card className="bg-fouxy-bg rounded-2xl card-hover border border-fouxy-accent/20">
-              <CardContent className="p-8">
-                <div className="text-4xl mb-4">🎓</div>
-                <h3 className="font-comfortaa font-bold text-2xl text-orange-600 mb-2">
-                  Diverse Backgrounds
-                </h3>
-                <p className="text-gray-700">
-                  From top design schools and leading tech companies
-                </p>
-              </CardContent>
-            </Card>
+            <div className="bg-white rounded-2xl p-10 card-hover border border-gray-200/60">
+              <h3 className="font-semibold text-3xl text-fouxy-text mb-3">
+                Diverse
+              </h3>
+              <p className="text-base text-fouxy-text-secondary font-medium mb-2">
+                Backgrounds
+              </p>
+              <p className="text-sm text-fouxy-text-secondary leading-relaxed">
+                From top design schools and leading tech companies
+              </p>
+            </div>
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <Card className="bg-fouxy-bg rounded-2xl card-hover border border-fouxy-accent/20">
-              <CardContent className="p-8">
-                <div className="text-4xl mb-4">🌟</div>
-                <h3 className="font-comfortaa font-bold text-2xl text-orange-600 mb-2">
-                  20-35 Years Old
-                </h3>
-                <p className="text-gray-700">
-                  Mostly young professionals and students passionate about design and
-                  technology
-                </p>
-              </CardContent>
-            </Card>
+            <div className="bg-white rounded-2xl p-10 card-hover border border-gray-200/60">
+              <h3 className="font-semibold text-3xl text-fouxy-text mb-3">
+                20-35
+              </h3>
+              <p className="text-base text-fouxy-text-secondary font-medium mb-2">
+                Years Old
+              </p>
+              <p className="text-sm text-fouxy-text-secondary leading-relaxed">
+                Young professionals and students passionate about design
+              </p>
+            </div>
           </motion.div>
         </motion.div>
-
-
       </div>
     </section>
   );
