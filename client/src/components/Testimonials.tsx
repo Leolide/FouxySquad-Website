@@ -32,17 +32,17 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 bg-fouxy-bg">
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
+    <section className="py-32 bg-white">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="font-comfortaa font-bold text-3xl text-black mb-6">
-            What do people say about us
+          <h2 className="font-semibold text-4xl sm:text-5xl text-fouxy-text mb-6 tracking-tight">
+            Testimonials
           </h2>
         </motion.div>
 
@@ -51,16 +51,17 @@ export default function Testimonials() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-fouxy-neutral border border-gray-200/60 rounded-2xl p-8 transition-all duration-200"
+              data-testid={`testimonial-${index}`}
             >
-              <p className="text-gray-700 text-sm leading-relaxed">
-                {testimonial}
+              <p className="text-fouxy-text-secondary text-sm leading-relaxed">
+                {testimonial.replace(/[🙏👋❤]/g, '')}
               </p>
             </motion.div>
           ))}

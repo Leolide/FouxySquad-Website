@@ -39,21 +39,20 @@ export default function SocialSection() {
   };
 
   return (
-    <section id="connect" className="py-20 bg-fouxy-bg">
-      <div className="max-w-5xl mx-auto px-8 sm:px-12 lg:px-16">
+    <section id="connect" className="py-32 bg-fouxy-neutral">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="font-comfortaa font-bold text-4xl text-black mb-4">
-            Connect With Us
+          <h2 className="font-semibold text-4xl sm:text-5xl text-fouxy-text mb-6 tracking-tight">
+            Connect
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Follow our journey, join our chat, and stay updated with the latest
-            events and community highlights.
+          <p className="text-xl text-fouxy-text-secondary max-w-2xl mx-auto font-light">
+            Stay updated with events and community highlights
           </p>
         </motion.div>
 
@@ -62,77 +61,62 @@ export default function SocialSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-3 gap-6"
         >
           <motion.div variants={itemVariants}>
-            <Card className="bg-white rounded-2xl card-hover text-center border border-fouxy-accent/20">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Instagram className="text-white text-2xl w-8 h-8" />
-                </div>
-                <h3 className="font-comfortaa font-bold text-xl text-black mb-2">
-                  Instagram
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Follow our visual journey and event highlights
-                </p>
-                <Button
-                  onClick={() => handleSocialLink("instagram")}
-                  className="bg-gradient-to-br from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300"
-                >
-                  @fouxy_squad
-                </Button>
-              </CardContent>
-            </Card>
+            <div className="bg-white rounded-2xl p-10 text-center border border-gray-200/60 card-hover">
+              <div className="w-12 h-12 bg-fouxy-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                <Instagram className="text-white w-6 h-6" />
+              </div>
+              <h3 className="font-medium text-lg text-fouxy-text mb-3">
+                Instagram
+              </h3>
+              <button
+                onClick={() => handleSocialLink("instagram")}
+                className="text-fouxy-text-secondary hover:text-fouxy-text text-sm transition-colors"
+                data-testid="link-instagram"
+              >
+                @fouxy_squad
+              </button>
+            </div>
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <Card className="bg-white rounded-2xl card-hover text-center border border-fouxy-accent/20">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Linkedin className="text-white text-2xl w-8 h-8" />
-                </div>
-                <h3 className="font-comfortaa font-bold text-xl text-black mb-2">
-                  LinkedIn
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Professional updates and industry insights
-                </p>
-                <Button
-                  onClick={() => handleSocialLink("linkedin")}
-                  className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-300"
-                >
-                  Fouxy Squad
-                </Button>
-              </CardContent>
-            </Card>
+            <div className="bg-white rounded-2xl p-10 text-center border border-gray-200/60 card-hover">
+              <div className="w-12 h-12 bg-fouxy-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                <Linkedin className="text-white w-6 h-6" />
+              </div>
+              <h3 className="font-medium text-lg text-fouxy-text mb-3">
+                LinkedIn
+              </h3>
+              <button
+                onClick={() => handleSocialLink("linkedin")}
+                className="text-fouxy-text-secondary hover:text-fouxy-text text-sm transition-colors"
+                data-testid="link-linkedin"
+              >
+                Fouxy Squad
+              </button>
+            </div>
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <Card className="bg-white rounded-2xl card-hover text-center border border-fouxy-accent/20 md:col-span-2 lg:col-span-1">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-fouxy-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <QrCode className="text-white text-2xl w-8 h-8" />
-                </div>
-                <h3 className="font-comfortaa font-bold text-xl text-black mb-2">
-                  Join Group Chat
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Scan QR code to join our active community chat
-                </p>
-
-                <Button
-                  onClick={openQRModal}
-                  className="bg-fouxy-primary text-white px-6 py-2 rounded-full hover:bg-fouxy-secondary transition-colors duration-300"
-                >
-                  View QR Code
-                </Button>
-              </CardContent>
-            </Card>
+            <div className="bg-white rounded-2xl p-10 text-center border border-gray-200/60 card-hover">
+              <div className="w-12 h-12 bg-fouxy-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                <QrCode className="text-white w-6 h-6" />
+              </div>
+              <h3 className="font-medium text-lg text-fouxy-text mb-3">
+                Group Chat
+              </h3>
+              <button
+                onClick={openQRModal}
+                className="text-fouxy-text-secondary hover:text-fouxy-text text-sm transition-colors"
+                data-testid="button-qr"
+              >
+                Scan QR Code
+              </button>
+            </div>
           </motion.div>
         </motion.div>
-
-
       </div>
 
       <QRCodeModal 

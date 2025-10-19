@@ -113,21 +113,20 @@ export default function Gallery() {
   }, [selectedImage]);
 
   return (
-    <section id="gallery" className="py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
+    <section id="gallery" className="py-32 bg-fouxy-neutral">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="font-comfortaa font-bold text-4xl text-black mb-4">
-            Community Gallery
+          <h2 className="font-semibold text-4xl sm:text-5xl text-fouxy-text mb-6 tracking-tight">
+            Gallery
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Capturing the energy, creativity, and connections from our events.
-            See our amazing community in action!
+          <p className="text-xl text-fouxy-text-secondary max-w-2xl mx-auto font-light">
+            Moments from our community events
           </p>
         </motion.div>
 
@@ -136,14 +135,15 @@ export default function Gallery() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
         >
           {galleryItems.map((item, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="relative group overflow-hidden rounded-2xl card-hover cursor-pointer"
+              className="relative group overflow-hidden rounded-2xl cursor-pointer transition-all duration-200"
               onClick={() => openLightbox(index)}
+              data-testid={`gallery-img-${index}`}
             >
               <img
                 src={item.src}
@@ -151,21 +151,9 @@ export default function Gallery() {
                 className="w-full h-64 object-cover"
                 loading="lazy"
               />
-              <div
-                className={`absolute inset-0 bg-gradient-to-t ${item.gradient} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end`}
-              >
-                <div className="p-6 text-white">
-                  <h4 className="font-comfortaa font-bold text-lg">
-                    {item.title}
-                  </h4>
-                  <p className="text-sm">{item.description}</p>
-                </div>
-              </div>
             </motion.div>
           ))}
         </motion.div>
-
-
       </div>
 
       {/* Lightbox */}
@@ -210,15 +198,9 @@ export default function Gallery() {
             />
 
             {/* Image info */}
-            <div className="absolute bottom-4 left-4 right-4 text-center">
-              <div className="bg-black bg-opacity-50 backdrop-blur-sm rounded-2xl p-4 mx-auto max-w-md">
-                <h3 className="font-comfortaa font-bold text-white text-lg mb-1">
-                  {galleryItems[selectedImage].title}
-                </h3>
-                <p className="text-white text-sm opacity-90">
-                  {galleryItems[selectedImage].description}
-                </p>
-                <p className="text-white text-xs opacity-70 mt-2">
+            <div className="absolute bottom-6 left-4 right-4 text-center">
+              <div className="bg-black/40 backdrop-blur-sm rounded-xl p-3 mx-auto max-w-md">
+                <p className="text-white text-xs">
                   {selectedImage + 1} / {galleryItems.length}
                 </p>
               </div>
