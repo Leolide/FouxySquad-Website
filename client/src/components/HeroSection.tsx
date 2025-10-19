@@ -58,10 +58,10 @@ export default function HeroSection() {
             className="space-y-10 px-2 sm:px-0 text-center lg:text-left"
           >
             <div className="space-y-6">
-              <h1 className="font-semibold text-5xl sm:text-6xl lg:text-7xl leading-tight text-fouxy-text tracking-tight">
+              <h1 className="font-semibold text-4xl sm:text-5xl lg:text-6xl leading-tight text-fouxy-text tracking-tight">
                 Fouxy Squad
               </h1>
-              <p className="text-xl sm:text-2xl text-fouxy-text-secondary leading-relaxed font-light max-w-lg">
+              <p className="text-lg sm:text-xl text-fouxy-text-secondary leading-relaxed font-light max-w-lg">
                 A design community for creatives in UX, UI, and product design. We host events that spark connection and fresh ideas.
               </p>
             </div>

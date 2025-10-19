@@ -23,7 +23,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-fouxy-text text-white py-16">
+    <footer className="bg-gray-900 text-white py-16">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
