@@ -39,7 +39,7 @@ export default function SocialSection() {
   };
 
   return (
-    <section id="connect" className="py-32 bg-fouxy-neutral">
+    <section id="connect" className="py-24 bg-fouxy-neutral">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ export default function SocialSection() {
           className="grid md:grid-cols-3 gap-6"
         >
           <motion.div variants={itemVariants}>
-            <div className="bg-white rounded-2xl p-10 text-center border border-gray-200/60 card-hover">
+            <div className="bg-white rounded-xl p-8 text-center card-hover">
               <div className="w-12 h-12 bg-fouxy-secondary rounded-full flex items-center justify-center mx-auto mb-6">
                 <Instagram className="text-white w-6 h-6" />
               </div>
@@ -82,7 +82,7 @@ export default function SocialSection() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <div className="bg-white rounded-2xl p-10 text-center border border-gray-200/60 card-hover">
+            <div className="bg-white rounded-xl p-8 text-center card-hover">
               <div className="w-12 h-12 bg-fouxy-secondary rounded-full flex items-center justify-center mx-auto mb-6">
                 <Linkedin className="text-white w-6 h-6" />
               </div>
@@ -100,7 +100,7 @@ export default function SocialSection() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <div className="bg-white rounded-2xl p-10 text-center border border-gray-200/60 card-hover">
+            <div className="bg-white rounded-xl p-8 text-center card-hover">
               <div className="w-12 h-12 bg-fouxy-secondary rounded-full flex items-center justify-center mx-auto mb-6">
                 <QrCode className="text-white w-6 h-6" />
               </div>

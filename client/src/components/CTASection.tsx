@@ -25,7 +25,7 @@ export default function CTASection() {
   };
 
   return (
-    <section id="cta" className="py-32 bg-white">
+    <section id="cta" className="py-24 bg-white">
       <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

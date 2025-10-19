@@ -113,7 +113,7 @@ export default function Gallery() {
   }, [selectedImage]);
 
   return (
-    <section id="gallery" className="py-32 bg-fouxy-neutral">
+    <section id="gallery" className="py-24 bg-fouxy-neutral">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -141,7 +141,7 @@ export default function Gallery() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="relative group overflow-hidden rounded-2xl cursor-pointer transition-all duration-200"
+              className="relative group overflow-hidden rounded-xl cursor-pointer transition-all duration-200"
               onClick={() => openLightbox(index)}
               data-testid={`gallery-img-${index}`}
             >

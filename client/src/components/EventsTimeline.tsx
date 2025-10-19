@@ -106,7 +106,7 @@ export default function EventsTimeline() {
   };
 
   return (
-    <section id="events" className="py-32 bg-white">
+    <section id="events" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -138,7 +138,7 @@ export default function EventsTimeline() {
                 data-testid={`event-card-${index}`}
               >
                 {event.image ? (
-                  <div className="relative overflow-hidden rounded-2xl aspect-square transition-all duration-200">
+                  <div className="relative overflow-hidden rounded-xl aspect-square transition-all duration-200">
                     <img 
                       src={event.image} 
                       alt={event.title}
@@ -167,7 +167,7 @@ export default function EventsTimeline() {
                     </div>
                   </div>
                 ) : (
-                  <div className="bg-fouxy-neutral border border-gray-200/60 rounded-2xl p-8 text-center aspect-square flex flex-col justify-center transition-all duration-200 hover:border-gray-300">
+                  <div className="bg-fouxy-neutral rounded-xl p-8 text-center aspect-square flex flex-col justify-center transition-all duration-200">
                     <h3 className="font-medium text-base text-fouxy-text mb-2">
                       {event.title}
                     </h3>

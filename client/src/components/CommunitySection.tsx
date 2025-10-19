@@ -30,7 +30,7 @@ export default function CommunitySection() {
   ];
 
   return (
-    <section id="community" className="py-32 bg-fouxy-neutral">
+    <section id="community" className="py-24 bg-fouxy-neutral">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ export default function CommunitySection() {
           className="grid md:grid-cols-3 gap-6 mb-16"
         >
           <motion.div variants={itemVariants}>
-            <div className="bg-white rounded-2xl p-10 card-hover border border-gray-200/60">
+            <div className="bg-white rounded-xl p-8 card-hover">
               <h3 className="font-semibold text-3xl text-fouxy-text mb-3">
                 {communityStats?.totalMembers || 200}+
               </h3>
@@ -69,7 +69,7 @@ export default function CommunitySection() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <div className="bg-white rounded-2xl p-10 card-hover border border-gray-200/60">
+            <div className="bg-white rounded-xl p-8 card-hover">
               <h3 className="font-semibold text-3xl text-fouxy-text mb-3">
                 Diverse
               </h3>
@@ -83,7 +83,7 @@ export default function CommunitySection() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <div className="bg-white rounded-2xl p-10 card-hover border border-gray-200/60">
+            <div className="bg-white rounded-xl p-8 card-hover">
               <h3 className="font-semibold text-3xl text-fouxy-text mb-3">
                 20-35
               </h3>

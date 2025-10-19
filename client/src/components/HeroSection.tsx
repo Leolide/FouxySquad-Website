@@ -23,7 +23,7 @@ export default function HeroSection() {
       {/* Minimal Next Event Card */}
       {nextEvent && (
         <div className="absolute top-8 right-8 z-40 max-w-xs hidden xl:block">
-          <div className="bg-fouxy-neutral rounded-2xl p-5 border border-gray-200/60">
+          <div className="bg-fouxy-neutral rounded-xl p-5">
             <div className="flex items-center space-x-2 mb-3">
               <span className="bg-fouxy-secondary text-white px-2.5 py-1 rounded-full text-xs font-medium">NEXT EVENT</span>
               <span className="text-xs text-fouxy-text-secondary">{nextEvent.participants} attending</span>

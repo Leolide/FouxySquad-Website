@@ -32,7 +32,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-32 bg-white">
+    <section className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,7 +57,7 @@ export default function Testimonials() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-fouxy-neutral border border-gray-200/60 rounded-2xl p-8 transition-all duration-200"
+              className="bg-fouxy-neutral rounded-xl p-6 transition-all duration-200"
               data-testid={`testimonial-${index}`}
             >
               <p className="text-fouxy-text-secondary text-sm leading-relaxed">

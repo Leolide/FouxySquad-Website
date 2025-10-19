@@ -18,7 +18,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white/95 sticky top-0 z-50 border-b border-gray-200/60">
+    <nav className="bg-white/95 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center space-x-2">
@@ -80,7 +80,7 @@ export default function Navigation() {
         
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200/60 py-6">
+          <div className="md:hidden bg-white py-6">
             <div className="flex flex-col space-y-5 px-4">
               <button
                 onClick={() => scrollToSection("community")}
