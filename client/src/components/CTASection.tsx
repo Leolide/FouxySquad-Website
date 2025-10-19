@@ -25,95 +25,30 @@ export default function CTASection() {
   };
 
   return (
-    <section id="cta" className="py-20 bg-gradient-to-br from-fouxy-primary via-fouxy-secondary to-fouxy-accent">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section id="cta" className="py-32 bg-white">
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mb-8"
         >
-          <img 
-            src="/attached_assets/Group 7_1753395217548.png" 
-            alt="Fouxy Squad Logo - Join Our Community" 
-            className="w-16 h-16 mx-auto mb-4 animate-bounce-slow"
-          />
-          <h2 className="font-comfortaa font-bold text-4xl text-white mb-4">
-            Ready to Join Fouxy Squad?
+          <h2 className="font-semibold text-4xl sm:text-5xl text-fouxy-text mb-8 tracking-tight">
+            Join Fouxy Squad
           </h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Become part of London's most vibrant design community. Connect with
-            amazing creatives, attend inspiring events, and grow your design
-            career with us.
+          <p className="text-xl text-fouxy-text-secondary max-w-2xl mx-auto leading-relaxed font-light mb-12">
+            Become part of London's vibrant design community. Connect with creatives and attend inspiring events.
           </p>
-        </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="space-y-6"
-        >
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              onClick={handleJoinCommunity}
-              className="bg-white text-fouxy-primary px-8 py-4 rounded-full font-comfortaa font-bold text-lg hover:bg-fouxy-bg transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Join Our Community
-            </Button>
-            <Button
+            <button
               onClick={handleViewEvents}
-              variant="outline"
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-comfortaa font-bold text-lg hover:bg-white hover:text-fouxy-primary transition-all duration-300"
+              className="bg-fouxy-secondary text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all duration-200"
+              data-testid="button-events"
             >
-              View Upcoming Events
-            </Button>
+              View Events
+            </button>
           </div>
-
-          <div className="flex justify-center space-x-6 pt-4">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => handleSocialClick("instagram")}
-              className="text-white hover:text-fouxy-bg hover:bg-white/10 transition-colors duration-200 p-3"
-            >
-              <Instagram className="w-6 h-6" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => handleSocialClick("linkedin")}
-              className="text-white hover:text-fouxy-bg hover:bg-white/10 transition-colors duration-200 p-3"
-            >
-              <Linkedin className="w-6 h-6" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => handleSocialClick("chat")}
-              className="text-white hover:text-fouxy-bg hover:bg-white/10 transition-colors duration-200 p-3"
-            >
-              <MessageCircle className="w-6 h-6" />
-            </Button>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-12 pt-8 border-t border-white/20"
-        >
-          <p className="text-white/80 mb-2">Questions? Reach out to us:</p>
-          <a
-            href="mailto:hello@fouxysquad.com"
-            className="text-white font-medium hover:text-fouxy-bg transition-colors duration-200"
-          >
-            hello@fouxysquad.com
-          </a>
         </motion.div>
       </div>
     </section>

@@ -23,36 +23,32 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-16 mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
+    <footer className="bg-fouxy-text text-white py-16">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
+          <div>
+            <div className="flex items-center space-x-2 mb-4">
               <img 
                 src="/attached_assets/Group 7_1753395217548.png" 
                 alt="Fouxy Squad Logo" 
-                className="w-8 h-8"
+                className="w-7 h-7"
               />
-              <span className="font-comfortaa font-bold text-xl">
+              <span className="font-medium text-lg">
                 Fouxy Squad
               </span>
             </div>
-            <p className="text-white/90 max-w-md">
-              London's vibrant design community fostering connection,
-              creativity, and growth among 200+ passionate designers and
-              creatives.
+            <p className="text-white/70 text-sm leading-relaxed">
+              London's design community fostering connection and creativity among passionate designers.
             </p>
           </div>
 
           <div>
-            <h4 className="font-comfortaa font-bold text-lg mb-4">
-              Quick Links
-            </h4>
-            <ul className="space-y-2 text-white/90">
+            <h4 className="font-medium text-sm mb-4">Links</h4>
+            <ul className="space-y-2 text-white/70 text-sm">
               <li>
                 <button
                   onClick={() => scrollToSection("community")}
-                  className="hover:text-white transition-colors duration-200"
+                  className="hover:text-white transition-colors"
                 >
                   Community
                 </button>
@@ -60,7 +56,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection("events")}
-                  className="hover:text-white transition-colors duration-200"
+                  className="hover:text-white transition-colors"
                 >
                   Events
                 </button>
@@ -68,88 +64,44 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection("gallery")}
-                  className="hover:text-white transition-colors duration-200"
+                  className="hover:text-white transition-colors"
                 >
                   Gallery
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("cta")}
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Join Us
                 </button>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-comfortaa font-bold text-lg mb-4">Connect</h4>
-            <div className="space-y-3">
+            <h4 className="font-medium text-sm mb-4">Connect</h4>
+            <div className="space-y-2 text-sm">
               <button
                 onClick={() => handleSocialClick("instagram")}
-                className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
+                className="flex items-center space-x-2 text-white/70 hover:text-white transition-colors"
               >
                 <Instagram className="w-4 h-4" />
-                <span>@fouxy_squad</span>
+                <span>Instagram</span>
               </button>
               <button
                 onClick={() => handleSocialClick("linkedin")}
-                className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
+                className="flex items-center space-x-2 text-white/70 hover:text-white transition-colors"
               >
                 <Linkedin className="w-4 h-4" />
-                <span>Fouxy Squad</span>
+                <span>LinkedIn</span>
               </button>
               <a
                 href="mailto:fouxysquad@gmail.com"
-                className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
+                className="flex items-center space-x-2 text-white/70 hover:text-white transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span>fouxysquad@gmail.com</span>
+                <span>Email</span>
               </a>
-              <div className="relative">
-                <button
-                  onClick={() => setShowQR(!showQR)}
-                  className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  <span>WhatsApp Group</span>
-                </button>
-                
-                {showQR && (
-                  <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" onClick={() => setShowQR(false)}>
-                    <div className="bg-white p-6 rounded-2xl max-w-sm mx-4" onClick={(e) => e.stopPropagation()}>
-                      <div className="text-center mb-4">
-                        <h3 className="font-comfortaa font-bold text-xl text-black mb-2">Join Our WhatsApp</h3>
-                        <p className="text-gray-600 text-sm">Scan the QR code to join our community chat</p>
-                      </div>
-                      <div className="flex justify-center mb-4">
-                        <img 
-                          src="/attached_assets/Screenshot 2025-07-26 at 23.38.27_1753569602945.png" 
-                          alt="WhatsApp Group QR Code" 
-                          className="w-64 h-64 object-contain"
-                        />
-                      </div>
-                      <button
-                        onClick={() => setShowQR(false)}
-                        className="w-full bg-fouxy-primary text-white py-2 px-4 rounded-full hover:bg-fouxy-secondary transition-colors duration-200 font-medium"
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/80">
-          <p>
-            &copy; 2025 Fouxy Squad. Bringing London's design community together
-            with love and creativity. 🦊
-          </p>
+        <div className="border-t border-white/10 pt-8 text-center text-white/50 text-xs">
+          <p>© 2025 Fouxy Squad</p>
         </div>
       </div>
     </footer>
