@@ -63,7 +63,7 @@ export class MemStorage implements IStorage {
     this.communityStats = {
       id: 1,
       totalMembers: 200,
-      totalEvents: 8,
+      totalEvents: 9,
       instagramFollowers: 2500,
       linkedinConnections: 1800,
       activeChatMembers: 190,
@@ -148,6 +148,16 @@ export class MemStorage implements IStorage {
         lumaUrl: "https://lu.ma/otw38ocu",
         status: "completed",
         imageUrl: "/attached_assets/ChatGPT Image Jul 22, 2025, 11_33_01 PM_1755554252997.png"
+      },
+      {
+        title: "AI × Design Playground",
+        description: "Interactive workshop exploring the intersection of AI and design. Hands-on sessions, creative experiments, and collaborative projects combining artificial intelligence with design thinking.",
+        date: new Date("2025-10-18"),
+        participants: 80,
+        isOnline: false,
+        lumaUrl: "https://lu.ma/req7gpl0",
+        status: "completed",
+        imageUrl: "/attached_assets/ChatGPT Image Sep 27, 2025, 06_23_36 PM_1760891514894.png"
       }
     ];
 
