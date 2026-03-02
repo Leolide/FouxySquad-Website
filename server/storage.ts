@@ -62,8 +62,8 @@ export class MemStorage implements IStorage {
     // Initialize community stats
     this.communityStats = {
       id: 1,
-      totalMembers: 200,
-      totalEvents: 9,
+      totalMembers: 400,
+      totalEvents: 12,
       instagramFollowers: 2500,
       linkedinConnections: 1800,
       activeChatMembers: 190,
@@ -158,6 +158,36 @@ export class MemStorage implements IStorage {
         lumaUrl: "https://lu.ma/req7gpl0",
         status: "completed",
         imageUrl: "/attached_assets/ChatGPT Image Sep 27, 2025, 06_23_36 PM_1760891514894.png"
+      },
+      {
+        title: "From Sketch to Reality: AIGC Creative Workflows",
+        description: "How AI image and video generation are reshaping creative workflows. Talks, workshop, pitch & prizes. All attendees receive 1 month free Fotor membership.",
+        date: new Date("2026-01-24"),
+        participants: 0,
+        isOnline: false,
+        lumaUrl: "https://lu.ma/9di2vrvp",
+        status: "completed",
+        imageUrl: "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/1v/004c852a-aeba-489e-a7bd-2bb253777a76.jpg"
+      },
+      {
+        title: "Navigating the 2026 UK Design Ecosystem",
+        description: "An honest conversation about how the UK design market works — CVs, portfolios, hiring, startups vs corporates. Speaker: Veron, 20+ years design leadership.",
+        date: new Date("2026-03-18"),
+        participants: 0,
+        isOnline: false,
+        lumaUrl: "https://lu.ma/msr75avl",
+        status: "upcoming",
+        imageUrl: "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/vn/8c485d29-0fa5-4f98-aa6c-928b99744cae.png"
+      },
+      {
+        title: "Design Mode: ON | London Designers Chat Night",
+        description: "A conversation-first evening for designers. No slides, no stage — food, drinks, and honest talks about design and AI. Sponsored by Replit.",
+        date: new Date("2026-03-25"),
+        participants: 0,
+        isOnline: false,
+        lumaUrl: "https://lu.ma/ua1wxepb",
+        status: "upcoming",
+        imageUrl: "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/co/adbdc299-3a83-4c91-969f-d2709c8d50d5.png"
       }
     ];
 

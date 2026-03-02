@@ -26,7 +26,6 @@ export default function HeroSection() {
           <div className="bg-fouxy-neutral rounded-xl p-5">
             <div className="flex items-center space-x-2 mb-3">
               <span className="bg-fouxy-secondary text-white px-2.5 py-1 rounded-full text-xs font-medium">NEXT EVENT</span>
-              <span className="text-xs text-fouxy-text-secondary">{nextEvent.participants} attending</span>
             </div>
             <h3 className="font-medium text-base text-fouxy-text mb-2">
               {nextEvent.title}
