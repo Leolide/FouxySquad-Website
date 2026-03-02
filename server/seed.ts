@@ -7,7 +7,7 @@ async function seedDatabase() {
   // Seed community stats
   const statsData: InsertCommunityStats = {
     totalMembers: 200,
-    totalEvents: 6,
+    totalEvents: 9,
     instagramFollowers: 2500,
     linkedinConnections: 1800,
     activeChatMembers: 190,
@@ -58,7 +58,7 @@ async function seedDatabase() {
       status: "completed"
     },
     {
-      title: "London UX/UI Designer Picnic - Third Edition", 
+      title: "London UX/UI Designer Picnic - Third Edition",
       description: "Parliament Hill Viewpoint picnic meetup",
       date: new Date("2025-05-18"),
       participants: 30,
@@ -80,6 +80,33 @@ async function seedDatabase() {
       participants: 0,
       isOnline: false,
       lumaUrl: "https://lu.ma/user/FouxySquad",
+      status: "completed"
+    },
+    {
+      title: "From Sketch to Reality: AIGC Creative Workflows",
+      description: "How AI image and video generation are reshaping creative workflows across industries. Talks, workshop, pitch & prizes. Speakers from SOM and more. All attendees receive 1 month free Fotor membership.",
+      date: new Date("2026-01-24"),
+      participants: 0,
+      isOnline: false,
+      lumaUrl: "https://lu.ma/9di2vrvp",
+      status: "completed"
+    },
+    {
+      title: "Navigating the 2026 UK Design Ecosystem",
+      description: "An honest, practical conversation about how the UK design market actually works — CVs, portfolios, hiring, startups vs corporates, and common blind spots for international designers. Speaker: Veron, Head of Design with 20+ years experience.",
+      date: new Date("2026-03-18"),
+      participants: 0,
+      isOnline: false,
+      lumaUrl: "https://lu.ma/msr75avl",
+      status: "upcoming"
+    },
+    {
+      title: "Design Mode: ON | London Designers Chat Night",
+      description: "A conversation-first evening for designers and creatives. No slides, no stage — just good people, food, drinks, and honest conversations about design judgment, taste, and AI. Sponsored by Replit.",
+      date: new Date("2026-03-25"),
+      participants: 0,
+      isOnline: false,
+      lumaUrl: "https://lu.ma/ua1wxepb",
       status: "upcoming"
     }
   ];
