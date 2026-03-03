@@ -85,13 +85,13 @@ export default function HeroSection() {
             <div className="flex items-center justify-center lg:justify-start space-x-12 pt-6">
               <div>
                 <div className="font-semibold text-3xl text-fouxy-text">
-                  200+
+                  400+
                 </div>
                 <div className="text-sm text-fouxy-text-secondary mt-1">Active Members</div>
               </div>
               <div>
                 <div className="font-semibold text-3xl text-fouxy-text">
-                  9
+                  12+
                 </div>
                 <div className="text-sm text-fouxy-text-secondary mt-1">Events Hosted</div>
               </div>
