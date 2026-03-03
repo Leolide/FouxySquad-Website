@@ -71,13 +71,13 @@ export default function CommunitySection() {
           <motion.div variants={itemVariants}>
             <div className="bg-white rounded-xl p-8 card-hover">
               <h3 className="font-semibold text-3xl text-fouxy-text mb-3">
-                Diverse
+                {communityStats?.totalEvents || 12}+
               </h3>
               <p className="text-base text-fouxy-text-secondary font-medium mb-2">
-                Backgrounds
+                Events
               </p>
               <p className="text-sm text-fouxy-text-secondary leading-relaxed">
-                From top design schools and leading tech companies
+                Meetups, workshops, and socials hosted across London
               </p>
             </div>
           </motion.div>
