@@ -6,8 +6,8 @@ async function seedDatabase() {
 
   // Seed community stats
   const statsData: InsertCommunityStats = {
-    totalMembers: 200,
-    totalEvents: 9,
+    totalMembers: 400,
+    totalEvents: 12,
     instagramFollowers: 2500,
     linkedinConnections: 1800,
     activeChatMembers: 190,

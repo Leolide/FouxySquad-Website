@@ -57,7 +57,7 @@ export default function CommunitySection() {
           <motion.div variants={itemVariants}>
             <div className="bg-white rounded-xl p-8 card-hover">
               <h3 className="font-semibold text-3xl text-fouxy-text mb-3">
-                {communityStats?.totalMembers || 200}+
+                {communityStats?.totalMembers || 400}+
               </h3>
               <p className="text-base text-fouxy-text-secondary font-medium mb-2">
                 Members
