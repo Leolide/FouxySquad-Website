@@ -8,8 +8,41 @@ import {
   ArrowRight, 
   Menu, 
   ExternalLink, 
-  Mail 
+  Mail,
+  MessageCircle,
+  Phone
 } from "lucide-react";
+
+function CuteFox() {
+  return (
+    <svg viewBox="0 0 200 200" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(100,110)">
+        <ellipse cx="0" cy="20" rx="45" ry="35" fill="#E8742C" />
+        <circle cx="0" cy="-15" r="38" fill="#E8742C" />
+        <polygon points="-38,-20 -28,-65 -10,-25" fill="#E8742C" />
+        <polygon points="-32,-28 -26,-55 -14,-30" fill="#FDEEE4" />
+        <polygon points="38,-20 28,-65 10,-25" fill="#E8742C" />
+        <polygon points="32,-28 26,-55 14,-30" fill="#FDEEE4" />
+        <ellipse cx="0" cy="-5" rx="22" ry="18" fill="#FDEEE4" />
+        <ellipse cx="0" cy="30" rx="25" ry="15" fill="#FDEEE4" />
+        <circle cx="-12" cy="-18" r="6" fill="#0A0A0A" />
+        <circle cx="12" cy="-18" r="6" fill="#0A0A0A" />
+        <circle cx="-10" cy="-20" r="2" fill="white" />
+        <circle cx="14" cy="-20" r="2" fill="white" />
+        <ellipse cx="0" cy="-6" rx="5" ry="3.5" fill="#0A0A0A" />
+        <path d="M -6 0 Q 0 6 6 0" stroke="#0A0A0A" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+        <line x1="-40" y1="-12" x2="-55" y2="-18" stroke="#0A0A0A" strokeWidth="1" strokeLinecap="round" />
+        <line x1="-40" y1="-8" x2="-56" y2="-8" stroke="#0A0A0A" strokeWidth="1" strokeLinecap="round" />
+        <line x1="-40" y1="-4" x2="-55" y2="2" stroke="#0A0A0A" strokeWidth="1" strokeLinecap="round" />
+        <line x1="40" y1="-12" x2="55" y2="-18" stroke="#0A0A0A" strokeWidth="1" strokeLinecap="round" />
+        <line x1="40" y1="-8" x2="56" y2="-8" stroke="#0A0A0A" strokeWidth="1" strokeLinecap="round" />
+        <line x1="40" y1="-4" x2="55" y2="2" stroke="#0A0A0A" strokeWidth="1" strokeLinecap="round" />
+        <path d="M 30 45 Q 50 30 55 50 Q 60 65 45 55 Q 35 50 30 45 Z" fill="#E8742C" />
+        <path d="M 45 50 Q 55 60 48 55" fill="#FDEEE4" />
+      </g>
+    </svg>
+  );
+}
 
 export default function Editorial() {
   return (
@@ -65,6 +98,11 @@ export default function Editorial() {
             </div>
             
             <div className="lg:col-span-4 lg:border-l border-[#E8E5E0] lg:pl-8 h-full flex flex-col justify-between pt-4 lg:pt-0 pb-12 lg:pb-0 gap-12">
+              <div className="flex justify-center mb-4">
+                <div className="w-40 h-40">
+                  <CuteFox />
+                </div>
+              </div>
               <div className="space-y-12">
                 <div>
                   <div className="flex items-center space-x-3 mb-2 text-gray-500 uppercase tracking-widest text-[10px] font-bold">
@@ -357,10 +395,38 @@ export default function Editorial() {
             <p className="text-xl text-gray-700 font-light mb-12 max-w-lg">
               Become part of London's most engaged design collective. No membership fees, just good design and great people.
             </p>
-            <button className="bg-[#0A0A0A] text-[#FAFAFA] text-xs font-semibold tracking-widest uppercase px-10 py-5 hover:bg-gray-800 transition-colors flex items-center space-x-3">
-              <span>Apply for Membership</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-16">
+              <a href="https://chat.whatsapp.com/FouxySquad" target="_blank" rel="noopener noreferrer" className="bg-[#0A0A0A] text-[#FAFAFA] text-xs font-semibold tracking-widest uppercase px-8 py-4 hover:bg-gray-800 transition-colors flex items-center justify-center space-x-2">
+                <MessageCircle className="w-4 h-4" />
+                <span>Join WhatsApp Group</span>
+                <ArrowRight className="w-3 h-3" />
+              </a>
+              <a href="https://lu.ma/user/FouxySquad" target="_blank" rel="noopener noreferrer" className="border border-[#0A0A0A] text-[#0A0A0A] text-xs font-semibold tracking-widest uppercase px-8 py-4 hover:bg-[#0A0A0A] hover:text-[#FAFAFA] transition-colors flex items-center justify-center space-x-2">
+                <Calendar className="w-4 h-4" />
+                <span>View Events on Luma</span>
+                <ArrowRight className="w-3 h-3" />
+              </a>
+            </div>
+
+            <div className="w-full max-w-lg">
+              <div className="w-full h-[1px] bg-[#0A0A0A]/20 mb-8"></div>
+              <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-6">Or contact the host directly</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-left">
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-4 h-4 text-gray-500" />
+                  <span className="font-medium">+44 7596449024</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <MessageCircle className="w-4 h-4 text-gray-500" />
+                  <span className="font-medium">WeChat: ExcalibuR-</span>
+                </div>
+                <div className="flex items-center space-x-3 sm:col-span-2">
+                  <Mail className="w-4 h-4 text-gray-500" />
+                  <a href="mailto:fouxysquad@gmail.com" className="font-medium border-b border-[#0A0A0A]/30 hover:border-[#0A0A0A] transition-colors">fouxysquad@gmail.com</a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
