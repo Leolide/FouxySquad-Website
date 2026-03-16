@@ -46,10 +46,10 @@ export default function Editorial() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] text-[#0A0A0A] font-['Inter'] antialiased">
+    <div className="min-h-screen bg-[#FAF6EE] text-[#0A0A0A] font-['Inter'] antialiased">
 
       {/* 1. Navigation */}
-      <nav className="border-b border-[#E8E5E0] sticky top-0 bg-[#FAFAFA]/95 backdrop-blur-sm z-50">
+      <nav className="border-b border-[#E8DFD0] sticky top-0 bg-[#FAF6EE]/95 backdrop-blur-sm z-50">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <span className="font-['Playfair_Display'] text-2xl tracking-tight font-semibold italic">
@@ -80,7 +80,7 @@ export default function Editorial() {
 
       <main>
         {/* 2. Hero */}
-        <section className="border-b border-[#E8E5E0] min-h-[85vh] flex flex-col justify-center relative pt-12">
+        <section className="border-b border-[#E8DFD0] min-h-[85vh] flex flex-col justify-center relative pt-12">
           {/* Orange accent bar top-left */}
           <div className="absolute top-0 left-0 w-1 h-full" style={{ backgroundColor: ORANGE, opacity: 0.15 }}></div>
 
@@ -160,7 +160,7 @@ export default function Editorial() {
         </section>
 
         {/* 3. Community */}
-        <section id="community" className="border-b border-[#E8E5E0] py-24">
+        <section id="community" className="border-b border-[#E8DFD0] py-24">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-baseline justify-between mb-16 pb-8 border-b-2" style={{ borderColor: ORANGE }}>
               <h2 className="font-['Playfair_Display'] text-5xl md:text-7xl">The Collective.</h2>
@@ -201,7 +201,7 @@ export default function Editorial() {
         </section>
 
         {/* 4. Events */}
-        <section id="events" className="border-b border-[#E8E5E0] py-24 bg-[#E8E5E0]/20">
+        <section id="events" className="border-b border-[#E8DFD0] py-24" style={{ backgroundColor: '#F5EDD8' }}>
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-baseline justify-between mb-16 pb-8 border-b border-[#0A0A0A]">
               <h2 className="font-['Playfair_Display'] text-5xl md:text-7xl">Calendar.</h2>
@@ -222,7 +222,7 @@ export default function Editorial() {
                   <div
                     key={event.id}
                     onClick={() => event.lumaUrl && window.open(event.lumaUrl, '_blank')}
-                    className={`grid grid-cols-1 md:grid-cols-12 gap-8 py-8 border-b border-[#E8E5E0] group hover:bg-white transition-colors cursor-pointer ${!isUpcoming ? 'opacity-70' : ''}`}
+                    className={`grid grid-cols-1 md:grid-cols-12 gap-8 py-8 border-b border-[#E8DFD0] group hover:bg-[#FAF6EE] transition-colors cursor-pointer ${!isUpcoming ? 'opacity-70' : ''}`}
                   >
                     <div className="md:col-span-2 flex flex-col justify-center">
                       {/* Orange "Upcoming" badge */}
@@ -265,46 +265,49 @@ export default function Editorial() {
         </section>
 
         {/* 5. Gallery */}
-        <section id="gallery" className="border-b border-[#E8E5E0] py-24">
+        <section id="gallery" className="border-b border-[#E8DFD0] py-24">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-baseline justify-between mb-16 pb-8 border-b border-[#0A0A0A]">
               <h2 className="font-['Playfair_Display'] text-5xl md:text-7xl">Moments.</h2>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
-              {/* Orange accent block */}
-              <div className="md:col-span-7 relative group overflow-hidden" style={{ backgroundColor: ORANGE }}>
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
+              {/* Row 1: big left + smaller right */}
+              <div className="md:col-span-7 relative group overflow-hidden h-[380px]">
+                <img src="/__mockup/images/event-1.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                 <div className="absolute bottom-6 left-6 text-white">
-                  <span className="text-xs uppercase tracking-widest font-semibold block mb-2 opacity-80">Vol. 12</span>
-                  <h4 className="font-['Playfair_Display'] text-2xl italic">Summer Social Gathering</h4>
+                  <span className="text-xs uppercase tracking-widest font-semibold block mb-1 opacity-80">Community</span>
+                  <h4 className="font-['Playfair_Display'] text-2xl italic">Fouxy Gathering</h4>
                 </div>
               </div>
-              <div className="md:col-span-5 bg-[#dcdad5] relative group overflow-hidden">
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+              <div className="md:col-span-5 relative group overflow-hidden h-[380px]">
+                <img src="/__mockup/images/event-2.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
               </div>
-              
-              <div className="md:col-span-4 bg-[#E8E5E0] relative group overflow-hidden">
-                <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors"></div>
+
+              {/* Row 2: three equal */}
+              <div className="md:col-span-4 relative group overflow-hidden h-[280px]">
+                <img src="/__mockup/images/event-3.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
               </div>
-              <div className="md:col-span-4 bg-[#0A0A0A] relative group overflow-hidden">
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+              <div className="md:col-span-4 relative group overflow-hidden h-[280px]">
+                <img src="/__mockup/images/event-4.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
               </div>
-              <div className="md:col-span-4 bg-[#dcdad5] relative group overflow-hidden">
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+              <div className="md:col-span-4 relative group overflow-hidden h-[280px]">
+                <img src="/__mockup/images/event-5.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
               </div>
-              
-              <div className="md:col-span-12 h-[400px] bg-[#0A0A0A] relative group overflow-hidden">
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                  <span className="font-['Playfair_Display'] text-4xl md:text-5xl italic mb-6">Experience the Vibe</span>
-                  <button className="px-8 py-3 text-xs uppercase tracking-widest font-semibold transition-colors text-white border" style={{ borderColor: ORANGE }}
-                    onMouseEnter={e => { (e.target as HTMLButtonElement).style.backgroundColor = ORANGE; }}
-                    onMouseLeave={e => { (e.target as HTMLButtonElement).style.backgroundColor = 'transparent'; }}
-                  >
-                    View Complete Archive
-                  </button>
-                </div>
+
+              {/* Row 3: wide banner with real photo */}
+              <div className="md:col-span-8 relative group overflow-hidden h-[320px]">
+                <img src="/__mockup/images/event-6.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+              </div>
+              <div className="md:col-span-4 relative group overflow-hidden h-[320px]">
+                <img src="/__mockup/images/event-8.jpg" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
               </div>
             </div>
           </div>
