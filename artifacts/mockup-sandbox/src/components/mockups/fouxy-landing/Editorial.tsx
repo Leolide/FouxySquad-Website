@@ -28,7 +28,7 @@ interface Event {
 
 const LOCAL_FALLBACKS: Record<number, string> = {
   5: "/__mockup/images/event-7.jpg",
-  6: "/__mockup/images/event-9.jpg",
+  6: "/__mockup/images/event-talk.jpg",
   7: "/__mockup/images/vibe-coding.png",
 };
 
