@@ -129,17 +129,17 @@ export default function Editorial() {
                 style={{ filter: 'drop-shadow(0 20px 40px rgba(232,116,44,0.25)) drop-shadow(0 8px 16px rgba(0,0,0,0.15))' }}
               />
 
-              {/* Stats as a compact horizontal row */}
-              <div className="w-full grid grid-cols-3 gap-4 border-t border-[#EAE3D8] pt-8">
-                <div className="flex flex-col items-center text-center">
+              {/* Stats — vertical on lg, horizontal on small */}
+              <div className="w-full flex flex-row lg:flex-col gap-0 border-t border-[#EAE3D8] pt-8 lg:pt-0 lg:border-t-0 lg:border-l lg:pl-8 lg:space-y-6">
+                <div className="flex-1 lg:flex-none flex flex-col items-center text-center lg:items-start lg:text-left">
                   <div className="font-['Playfair_Display'] text-6xl font-semibold">400+</div>
                   <div className="text-xs uppercase tracking-widest text-gray-500 mt-2">Members</div>
                 </div>
-                <div className="flex flex-col items-center text-center border-x border-[#EAE3D8]">
+                <div className="flex-1 lg:flex-none flex flex-col items-center text-center lg:items-start lg:text-left border-x border-[#EAE3D8] lg:border-x-0 lg:border-t lg:pt-6">
                   <div className="font-['Playfair_Display'] text-6xl font-semibold">12+</div>
                   <div className="text-xs uppercase tracking-widest text-gray-500 mt-2">Events</div>
                 </div>
-                <div className="flex flex-col items-center text-center">
+                <div className="flex-1 lg:flex-none flex flex-col items-center text-center lg:items-start lg:text-left lg:border-t lg:pt-6">
                   <div className="font-['Playfair_Display'] text-5xl italic">London</div>
                   <div className="text-xs uppercase tracking-widest text-gray-500 mt-2">Based</div>
                 </div>
