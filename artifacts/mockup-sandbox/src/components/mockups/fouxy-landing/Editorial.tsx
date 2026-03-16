@@ -75,10 +75,10 @@ export default function Editorial() {
           
           <div className="flex items-center space-x-4">
             {/* Orange CTA in nav */}
-            <button className="hidden md:flex items-center space-x-2 text-xs font-semibold tracking-widest uppercase px-4 py-2 text-white transition-colors" style={{ backgroundColor: ORANGE }}>
+            <a href="#join" className="hidden md:flex items-center space-x-2 text-xs font-semibold tracking-widest uppercase px-4 py-2 text-white transition-colors hover:opacity-90" style={{ backgroundColor: ORANGE }}>
               <span>Join Us</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
             <button className="md:hidden">
               <Menu className="w-6 h-6" />
             </button>
@@ -316,38 +316,8 @@ export default function Editorial() {
           </div>
         </section>
 
-        {/* 6. Testimonials */}
-        <section className="border-b border-[#E8E5E0] py-24 bg-[#0A0A0A] text-white">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="font-['Playfair_Display'] text-5xl md:text-7xl mb-16 pb-8 border-b border-white/20">Voices.</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-              {[
-                "Amazing event! Many thanks for organising it!",
-                "The London design community needs more events like these.",
-                "Great event - nice to meet everyone.",
-                "Big thanks for organising the event! I had a lot of fun meeting new designers."
-              ].map((quote, i) => (
-                <div key={i} className="flex flex-col">
-                  {/* Orange quote mark */}
-                  <div className="font-['Playfair_Display'] text-6xl leading-none mb-4" style={{ color: ORANGE }}>"</div>
-                  <p className="font-['Playfair_Display'] text-3xl leading-snug italic mb-8 flex-grow">{quote}</p>
-                  <div className="flex items-center space-x-4">
-                    {/* Orange avatar */}
-                    <div className="w-10 h-10" style={{ backgroundColor: ORANGE, opacity: 0.7 }}></div>
-                    <div>
-                      <div className="text-sm font-semibold uppercase tracking-wider">Member</div>
-                      <div className="text-xs opacity-60">London</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 8. CTA */}
-        <section className="py-32 border-b border-[#EAE3D8]">
+        {/* 6. CTA */}
+        <section id="join" className="py-32 border-b border-[#EAE3D8]">
           <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
             {/* Orange divider */}
             <div className="w-16 h-[2px] mb-12" style={{ backgroundColor: ORANGE }}></div>
