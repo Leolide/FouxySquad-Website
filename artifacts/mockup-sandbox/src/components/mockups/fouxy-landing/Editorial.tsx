@@ -328,7 +328,7 @@ export default function Editorial() {
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
               </div>
               <div className="md:col-span-4 relative group overflow-hidden h-[320px]">
-                <img src="/__mockup/images/event-8.jpg" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/__mockup/images/event-talk.jpg" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
               </div>
             </div>
