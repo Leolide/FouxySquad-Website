@@ -4,6 +4,7 @@ import {
   Users, 
   MapPin, 
   ArrowRight, 
+  ChevronUp,
   Menu, 
   ExternalLink, 
   Mail,
@@ -277,7 +278,7 @@ export default function Editorial() {
                   className="flex items-center space-x-2 text-xs font-semibold tracking-widest uppercase px-8 py-4 border border-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-white transition-colors"
                 >
                   <span>{showAll ? 'Show Less' : `View All ${events.length} Events`}</span>
-                  <ArrowRight className={`w-4 h-4 transition-transform ${showAll ? 'rotate-90' : ''}`} />
+                  {showAll ? <ChevronUp className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
                 </button>
               </div>
             )}
