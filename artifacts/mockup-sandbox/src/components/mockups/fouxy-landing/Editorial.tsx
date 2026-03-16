@@ -12,6 +12,8 @@ import {
   Phone
 } from "lucide-react";
 
+import ae71a16f_16bb_45af_bf5b_9e1d8883673b from "@assets/ae71a16f-16bb-45af-bf5b-9e1d8883673b.png";
+
 const API_BASE = "https://9ab228c5-a1fc-41e0-93a0-af710ac7bd5d-00-ykys8izdpz87.picard.replit.dev";
 const ORANGE = "#E8742C";
 
@@ -55,7 +57,6 @@ export default function Editorial() {
 
   return (
     <div className="min-h-screen bg-[#FDFAF6] text-[#0A0A0A] font-['Inter'] antialiased">
-
       {/* 1. Navigation */}
       <nav className="border-b border-[#EAE3D8] sticky top-0 bg-[#FDFAF6]/95 backdrop-blur-sm z-50">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -85,7 +86,6 @@ export default function Editorial() {
           </div>
         </div>
       </nav>
-
       <main>
         {/* 2. Hero */}
         <section className="border-b border-[#E8DFD0] min-h-[85vh] flex flex-col justify-center relative pt-12">
@@ -125,7 +125,7 @@ export default function Editorial() {
             <div className="lg:col-span-5 flex flex-col items-center gap-8">
               {/* Fox mascot — large and proud */}
               <img 
-                src="/__mockup/images/fox-mascot.png" 
+                src={ae71a16f_16bb_45af_bf5b_9e1d8883673b} 
                 alt="Fouxy Squad Mascot" 
                 className="w-full max-w-sm object-contain drop-shadow-lg"
               />
@@ -365,7 +365,6 @@ export default function Editorial() {
           </div>
         </section>
       </main>
-
       {/* 9. Footer */}
       <footer className="py-12" style={{ backgroundColor: '#0A0A0A' }}>
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
