@@ -95,12 +95,12 @@ export default function Editorial() {
               {/* Orange label */}
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-6 h-[2px]" style={{ backgroundColor: ORANGE }}></div>
-                <span className="text-xs uppercase tracking-widest font-semibold" style={{ color: ORANGE }}>London's Design Community</span>
+                <span className="text-xs uppercase tracking-widest font-semibold" style={{ color: ORANGE }}>London's Product Design Community</span>
               </div>
 
               <h1 className="font-['Playfair_Display'] text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight mb-8">
                 London's <br />
-                <span className="italic font-light text-gray-800">UX/UI</span> <br />
+                <span className="italic font-light text-gray-800">Product Design</span> <br />
                 Society.
               </h1>
               <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed max-w-2xl text-gray-800 mb-10">
@@ -164,7 +164,7 @@ export default function Editorial() {
               </div>
               <div className="flex flex-col md:border-l border-[#E8E5E0] md:pl-12">
                 <span className="text-xs uppercase tracking-widest mb-4 font-bold" style={{ color: ORANGE }}>Focus</span>
-                <span className="font-['Playfair_Display'] text-6xl mb-2 italic">UX/UI</span>
+                <span className="font-['Playfair_Display'] text-6xl mb-2 italic">Product</span>
                 <p className="text-sm text-gray-700 leading-relaxed">Product designers, researchers, and interaction specialists dedicated to digital craft.</p>
               </div>
               <div className="flex flex-col md:border-l border-[#E8E5E0] md:pl-12">
