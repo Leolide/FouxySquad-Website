@@ -158,9 +158,9 @@ export default function Editorial() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
               <div className="flex flex-col">
-                <span className="text-xs uppercase tracking-widest mb-4 font-bold" style={{ color: ORANGE }}>Core Age</span>
-                <span className="font-['Playfair_Display'] text-6xl mb-2">20—35</span>
-                <p className="text-sm text-gray-700 leading-relaxed">A vibrant generation of ambitious designers in the early to mid stages of their careers.</p>
+                <span className="text-xs uppercase tracking-widest mb-4 font-bold" style={{ color: ORANGE }}>Members</span>
+                <span className="font-['Playfair_Display'] text-6xl mb-2">400+</span>
+                <p className="text-sm text-gray-700 leading-relaxed">A growing collective of ambitious product designers across London and beyond.</p>
               </div>
               <div className="flex flex-col md:border-l border-[#E8E5E0] md:pl-12">
                 <span className="text-xs uppercase tracking-widest mb-4 font-bold" style={{ color: ORANGE }}>Focus</span>
