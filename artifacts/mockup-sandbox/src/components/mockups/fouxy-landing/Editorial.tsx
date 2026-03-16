@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { 
   Instagram, 
   Linkedin, 
@@ -13,38 +13,39 @@ import {
   Phone
 } from "lucide-react";
 
-function CuteFox() {
-  return (
-    <svg viewBox="0 0 200 200" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-      <g transform="translate(100,110)">
-        <ellipse cx="0" cy="20" rx="45" ry="35" fill="#E8742C" />
-        <circle cx="0" cy="-15" r="38" fill="#E8742C" />
-        <polygon points="-38,-20 -28,-65 -10,-25" fill="#E8742C" />
-        <polygon points="-32,-28 -26,-55 -14,-30" fill="#FDEEE4" />
-        <polygon points="38,-20 28,-65 10,-25" fill="#E8742C" />
-        <polygon points="32,-28 26,-55 14,-30" fill="#FDEEE4" />
-        <ellipse cx="0" cy="-5" rx="22" ry="18" fill="#FDEEE4" />
-        <ellipse cx="0" cy="30" rx="25" ry="15" fill="#FDEEE4" />
-        <circle cx="-12" cy="-18" r="6" fill="#0A0A0A" />
-        <circle cx="12" cy="-18" r="6" fill="#0A0A0A" />
-        <circle cx="-10" cy="-20" r="2" fill="white" />
-        <circle cx="14" cy="-20" r="2" fill="white" />
-        <ellipse cx="0" cy="-6" rx="5" ry="3.5" fill="#0A0A0A" />
-        <path d="M -6 0 Q 0 6 6 0" stroke="#0A0A0A" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-        <line x1="-40" y1="-12" x2="-55" y2="-18" stroke="#0A0A0A" strokeWidth="1" strokeLinecap="round" />
-        <line x1="-40" y1="-8" x2="-56" y2="-8" stroke="#0A0A0A" strokeWidth="1" strokeLinecap="round" />
-        <line x1="-40" y1="-4" x2="-55" y2="2" stroke="#0A0A0A" strokeWidth="1" strokeLinecap="round" />
-        <line x1="40" y1="-12" x2="55" y2="-18" stroke="#0A0A0A" strokeWidth="1" strokeLinecap="round" />
-        <line x1="40" y1="-8" x2="56" y2="-8" stroke="#0A0A0A" strokeWidth="1" strokeLinecap="round" />
-        <line x1="40" y1="-4" x2="55" y2="2" stroke="#0A0A0A" strokeWidth="1" strokeLinecap="round" />
-        <path d="M 30 45 Q 50 30 55 50 Q 60 65 45 55 Q 35 50 30 45 Z" fill="#E8742C" />
-        <path d="M 45 50 Q 55 60 48 55" fill="#FDEEE4" />
-      </g>
-    </svg>
-  );
+const API_BASE = "https://9ab228c5-a1fc-41e0-93a0-af710ac7bd5d-00-ykys8izdpz87.picard.replit.dev";
+
+interface Event {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  participants: number;
+  isOnline: boolean;
+  status: string;
+  lumaUrl?: string;
+  imageUrl?: string;
 }
 
 export default function Editorial() {
+  const [events, setEvents] = useState<Event[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`${API_BASE}/api/events`)
+      .then(r => r.json())
+      .then((data: Event[]) => {
+        setEvents(data.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, []);
+
+  const formatDate = (dateStr: string) => {
+    const d = new Date(dateStr);
+    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  };
+
   return (
     <div className="min-h-screen bg-[#FAFAFA] text-[#0A0A0A] font-['Inter'] antialiased selection:bg-[#0A0A0A] selection:text-[#FAFAFA]">
       {/* 1. Navigation */}
@@ -99,9 +100,11 @@ export default function Editorial() {
             
             <div className="lg:col-span-4 lg:border-l border-[#E8E5E0] lg:pl-8 h-full flex flex-col justify-between pt-4 lg:pt-0 pb-12 lg:pb-0 gap-12">
               <div className="flex justify-center mb-4">
-                <div className="w-40 h-40">
-                  <CuteFox />
-                </div>
+                <img 
+                  src="/__mockup/images/fox-mascot.png" 
+                  alt="Fouxy Squad Mascot" 
+                  className="w-40 h-40 object-contain"
+                />
               </div>
               <div className="space-y-12">
                 <div>
@@ -190,65 +193,49 @@ export default function Editorial() {
             </div>
             
             <div className="flex flex-col">
-              {/* Event 1 */}
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-8 border-b border-[#E8E5E0] group hover:bg-[#FAFAFA] transition-colors cursor-pointer">
-                <div className="md:col-span-2 flex flex-col justify-center">
-                  <span className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-1">Upcoming</span>
-                  <span className="font-['Playfair_Display'] text-3xl">Oct 12</span>
-                </div>
-                <div className="md:col-span-4">
-                  <div className="w-full aspect-[4/3] bg-[#0A0A0A]"></div>
-                </div>
-                <div className="md:col-span-5 flex flex-col justify-center">
-                  <h3 className="font-['Playfair_Display'] text-3xl mb-4 italic">Design Systems at Scale</h3>
-                  <p className="text-sm text-gray-700 leading-relaxed">A roundtable discussion on managing comprehensive design systems across multiple product teams and platforms.</p>
-                </div>
-                <div className="md:col-span-1 flex items-center justify-end">
-                  <div className="w-12 h-12 border border-[#0A0A0A] flex items-center justify-center group-hover:bg-[#0A0A0A] group-hover:text-[#FAFAFA] transition-colors">
-                    <ArrowRight className="w-5 h-5" />
+              {loading && (
+                <div className="py-16 text-center text-xs uppercase tracking-widest text-gray-400">Loading events...</div>
+              )}
+              {!loading && events.slice(0, 6).map((event, i) => {
+                const isUpcoming = event.status === 'upcoming';
+                const bgColors = ["bg-[#0A0A0A]", "bg-[#E8E5E0]", "bg-[#dcdad5]", "bg-[#c8c5c0]", "bg-[#0A0A0A]", "bg-[#E8E5E0]"];
+                return (
+                  <div
+                    key={event.id}
+                    onClick={() => event.lumaUrl && window.open(event.lumaUrl, '_blank')}
+                    className={`grid grid-cols-1 md:grid-cols-12 gap-8 py-8 border-b border-[#E8E5E0] group hover:bg-[#FAFAFA] transition-colors cursor-pointer ${!isUpcoming ? 'opacity-75' : ''}`}
+                  >
+                    <div className="md:col-span-2 flex flex-col justify-center">
+                      <span className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-1">
+                        {isUpcoming ? 'Upcoming' : 'Past'}
+                      </span>
+                      <span className="font-['Playfair_Display'] text-2xl">{formatDate(event.date)}</span>
+                      {event.isOnline && (
+                        <span className="text-[10px] uppercase tracking-widest text-gray-400 mt-1">Online</span>
+                      )}
+                    </div>
+                    <div className="md:col-span-4">
+                      {event.imageUrl ? (
+                        <img src={event.imageUrl} alt={event.title} className="w-full aspect-[4/3] object-cover" />
+                      ) : (
+                        <div className={`w-full aspect-[4/3] ${bgColors[i % bgColors.length]}`}></div>
+                      )}
+                    </div>
+                    <div className="md:col-span-5 flex flex-col justify-center">
+                      <h3 className="font-['Playfair_Display'] text-2xl mb-3 italic">{event.title}</h3>
+                      <p className="text-sm text-gray-700 leading-relaxed line-clamp-3">{event.description}</p>
+                      {event.participants > 0 && (
+                        <span className="text-xs text-gray-400 mt-3 uppercase tracking-wider">{event.participants} participants</span>
+                      )}
+                    </div>
+                    <div className="md:col-span-1 flex items-center justify-end">
+                      <div className={`w-12 h-12 border flex items-center justify-center transition-colors ${isUpcoming ? 'border-[#0A0A0A] group-hover:bg-[#0A0A0A] group-hover:text-[#FAFAFA]' : 'border-gray-300 text-gray-400'}`}>
+                        {isUpcoming ? <ArrowRight className="w-5 h-5" /> : <ExternalLink className="w-5 h-5" />}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Event 2 */}
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-8 border-b border-[#E8E5E0] group hover:bg-[#FAFAFA] transition-colors cursor-pointer">
-                <div className="md:col-span-2 flex flex-col justify-center">
-                  <span className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-1">Upcoming</span>
-                  <span className="font-['Playfair_Display'] text-3xl">Nov 05</span>
-                </div>
-                <div className="md:col-span-4">
-                  <div className="w-full aspect-[4/3] bg-[#E8E5E0]"></div>
-                </div>
-                <div className="md:col-span-5 flex flex-col justify-center">
-                  <h3 className="font-['Playfair_Display'] text-3xl mb-4 italic">Portfolio Review Night</h3>
-                  <p className="text-sm text-gray-700 leading-relaxed">Bring your current portfolio and get actionable feedback from senior designers at top London tech companies.</p>
-                </div>
-                <div className="md:col-span-1 flex items-center justify-end">
-                  <div className="w-12 h-12 border border-[#0A0A0A] flex items-center justify-center group-hover:bg-[#0A0A0A] group-hover:text-[#FAFAFA] transition-colors">
-                    <ArrowRight className="w-5 h-5" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Event 3 */}
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-8 border-b border-[#E8E5E0] group hover:bg-[#FAFAFA] transition-colors cursor-pointer opacity-70">
-                <div className="md:col-span-2 flex flex-col justify-center">
-                  <span className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-1">Past</span>
-                  <span className="font-['Playfair_Display'] text-3xl">Sep 18</span>
-                </div>
-                <div className="md:col-span-4">
-                  <div className="w-full aspect-[4/3] bg-[#dcdad5]"></div>
-                </div>
-                <div className="md:col-span-5 flex flex-col justify-center">
-                  <h3 className="font-['Playfair_Display'] text-3xl mb-4 italic">Figma Advanced Workshop</h3>
-                  <p className="text-sm text-gray-700 leading-relaxed">Deep dive into variables, advanced prototyping, and modern component architecture.</p>
-                </div>
-                <div className="md:col-span-1 flex items-center justify-end">
-                  <div className="w-12 h-12 border border-gray-300 flex items-center justify-center text-gray-400">
-                    <ExternalLink className="w-5 h-5" />
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </section>
