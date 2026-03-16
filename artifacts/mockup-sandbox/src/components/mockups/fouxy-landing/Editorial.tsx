@@ -46,10 +46,10 @@ export default function Editorial() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF6EE] text-[#0A0A0A] font-['Inter'] antialiased">
+    <div className="min-h-screen bg-[#FDFAF6] text-[#0A0A0A] font-['Inter'] antialiased">
 
       {/* 1. Navigation */}
-      <nav className="border-b border-[#E8DFD0] sticky top-0 bg-[#FAF6EE]/95 backdrop-blur-sm z-50">
+      <nav className="border-b border-[#EAE3D8] sticky top-0 bg-[#FDFAF6]/95 backdrop-blur-sm z-50">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <span className="font-['Playfair_Display'] text-2xl tracking-tight font-semibold italic">
@@ -160,7 +160,7 @@ export default function Editorial() {
         </section>
 
         {/* 3. Community */}
-        <section id="community" className="border-b border-[#E8DFD0] py-24">
+        <section id="community" className="border-b border-[#EAE3D8] py-24">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-baseline justify-between mb-16 pb-8 border-b-2" style={{ borderColor: ORANGE }}>
               <h2 className="font-['Playfair_Display'] text-5xl md:text-7xl">The Collective.</h2>
@@ -201,7 +201,7 @@ export default function Editorial() {
         </section>
 
         {/* 4. Events */}
-        <section id="events" className="border-b border-[#E8DFD0] py-24" style={{ backgroundColor: '#F5EDD8' }}>
+        <section id="events" className="border-b border-[#EAE3D8] py-24">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-baseline justify-between mb-16 pb-8 border-b border-[#0A0A0A]">
               <h2 className="font-['Playfair_Display'] text-5xl md:text-7xl">Calendar.</h2>
@@ -222,7 +222,7 @@ export default function Editorial() {
                   <div
                     key={event.id}
                     onClick={() => event.lumaUrl && window.open(event.lumaUrl, '_blank')}
-                    className={`grid grid-cols-1 md:grid-cols-12 gap-8 py-8 border-b border-[#E8DFD0] group hover:bg-[#FAF6EE] transition-colors cursor-pointer ${!isUpcoming ? 'opacity-70' : ''}`}
+                    className={`grid grid-cols-1 md:grid-cols-12 gap-8 py-8 border-b border-[#EAE3D8] group hover:bg-[#F5F0E8] transition-colors cursor-pointer ${!isUpcoming ? 'opacity-70' : ''}`}
                   >
                     <div className="md:col-span-2 flex flex-col justify-center">
                       {/* Orange "Upcoming" badge */}
@@ -265,7 +265,7 @@ export default function Editorial() {
         </section>
 
         {/* 5. Gallery */}
-        <section id="gallery" className="border-b border-[#E8DFD0] py-24">
+        <section id="gallery" className="border-b border-[#EAE3D8] py-24">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-baseline justify-between mb-16 pb-8 border-b border-[#0A0A0A]">
               <h2 className="font-['Playfair_Display'] text-5xl md:text-7xl">Moments.</h2>
@@ -344,7 +344,7 @@ export default function Editorial() {
         </section>
 
         {/* 8. CTA */}
-        <section className="py-32 border-b border-[#0A0A0A]" style={{ backgroundColor: '#FDF5F0' }}>
+        <section className="py-32 border-b border-[#EAE3D8]">
           <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
             {/* Orange divider */}
             <div className="w-16 h-[2px] mb-12" style={{ backgroundColor: ORANGE }}></div>
