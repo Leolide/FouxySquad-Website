@@ -315,7 +315,23 @@ export default function Editorial() {
           </div>
         </section>
 
-        {/* 6. CTA */}
+        {/* 6. Sponsors */}
+        <section className="border-b border-[#EAE3D8] py-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex items-center gap-6 mb-14">
+              <div className="w-6 h-[2px]" style={{ backgroundColor: ORANGE }}></div>
+              <span className="text-xs uppercase tracking-widest font-semibold text-gray-500">Supported By</span>
+              <div className="flex-1 h-[1px] bg-[#EAE3D8]"></div>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-16 md:gap-24">
+              <img src="/__mockup/images/logo-halkin.png" alt="Halkin" className="h-12 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="/__mockup/images/logo-sponsor2.png" alt="Replit" className="h-10 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <span className="font-['Playfair_Display'] text-3xl italic opacity-60 hover:opacity-100 transition-opacity tracking-tight">Fotor AI</span>
+            </div>
+          </div>
+        </section>
+
+        {/* 7. CTA */}
         <section id="join" className="py-32 border-b border-[#EAE3D8]">
           <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
             {/* Orange divider */}
