@@ -230,7 +230,7 @@ export default function Editorial() {
                   <div
                     key={event.id}
                     onClick={() => event.lumaUrl && window.open(event.lumaUrl, '_blank')}
-                    className={`grid grid-cols-1 md:grid-cols-12 gap-8 py-8 border-b border-[#EAE3D8] group hover:bg-[#F5F0E8] transition-colors cursor-pointer ${!isUpcoming ? 'opacity-70' : ''}`}
+                    className={`grid grid-cols-1 md:grid-cols-12 gap-8 py-8 px-0 hover:px-6 border-b border-[#EAE3D8] group hover:bg-[#F5F0E8] transition-all duration-200 cursor-pointer ${!isUpcoming ? 'opacity-70' : ''}`}
                   >
                     <div className="md:col-span-2 flex flex-col justify-center">
                       {/* Orange "Upcoming" badge */}
