@@ -123,7 +123,7 @@ export default function Editorial() {
             <div className="lg:col-span-5 flex flex-col items-center gap-8">
               {/* Fox mascot — large and proud */}
               <img 
-                src={ae71a16f_16bb_45af_bf5b_9e1d8883673b} 
+                src="/__mockup/images/fox-plushie.png" 
                 alt="Fouxy Squad Mascot" 
                 className="w-full max-w-sm object-contain drop-shadow-lg"
               />
