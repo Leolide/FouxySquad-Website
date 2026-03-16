@@ -92,8 +92,8 @@ export default function Editorial() {
           {/* Orange accent bar top-left */}
           <div className="absolute top-0 left-0 w-1 h-full" style={{ backgroundColor: ORANGE, opacity: 0.15 }}></div>
 
-          <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
-            <div className="lg:col-span-8 flex flex-col justify-center">
+          <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            <div className="lg:col-span-7 flex flex-col justify-center">
               {/* Orange label */}
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-6 h-[2px]" style={{ backgroundColor: ORANGE }}></div>
@@ -122,46 +122,27 @@ export default function Editorial() {
               </div>
             </div>
             
-            <div className="lg:col-span-4 lg:border-l border-[#E8E5E0] lg:pl-8 h-full flex flex-col pt-4 lg:pt-0 pb-12 lg:pb-0 gap-8">
-              {/* Fox mascot PNG */}
-              <div className="flex justify-center">
-                <img 
-                  src="/__mockup/images/fox-mascot.png" 
-                  alt="Fouxy Squad Mascot" 
-                  className="w-44 h-44 object-contain"
-                />
-              </div>
+            <div className="lg:col-span-5 flex flex-col items-center gap-8">
+              {/* Fox mascot — large and proud */}
+              <img 
+                src="/__mockup/images/fox-mascot.png" 
+                alt="Fouxy Squad Mascot" 
+                className="w-full max-w-sm object-contain drop-shadow-lg"
+              />
 
-              <div className="space-y-10">
-                <div>
-                  <div className="flex items-center space-x-3 mb-2 uppercase tracking-widest text-[10px] font-bold" style={{ color: ORANGE }}>
-                    <Users className="w-3 h-3" />
-                    <span>The Network</span>
-                  </div>
-                  <div className="font-['Playfair_Display'] text-6xl">400+</div>
-                  <div className="text-sm font-medium mt-1 uppercase tracking-wider">Active Members</div>
+              {/* Stats as a compact horizontal row */}
+              <div className="w-full grid grid-cols-3 gap-4 border-t border-[#EAE3D8] pt-8">
+                <div className="flex flex-col items-center text-center">
+                  <div className="font-['Playfair_Display'] text-4xl font-semibold">400+</div>
+                  <div className="text-[10px] uppercase tracking-widest text-gray-500 mt-1">Members</div>
                 </div>
-                
-                <div className="w-full h-[1px] bg-[#E8E5E0]"></div>
-                
-                <div>
-                  <div className="flex items-center space-x-3 mb-2 uppercase tracking-widest text-[10px] font-bold" style={{ color: ORANGE }}>
-                    <Calendar className="w-3 h-3" />
-                    <span>Gatherings</span>
-                  </div>
-                  <div className="font-['Playfair_Display'] text-6xl">12+</div>
-                  <div className="text-sm font-medium mt-1 uppercase tracking-wider">Events Hosted</div>
+                <div className="flex flex-col items-center text-center border-x border-[#EAE3D8]">
+                  <div className="font-['Playfair_Display'] text-4xl font-semibold">12+</div>
+                  <div className="text-[10px] uppercase tracking-widest text-gray-500 mt-1">Events</div>
                 </div>
-                
-                <div className="w-full h-[1px] bg-[#E8E5E0]"></div>
-                
-                <div>
-                  <div className="flex items-center space-x-3 mb-2 uppercase tracking-widest text-[10px] font-bold" style={{ color: ORANGE }}>
-                    <MapPin className="w-3 h-3" />
-                    <span>Base</span>
-                  </div>
-                  <div className="font-['Playfair_Display'] text-5xl italic">London</div>
-                  <div className="text-sm font-medium mt-2 uppercase tracking-wider">United Kingdom</div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="font-['Playfair_Display'] text-4xl italic">London</div>
+                  <div className="text-[10px] uppercase tracking-widest text-gray-500 mt-1">Based</div>
                 </div>
               </div>
             </div>
