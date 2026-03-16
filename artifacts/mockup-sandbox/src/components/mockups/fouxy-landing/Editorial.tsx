@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { 
-  Instagram, 
-  Linkedin, 
   Calendar, 
   Users, 
   MapPin, 
@@ -338,42 +336,6 @@ export default function Editorial() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 7. Connect */}
-        <section className="border-b border-[#E8E5E0] py-24">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="font-['Playfair_Display'] text-5xl md:text-7xl mb-16 pb-8 border-b border-[#0A0A0A]">Network.</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#0A0A0A]">
-              <a href="https://instagram.com/fouxy_squad" target="_blank" rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center p-16 border-b md:border-b-0 md:border-r border-[#0A0A0A] transition-colors group hover:text-white"
-                style={{} as React.CSSProperties}
-                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = ORANGE; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.backgroundColor = ''; }}
-              >
-                <Instagram className="w-12 h-12 mb-6 opacity-80" />
-                <span className="font-['Playfair_Display'] text-2xl italic mb-2">Instagram</span>
-                <span className="text-xs uppercase tracking-widest font-semibold opacity-60">@fouxy_squad</span>
-              </a>
-              
-              <a href="https://linkedin.com/company/fouxy-squad" target="_blank" rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center p-16 border-b md:border-b-0 md:border-r border-[#0A0A0A] transition-colors group hover:bg-[#0A0A0A] hover:text-white"
-              >
-                <Linkedin className="w-12 h-12 mb-6 opacity-80" />
-                <span className="font-['Playfair_Display'] text-2xl italic mb-2">LinkedIn</span>
-                <span className="text-xs uppercase tracking-widest font-semibold opacity-60">Fouxy Squad</span>
-              </a>
-              
-              <a href="https://lu.ma/user/FouxySquad" target="_blank" rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center p-16 transition-colors group hover:bg-[#0A0A0A] hover:text-white"
-              >
-                <Calendar className="w-12 h-12 mb-6 opacity-80" />
-                <span className="font-['Playfair_Display'] text-2xl italic mb-2">Luma</span>
-                <span className="text-xs uppercase tracking-widest font-semibold opacity-60">Events & RSVP</span>
-              </a>
             </div>
           </div>
         </section>
