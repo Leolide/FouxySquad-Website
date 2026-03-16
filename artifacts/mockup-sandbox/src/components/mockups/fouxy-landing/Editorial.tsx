@@ -12,8 +12,6 @@ import {
   Phone
 } from "lucide-react";
 
-import ae71a16f_16bb_45af_bf5b_9e1d8883673b from "@assets/ae71a16f-16bb-45af-bf5b-9e1d8883673b.png";
-
 const API_BASE = "https://9ab228c5-a1fc-41e0-93a0-af710ac7bd5d-00-ykys8izdpz87.picard.replit.dev";
 const ORANGE = "#E8742C";
 
