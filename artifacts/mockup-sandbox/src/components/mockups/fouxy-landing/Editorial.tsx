@@ -276,7 +276,7 @@ export default function Editorial() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
               {/* Row 1: big left + smaller right */}
               <div className="md:col-span-7 relative group overflow-hidden h-[380px]">
-                <img src="/__mockup/images/event-1.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/__mockup/images/event-6.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                   <span className="text-xs uppercase tracking-widest font-semibold block mb-1 opacity-80">Community</span>
@@ -284,7 +284,7 @@ export default function Editorial() {
                 </div>
               </div>
               <div className="md:col-span-5 relative group overflow-hidden h-[380px]">
-                <img src="/__mockup/images/event-2.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/__mockup/images/event-talk.jpg" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
               </div>
 
@@ -302,13 +302,13 @@ export default function Editorial() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
               </div>
 
-              {/* Row 3: wide banner with real photo */}
+              {/* Row 3: wide banner + digital screen photos */}
               <div className="md:col-span-8 relative group overflow-hidden h-[320px]">
-                <img src="/__mockup/images/event-6.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/__mockup/images/event-1.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
               </div>
               <div className="md:col-span-4 relative group overflow-hidden h-[320px]">
-                <img src="/__mockup/images/event-talk.jpg" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/__mockup/images/event-2.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
               </div>
             </div>
