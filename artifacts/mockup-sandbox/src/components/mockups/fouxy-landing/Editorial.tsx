@@ -35,6 +35,7 @@ const LOCAL_FALLBACKS: Record<number, string> = {
 export default function Editorial() {
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     fetch(`${API_BASE}/api/events`)
@@ -221,7 +222,7 @@ export default function Editorial() {
               {loading && (
                 <div className="py-16 text-center text-xs uppercase tracking-widest text-gray-400">Loading events...</div>
               )}
-              {!loading && events.slice(0, 6).map((event, i) => {
+              {!loading && (showAll ? events : events.slice(0, 5)).map((event, i) => {
                 const isUpcoming = event.status === 'upcoming';
                 const bgColors = ["#0A0A0A", "#dcdad5", "#c8c5c0", "#E8E5E0", "#0A0A0A", "#dcdad5"];
                 return (
@@ -267,6 +268,19 @@ export default function Editorial() {
                 );
               })}
             </div>
+
+            {/* View more / less */}
+            {!loading && events.length > 5 && (
+              <div className="mt-10 flex justify-center">
+                <button
+                  onClick={() => setShowAll(v => !v)}
+                  className="flex items-center space-x-2 text-xs font-semibold tracking-widest uppercase px-8 py-4 border border-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-white transition-colors"
+                >
+                  <span>{showAll ? 'Show Less' : `View All ${events.length} Events`}</span>
+                  <ArrowRight className={`w-4 h-4 transition-transform ${showAll ? 'rotate-90' : ''}`} />
+                </button>
+              </div>
+            )}
           </div>
         </section>
 
