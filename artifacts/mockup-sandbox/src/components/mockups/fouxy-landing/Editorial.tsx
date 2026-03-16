@@ -26,6 +26,12 @@ interface Event {
   imageUrl?: string;
 }
 
+const LOCAL_FALLBACKS: Record<number, string> = {
+  5: "/__mockup/images/event-7.jpg",
+  6: "/__mockup/images/event-9.jpg",
+  7: "/__mockup/images/vibe-coding.png",
+};
+
 export default function Editorial() {
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
@@ -236,8 +242,8 @@ export default function Editorial() {
                     </div>
                     {/* 1:1 square image */}
                     <div className="md:col-span-3">
-                      {event.imageUrl ? (
-                        <img src={event.imageUrl} alt={event.title} className="w-full aspect-square object-cover" />
+                      {(event.imageUrl || LOCAL_FALLBACKS[event.id]) ? (
+                        <img src={event.imageUrl || LOCAL_FALLBACKS[event.id]} alt={event.title} className="w-full aspect-square object-cover" />
                       ) : (
                         <div className="w-full aspect-square" style={{ backgroundColor: bgColors[i % bgColors.length] }}></div>
                       )}
