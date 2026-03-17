@@ -8,7 +8,6 @@ const images = [
   { src: "/__mockup/images/event-speaker.png",  label: "On Stage",         sub: "Speaker Series" },
   { src: "/__mockup/images/event-6.png",        label: "Fouxy Gathering",  sub: "Battersea, 2025" },
   { src: "/__mockup/images/event-8.jpg",        label: "Community Night",  sub: "London, 2025" },
-  { src: "/__mockup/images/event-9.jpg",        label: "Design Meet",      sub: "London, 2025" },
   { src: "/__mockup/images/event-new.jpg",      label: "Fouxy Squad",      sub: "Est. 2025" },
   { src: "/__mockup/images/event-catering.jpg", label: "Halkin Venue",     sub: "Sponsored" },
   { src: "/__mockup/images/event-3.png",        label: "Workshop",         sub: "London, 2025" },
