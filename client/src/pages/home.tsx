@@ -304,6 +304,18 @@ export default function Home() {
                 <img src="/images/event-2.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
               </div>
+              <div className="md:col-span-4 relative group overflow-hidden h-[280px]">
+                <img src="/images/event-8.jpg" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
+              </div>
+              <div className="md:col-span-4 relative group overflow-hidden h-[280px]">
+                <img src="/images/event-9.jpg" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
+              </div>
+              <div className="md:col-span-4 relative group overflow-hidden h-[280px]">
+                <img src="/images/event-new.jpg" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
+              </div>
             </div>
           </div>
         </section>
