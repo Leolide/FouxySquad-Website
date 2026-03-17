@@ -325,7 +325,7 @@ export default function Editorial() {
             </div>
             <div className="flex flex-wrap items-center justify-center gap-16 md:gap-28">
               <img src="/__mockup/images/logo-halkin.png?v=2" alt="Halkin" className="h-24 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-              <img src="/__mockup/images/logo-sponsor2.png" alt="Replit" className="h-20 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="/__mockup/images/logo-sponsor2.png?v=2" alt="Replit" className="h-20 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
               <img src="/__mockup/images/logo-fotor.png" alt="Fotor AI" className="h-20 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
             </div>
           </div>
