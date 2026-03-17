@@ -72,7 +72,7 @@ function BentoGallery() {
       </div>
 
       <div className="grid grid-cols-12 gap-2 mb-2">
-        <div className="col-span-12 md:col-span-8 relative overflow-hidden bg-gray-100" style={{ height: 480 }}>
+        <div className="col-span-12 md:col-span-8 relative overflow-hidden bg-gray-100" style={{ height: "70vh", minHeight: 400 }}>
           {hero && (
             <>
               <img
