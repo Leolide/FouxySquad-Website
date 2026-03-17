@@ -81,7 +81,8 @@ async function seedDatabase() {
       participants: 0,
       isOnline: false,
       lumaUrl: "https://lu.ma/user/FouxySquad",
-      status: "completed"
+      status: "completed",
+      imageUrl: "/images/event-vibecoding.jpg"
     },
     {
       title: "From Sketch to Reality: AIGC Creative Workflows",
