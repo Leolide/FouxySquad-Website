@@ -275,11 +275,11 @@ export default function Home() {
             <div>
               <h3 className="text-xs uppercase tracking-widest text-gray-500 mb-8 font-semibold">Representing Industry Leaders</h3>
               <div className="flex flex-wrap gap-4">
-                {["Amazon", "Microsoft", "Figma", "Intercom", "Monzo", "Palantir", "Burberry", "UAL", "RCA", "Cambridge"].map((company, i) => (
+                {["Amazon", "Microsoft", "Figma", "Intercom", "Monzo", "Palantir", "Burberry", "UAL", "RCA", "Cambridge"].map((company) => (
                   <span
                     key={company}
                     className="px-6 py-3 text-sm font-medium uppercase tracking-wider cursor-default transition-colors"
-                    style={i === 0 ? { backgroundColor: ORANGE, color: "white" } : { border: "1px solid #0A0A0A" }}
+                    style={{ border: "1px solid #0A0A0A" }}
                   >
                     {company}
                   </span>
