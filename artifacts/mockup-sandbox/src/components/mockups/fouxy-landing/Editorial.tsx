@@ -321,11 +321,10 @@ export default function Editorial() {
             <div className="text-center mb-14">
               <span className="text-xs uppercase tracking-widest font-bold" style={{ color: ORANGE }}>Supported By</span>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px]">
               {[
                 { src: '/__mockup/images/logo-halkin.png?v=2', alt: 'Halkin', h: 'h-20', href: 'https://www.halkin.com/' },
                 { src: '/__mockup/images/logo-sponsor2.png?v=2', alt: 'Replit', h: 'h-14', href: 'https://replit.com' },
-                { src: '/__mockup/images/logo-fotor.png', alt: 'Fotor AI', h: 'h-14', href: 'https://www.fotor.com' },
               ].map(({ src, alt, h, href }) => (
                 <a key={alt} href={href} target="_blank" rel="noopener noreferrer"
                   className="flex flex-col items-center justify-center gap-5 py-12 px-8 bg-white border border-[#EAE3D8] hover:border-[#0A0A0A] transition-colors group"
