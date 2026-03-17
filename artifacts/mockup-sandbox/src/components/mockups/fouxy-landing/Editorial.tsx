@@ -318,15 +318,22 @@ export default function Editorial() {
         {/* 6. Sponsors */}
         <section className="border-b border-[#EAE3D8] py-20">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="flex items-center gap-6 mb-14">
-              <div className="w-6 h-[2px]" style={{ backgroundColor: ORANGE }}></div>
-              <span className="text-xs uppercase tracking-widest font-semibold text-gray-500">Supported By</span>
-              <div className="flex-1 h-[1px] bg-[#EAE3D8]"></div>
+            <div className="text-center mb-14">
+              <span className="text-xs uppercase tracking-widest font-bold" style={{ color: ORANGE }}>Supported By</span>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-16 md:gap-28">
-              <img src="/__mockup/images/logo-halkin.png?v=2" alt="Halkin" className="h-24 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-              <img src="/__mockup/images/logo-sponsor2.png?v=2" alt="Replit" className="h-20 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-              <img src="/__mockup/images/logo-fotor.png" alt="Fotor AI" className="h-20 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px]">
+              {[
+                { src: '/__mockup/images/logo-halkin.png?v=2', alt: 'Halkin', h: 'h-20', href: 'https://www.comohotels.com/halkin' },
+                { src: '/__mockup/images/logo-sponsor2.png?v=2', alt: 'Replit', h: 'h-14', href: 'https://replit.com' },
+                { src: '/__mockup/images/logo-fotor.png', alt: 'Fotor AI', h: 'h-14', href: 'https://www.fotor.com' },
+              ].map(({ src, alt, h, href }) => (
+                <a key={alt} href={href} target="_blank" rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center gap-5 py-12 px-8 bg-white border border-[#EAE3D8] hover:border-[#0A0A0A] transition-colors group"
+                >
+                  <img src={src} alt={alt} className={`${h} object-contain grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300`} />
+                  <span className="text-[9px] uppercase tracking-[0.15em] text-gray-400 group-hover:text-gray-700 transition-colors font-semibold">{alt}</span>
+                </a>
+              ))}
             </div>
           </div>
         </section>
