@@ -323,7 +323,7 @@ export default function Editorial() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px]">
               {[
-                { src: '/__mockup/images/logo-halkin.png?v=2', alt: 'Halkin', h: 'h-20', href: 'https://www.comohotels.com/halkin' },
+                { src: '/__mockup/images/logo-halkin.png?v=2', alt: 'Halkin', h: 'h-20', href: 'https://www.halkin.com/' },
                 { src: '/__mockup/images/logo-sponsor2.png?v=2', alt: 'Replit', h: 'h-14', href: 'https://replit.com' },
                 { src: '/__mockup/images/logo-fotor.png', alt: 'Fotor AI', h: 'h-14', href: 'https://www.fotor.com' },
               ].map(({ src, alt, h, href }) => (
