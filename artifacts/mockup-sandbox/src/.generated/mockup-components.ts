@@ -6,5 +6,8 @@ export const modules: ModuleMap = {
   "./components/mockups/fouxy-landing/SoftAiry.tsx": () => import("../components/mockups/fouxy-landing/SoftAiry.tsx"),
   "./components/mockups/fouxy-landing/SponsorA.tsx": () => import("../components/mockups/fouxy-landing/SponsorA.tsx"),
   "./components/mockups/fouxy-landing/SponsorB.tsx": () => import("../components/mockups/fouxy-landing/SponsorB.tsx"),
-  "./components/mockups/fouxy-landing/SponsorC.tsx": () => import("../components/mockups/fouxy-landing/SponsorC.tsx")
+  "./components/mockups/fouxy-landing/SponsorC.tsx": () => import("../components/mockups/fouxy-landing/SponsorC.tsx"),
+  "./components/mockups/gallery-options/CinematicHero.tsx": () => import("../components/mockups/gallery-options/CinematicHero.tsx"),
+  "./components/mockups/gallery-options/EditorialCollage.tsx": () => import("../components/mockups/gallery-options/EditorialCollage.tsx"),
+  "./components/mockups/gallery-options/MasonryFlow.tsx": () => import("../components/mockups/gallery-options/MasonryFlow.tsx")
 };
