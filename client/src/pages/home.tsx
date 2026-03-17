@@ -78,7 +78,7 @@ function BentoGallery() {
                 key={safeIndex}
                 src={hero.src}
                 alt={hero.label}
-                className="w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
                 style={{ opacity: fading ? 0 : 1, transition: "opacity 0.22s ease" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none" />
