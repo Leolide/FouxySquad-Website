@@ -10,7 +10,6 @@ const images = [
   { src: "/__mockup/images/event-8.jpg",        label: "Community Night",  sub: "London, 2025" },
   { src: "/__mockup/images/event-new.jpg",      label: "Fouxy Squad",      sub: "Est. 2025" },
   { src: "/__mockup/images/event-catering.jpg", label: "Halkin Venue",     sub: "Sponsored" },
-  { src: "/__mockup/images/event-3.png",        label: "Workshop",         sub: "London, 2025" },
   { src: "/__mockup/images/event-4.png",        label: "Meetup",           sub: "London, 2025" },
   { src: "/__mockup/images/event-crowd.jpg",    label: "The Crowd",        sub: "London, 2025" },
 ];
