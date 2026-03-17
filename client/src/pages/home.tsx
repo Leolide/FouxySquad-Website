@@ -89,7 +89,7 @@ function BentoGallery() {
             </>
           )}
         </div>
-        <div className="hidden md:flex col-span-4 flex-col gap-2">
+        <div className="hidden md:flex col-span-4 flex-col gap-2" style={{ height: 480 }}>
           {rightThumbs.map((img) => {
             const origIndex = galleryImages.findIndex((x) => x.src === img.src);
             return (
