@@ -49,19 +49,19 @@ export default function Home() {
     <div className="min-h-screen bg-[#FDFAF6] text-[#0A0A0A] font-['Inter'] antialiased">
       {/* Navigation */}
       <nav className="border-b border-[#EAE3D8] sticky top-0 bg-[#FDFAF6]/95 backdrop-blur-sm z-50">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center">
+          <div className="flex-1 flex items-center space-x-2">
             <span className="font-['Playfair_Display'] text-2xl tracking-tight font-semibold italic">
               Fouxy Squad
             </span>
             <span className="w-2 h-2 rounded-full inline-block mb-3" style={{ backgroundColor: ORANGE }} />
           </div>
-          <div className="hidden md:flex space-x-8 text-xs font-medium tracking-widest uppercase">
+          <div className="hidden md:flex flex-1 justify-center space-x-8 text-xs font-medium tracking-widest uppercase">
             <a href="#community" className="hover:text-gray-500 transition-colors">The Collective</a>
             <a href="#events" className="hover:text-gray-500 transition-colors">Calendar</a>
             <a href="#gallery" className="hover:text-gray-500 transition-colors">Moments</a>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="flex-1 flex items-center justify-end space-x-4">
             <a
               href="#join"
               className="hidden md:flex items-center space-x-2 text-xs font-semibold tracking-widest uppercase px-4 py-2 text-white transition-colors hover:opacity-90"
