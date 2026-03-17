@@ -57,9 +57,9 @@ export default function Home() {
             <span className="w-2 h-2 rounded-full inline-block mb-3" style={{ backgroundColor: ORANGE }} />
           </div>
           <div className="hidden md:flex space-x-8 text-xs font-medium tracking-widest uppercase">
-            <a href="#community" className="hover:text-gray-500 transition-colors">Community</a>
-            <a href="#events" className="hover:text-gray-500 transition-colors">Events</a>
-            <a href="#gallery" className="hover:text-gray-500 transition-colors">Gallery</a>
+            <a href="#community" className="hover:text-gray-500 transition-colors">The Collective</a>
+            <a href="#events" className="hover:text-gray-500 transition-colors">Calendar</a>
+            <a href="#gallery" className="hover:text-gray-500 transition-colors">Moments</a>
           </div>
           <div className="flex items-center space-x-4">
             <a
@@ -397,9 +397,9 @@ export default function Home() {
             <span className="w-2 h-2 rounded-full mb-3" style={{ backgroundColor: ORANGE }} />
           </div>
           <div className="flex space-x-8 text-xs font-semibold uppercase tracking-widest text-white/60">
-            <a href="#community" className="hover:text-white transition-colors">Community</a>
-            <a href="#events" className="hover:text-white transition-colors">Events</a>
-            <a href="#gallery" className="hover:text-white transition-colors">Gallery</a>
+            <a href="#community" className="hover:text-white transition-colors">The Collective</a>
+            <a href="#events" className="hover:text-white transition-colors">Calendar</a>
+            <a href="#gallery" className="hover:text-white transition-colors">Moments</a>
           </div>
           <div className="text-white/40 text-xs uppercase tracking-widest">
             © {new Date().getFullYear()} Fouxy Squad
