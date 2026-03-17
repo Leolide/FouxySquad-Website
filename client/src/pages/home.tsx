@@ -214,15 +214,13 @@ export default function Home() {
                   <span>Upcoming Events</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <a
-                  href="https://lu.ma/user/FouxySquad"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => document.getElementById("connect")?.scrollIntoView({ behavior: "smooth" })}
                   className="border border-[#0A0A0A] text-[#0A0A0A] text-xs font-semibold tracking-widest uppercase px-8 py-4 flex items-center justify-center space-x-2 hover:bg-[#0A0A0A] hover:text-white transition-colors"
                 >
                   <span>Join Community</span>
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </button>
               </div>
             </div>
             <div className="lg:col-span-5 flex flex-col items-center gap-8">
