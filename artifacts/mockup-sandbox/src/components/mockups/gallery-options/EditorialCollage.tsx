@@ -72,12 +72,6 @@ export default function EditorialCollage() {
               className="absolute bottom-0 left-0 right-0 p-6"
               style={{ opacity: fading ? 0 : 1, transition: "opacity 0.22s ease" }}
             >
-              <span
-                className="text-[9px] uppercase tracking-widest font-bold px-2 py-1 mb-2 inline-block text-white"
-                style={{ backgroundColor: ORANGE }}
-              >
-                Featured
-              </span>
               <h3 className="font-['Playfair_Display'] text-3xl italic text-white leading-tight">
                 {hero.label}
               </h3>
