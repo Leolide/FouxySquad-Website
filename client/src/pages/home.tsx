@@ -328,6 +328,10 @@ export default function Home() {
                 <img src="/images/event-crowd.jpg" alt="Fouxy event" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
               </div>
+              <div className="md:col-span-12 relative group overflow-hidden h-[300px]">
+                <img src="/images/event-speaker.png" alt="Fouxy speaker" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
+              </div>
             </div>
           </div>
         </section>

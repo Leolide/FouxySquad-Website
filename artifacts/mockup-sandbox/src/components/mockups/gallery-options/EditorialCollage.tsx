@@ -7,6 +7,7 @@ const images = [
   { src: "/__mockup/images/event-talk.jpg",     label: "Community Talk",    col: "col-span-2", row: "row-span-1" },
   { src: "/__mockup/images/event-8.jpg",        label: "Gathering",         col: "col-span-1", row: "row-span-1" },
   { src: "/__mockup/images/event-9.jpg",        label: "Community",         col: "col-span-1", row: "row-span-1" },
+  { src: "/__mockup/images/event-speaker.png",  label: "On Stage",          col: "col-span-2", row: "row-span-1" },
   { src: "/__mockup/images/event-6.png",        label: "Fouxy Night",       col: "col-span-2", row: "row-span-1" },
   { src: "/__mockup/images/event-3.png",        label: "Workshop",          col: "col-span-1", row: "row-span-1" },
   { src: "/__mockup/images/event-4.png",        label: "Meetup",            col: "col-span-1", row: "row-span-1" },
