@@ -323,10 +323,10 @@ export default function Editorial() {
               <span className="text-xs uppercase tracking-widest font-semibold text-gray-500">Supported By</span>
               <div className="flex-1 h-[1px] bg-[#EAE3D8]"></div>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-16 md:gap-24">
-              <img src="/__mockup/images/logo-halkin.png" alt="Halkin" className="h-20 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-              <img src="/__mockup/images/logo-sponsor2.png" alt="Replit" className="h-10 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-              <span className="font-['Playfair_Display'] text-3xl italic opacity-60 hover:opacity-100 transition-opacity tracking-tight">Fotor AI</span>
+            <div className="flex flex-wrap items-center justify-center gap-16 md:gap-28">
+              <img src="/__mockup/images/logo-halkin.png" alt="Halkin" className="h-24 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="/__mockup/images/logo-sponsor2.png" alt="Replit" className="h-20 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+              <img src="/__mockup/images/logo-fotor.png" alt="Fotor AI" className="h-20 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
             </div>
           </div>
         </section>
