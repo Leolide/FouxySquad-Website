@@ -33,6 +33,111 @@ const LOCAL_FALLBACKS: Record<number, string> = {
   7: "/__mockup/images/vibe-coding.png",
 };
 
+const bentoImages = [
+  { src: "/__mockup/images/event-talk.jpg",     label: "Community Talk",   sub: "London, 2025" },
+  { src: "/__mockup/images/event-workshop.jpg", label: "AI Workshop",      sub: "Vibe Coding Series" },
+  { src: "/__mockup/images/event-speaker.png",  label: "On Stage",         sub: "Speaker Series" },
+  { src: "/__mockup/images/event-6.png",        label: "Fouxy Gathering",  sub: "Battersea, 2025" },
+  { src: "/__mockup/images/event-8.jpg",        label: "Community Night",  sub: "London, 2025" },
+  { src: "/__mockup/images/event-new.jpg",      label: "Fouxy Squad",      sub: "Est. 2025" },
+  { src: "/__mockup/images/event-catering.jpg", label: "Halkin Venue",     sub: "Sponsored" },
+  { src: "/__mockup/images/event-4.png",        label: "Meetup",           sub: "London, 2025" },
+  { src: "/__mockup/images/event-crowd.jpg",    label: "The Crowd",        sub: "London, 2025" },
+];
+
+function BentoGallery() {
+  const [heroIndex, setHeroIndex] = useState(0);
+  const [fading, setFading] = useState(false);
+
+  const safeIndex = Math.max(0, Math.min(heroIndex, bentoImages.length - 1));
+  const hero = bentoImages[safeIndex];
+  const thumbnails = bentoImages.filter((_, i) => i !== safeIndex);
+  const rightThumbs = thumbnails.slice(0, 2);
+  const stripThumbs = thumbnails.slice(2);
+
+  const selectHero = (i: number) => {
+    if (i < 0 || i >= bentoImages.length || i === safeIndex) return;
+    setFading(true);
+    setTimeout(() => {
+      setHeroIndex(i);
+      setFading(false);
+    }, 220);
+  };
+
+  return (
+    <>
+      <div className="flex items-baseline justify-between mb-12 pb-8 border-b border-[#0A0A0A]">
+        <h2 className="font-['Playfair_Display'] text-5xl md:text-7xl">Moments.</h2>
+        <span className="text-xs uppercase tracking-widest text-gray-400 font-medium hidden sm:block">Click any photo to feature it</span>
+      </div>
+
+      <div className="grid grid-cols-12 gap-2 mb-2">
+        <div className="col-span-12 md:col-span-8 relative overflow-hidden bg-gray-100" style={{ height: 480 }}>
+          {hero && (
+            <>
+              <img
+                key={safeIndex}
+                src={hero.src}
+                alt={hero.label}
+                className="w-full h-full object-cover"
+                style={{ opacity: fading ? 0 : 1, transition: "opacity 0.22s ease" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-6" style={{ opacity: fading ? 0 : 1, transition: "opacity 0.22s ease" }}>
+                <h3 className="font-['Playfair_Display'] text-3xl italic text-white leading-tight">{hero.label}</h3>
+                <p className="text-white/60 text-xs uppercase tracking-widest mt-1">{hero.sub}</p>
+              </div>
+            </>
+          )}
+        </div>
+        <div className="hidden md:flex col-span-4 flex-col gap-2">
+          {rightThumbs.map((img) => {
+            const origIndex = bentoImages.findIndex((x) => x.src === img.src);
+            return (
+              <div key={img.src} onClick={() => selectHero(origIndex)} className="flex-1 relative overflow-hidden cursor-pointer group">
+                <img src={img.src} alt={img.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.06]" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/60 to-transparent">
+                  <p className="text-white text-xs font-['Playfair_Display'] italic">{img.label}</p>
+                </div>
+                <div className="absolute top-2 right-2 w-2 h-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" style={{ backgroundColor: ORANGE }} />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="grid gap-2" style={{ gridTemplateColumns: `repeat(${stripThumbs.length}, 1fr)` }}>
+        {stripThumbs.map((img) => {
+          const origIndex = bentoImages.findIndex((x) => x.src === img.src);
+          return (
+            <div key={img.src} onClick={() => selectHero(origIndex)} className="relative overflow-hidden cursor-pointer group" style={{ height: 140 }}>
+              <img src={img.src} alt={img.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.08]" />
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300" />
+              <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" style={{ backgroundColor: ORANGE }} />
+              <div className="absolute bottom-0 left-0 right-0 px-2 py-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-black/50">
+                <p className="text-white text-[10px] truncate font-['Playfair_Display'] italic">{img.label}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="mt-6 flex items-center justify-between">
+        <div className="flex items-center space-x-3">
+          <div className="w-6 h-[1px]" style={{ backgroundColor: ORANGE }} />
+          <span className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-medium">{bentoImages.length} photographs · click to feature</span>
+        </div>
+        <div className="flex space-x-1.5">
+          {bentoImages.map((_, i) => (
+            <button key={i} onClick={() => selectHero(i)} className="w-2 h-2 rounded-full transition-all duration-200" style={{ backgroundColor: i === safeIndex ? ORANGE : "#D1C9BE" }} />
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
 export default function Editorial() {
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
@@ -269,49 +374,7 @@ export default function Editorial() {
         {/* 5. Gallery */}
         <section id="gallery" className="border-b border-[#EAE3D8] py-24">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="flex items-baseline justify-between mb-16 pb-8 border-b border-[#0A0A0A]">
-              <h2 className="font-['Playfair_Display'] text-5xl md:text-7xl">Moments.</h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
-              {/* Row 1: big left + smaller right */}
-              <div className="md:col-span-7 relative group overflow-hidden h-[380px]">
-                <img src="/__mockup/images/event-6.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
-                <div className="absolute bottom-6 left-6 text-white">
-                  <span className="text-xs uppercase tracking-widest font-semibold block mb-1 opacity-80">Community</span>
-                  <h4 className="font-['Playfair_Display'] text-2xl italic">Fouxy Gathering</h4>
-                </div>
-              </div>
-              <div className="md:col-span-5 relative group overflow-hidden h-[380px]">
-                <img src="/__mockup/images/event-talk.jpg" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
-              </div>
-
-              {/* Row 2: three equal */}
-              <div className="md:col-span-4 relative group overflow-hidden h-[280px]">
-                <img src="/__mockup/images/event-3.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
-              </div>
-              <div className="md:col-span-4 relative group overflow-hidden h-[280px]">
-                <img src="/__mockup/images/event-4.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
-              </div>
-              <div className="md:col-span-4 relative group overflow-hidden h-[280px]">
-                <img src="/__mockup/images/event-5.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
-              </div>
-
-              {/* Row 3: wide banner + digital screen photos */}
-              <div className="md:col-span-8 relative group overflow-hidden h-[320px]">
-                <img src="/__mockup/images/event-1.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
-              </div>
-              <div className="md:col-span-4 relative group overflow-hidden h-[320px]">
-                <img src="/__mockup/images/event-2.png" alt="Fouxy event" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
-              </div>
-            </div>
+            <BentoGallery />
           </div>
         </section>
 
