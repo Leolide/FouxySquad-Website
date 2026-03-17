@@ -71,7 +71,8 @@ async function seedDatabase() {
       date: new Date("2025-06-28"),
       participants: 40,
       isOnline: true,
-      status: "completed"
+      status: "completed",
+      imageUrl: "/images/event-roundtable.jpg"
     },
     {
       title: "Vibe Coding for Designers",
