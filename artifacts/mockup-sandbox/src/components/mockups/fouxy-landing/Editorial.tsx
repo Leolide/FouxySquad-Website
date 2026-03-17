@@ -205,7 +205,7 @@ export default function Editorial() {
 
               <h1 className="font-['Playfair_Display'] text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight mb-8">
                 London's <br />
-                <span className="italic font-light text-gray-800">Product Design</span> <br />
+                <span className="italic font-light text-[#474747]">Product Design</span> <br />
                 Society.
               </h1>
               <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed max-w-2xl text-gray-800 mb-10">
