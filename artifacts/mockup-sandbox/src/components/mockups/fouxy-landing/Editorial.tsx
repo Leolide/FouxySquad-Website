@@ -282,7 +282,7 @@ export default function Editorial() {
             <div>
               <h3 className="text-xs uppercase tracking-widest text-gray-500 mb-8 font-semibold">Representing Industry Leaders</h3>
               <div className="flex flex-wrap gap-4">
-                {["Amazon", "Microsoft", "Figma", "Intercom", "Monzo", "Palantir", "Burberry", "UAL", "RCA", "Imperial", "Cambridge"].map((company) => (
+                {["Amazon", "Microsoft", "Figma", "Intercom", "Monzo", "Palantir", "Burberry", "UAL", "RCA", "Imperial", "Cambridge University"].map((company) => (
                   <span key={company} className="px-6 py-3 text-sm font-medium uppercase tracking-wider cursor-default transition-colors" style={{ border: '1px solid #0A0A0A' }}>
                     {company}
                   </span>
